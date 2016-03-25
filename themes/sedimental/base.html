@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="{site.lang_code}">
+<head>
+  <meta charset="{site.charset}">
+  <title>{+head_title}{site.head_title}{/head_title}</title>
+  <meta name="author" content="{site.author_name}">
+  <meta name="description" content="{site.tagline}">
+  <link href="{site.atom_feed_url}" title="{site.head_title} Feed" type="application/atom+xml" rel="alternate" />
+
+  <!-- Mobile Specific Meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  {?site.dev_mode}{?site.dev_mode_refresh_seconds}
+  <meta http-equiv="refresh" content="{site.dev_mode_refresh_seconds}" />
+  {/site.dev_mode_refresh_seconds}{/site.dev_mode}
+
+  <!-- Font
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css"> -->
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/skeleton.css">
+  <link rel="stylesheet" href="/css/github.css">
+  <link rel="stylesheet" href="/css/sedimental.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+
+  <!-- Analytics -->
+  {?site.enable_analytics}
+  <script type="text/javascript">
+      var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-63522904-1']);
+        _gaq.push(['_trackPageview']);
+        {?site.analytics_code}
+        _gaq.push(['user._setAccount', '{site.analytics_code}']);
+        _gaq.push(['user._trackPageview']);
+        {/site.analytics_code}
+        (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+  </script>
+  {/site.enable_analytics}
+</head>
+<body>
+  <div class="table-container">
+    <div class="table-block footer-push">
+      <div class="container">
+        <div class="row">
+          <div id="layer-accent-div-1"></div>
+          <div id="layer-accent-div-2"></div>
+          <div id="layer-accent-div-3"></div>
+          <header id="header" class="twelve columns">
+            <h1><a href="{site.canonical_base_path}">{site.title}</a></h1>
+            <p id="tagline-p">{site.tagline}</p>
+            {?site.primary_links}<p id="pri-links-p">
+              {#site.primary_links}
+              <a {?is_external} target="_blank"{/is_external} title="{.desc}" href="{.href}">{.text}</a>
+              {/site.primary_links}
+            </p>{/site.primary_links}
+            {?site.secondary_links}<p id="sec-links-p">
+            {#site.secondary_links}
+              <a {?is_external} target="_blank"{/is_external} title="{.desc}" href="{.href}">{.text}</a>
+            {/site.secondary_links}
+            </p>{/site.secondary_links}
+            <hr>
+          </header>
+        </div>
+        {+content}Page content{/content}
+      </div> <!-- End header/content container -->
+    </div>
+    <div class="table-block">
+      <div class="container">
+        <footer id="footer" class="twelve columns">
+          {site.copyright_notice|s} <a href="{site.atom_feed_url}"><img height="14" src="/img/feed.png"></a>
+        </footer>
+      </div>
+    </div>  <!-- end table block footer div -->
+  </div>
+  <!-- Last generated: {site.last_generated_utc} -->
+</body>
+</html>

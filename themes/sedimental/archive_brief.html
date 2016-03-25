@@ -1,0 +1,19 @@
+{>base.html/}
+
+{<head_title}{?list.tag}Entries tagged "{list.tag}" — {/list.tag}{site.head_title}{/head_title}
+
+{<content}
+{#entries}
+<div class="row">
+  <div class="twelve columns">
+    <div class="two columns"><h4><a href="/{.entry_root}{site.export_html_ext}">{headers.title}</a></h4></div>
+    <div class="ten columns"><p>{.summary}</p></div>
+  </div>
+</div>
+{:else}
+{! Not really reachable for tags, etc., because at least one post has to exist for this to get rendered at all !}
+<p>No entries here yet.</p>
+{/entries}
+
+
+{/content}

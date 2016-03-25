@@ -1,0 +1,15 @@
+
+# Chert ignores
+
+# Ignore generated files. Remove this line if you want to check them in.
+site/*
+
+# Ignore compiled Python in the top-level directory (where custom.py lives)
+/*.py[co]
+
+
+# emacs ignores
+*~
+._*
+.\#*
+\#*\#

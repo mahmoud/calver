@@ -1,0 +1,36 @@
+---
+site:
+  title: Chert
+  author: Chert Chertington
+  tagline: Sharp and sparky static sites
+  copyright: >-
+    &copy; 2015 <a href="https://creativecommons.org/licenses/by-sa/4.0/"><img height="14" src="/img/by-sa.png" /></a>
+  primary_links:
+    - text: About
+      href: /about.html
+    - text: Github
+      href: https://github.com/mahmoud/chert
+      desc: Chert source code
+    - text: Twitter
+      href: https://twitter.com/mhashemi
+  # change to your own analytics code from analytics.google.com
+  # remove if you won't be using analytics
+  analytics_code: UA-63522904-3
+
+theme:
+  name: sedimental
+
+dev:
+  server_host: 0.0.0.0
+  server_port: 8080
+  base_url: /
+  autorefresh: 0  # set to a positive integer to cause the default theme to autorefresh every few seconds
+
+prod:
+  canonical_domain: http://sedimental.org
+  canonical_base_path: /
+  remote_host: sedimental.org
+  remote_user: chert_user
+  remote_path: /home/chert_user/my_site/public
+  # rsync_cmd: rsync
+  # rsync_flags: avzPk

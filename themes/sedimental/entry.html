@@ -1,0 +1,35 @@
+{>base.html/}
+
+{<head_title}{entry.headers.title} — {site.head_title}{/head_title}
+
+{<content}
+
+{#entry}
+<div class="row">
+  <div class="twelve columns entry-div">
+    <header id="entry-header">
+      <h1 id="entry-h1">{headers.title}</h1>
+      <p id="entry-tagline">{headers.tagline}</p>
+    </header>
+      {entry.content_html|s}
+  </div>
+  <div class="twelve columns metadata-div">
+    <a href="/{entry_root}{site.export_html_ext}" title="{publish_timestamp_local}" class="post-timestamp">{headers.publish_date}</a>
+    {?headers.tags}
+    <span class="tags">
+      {#headers.tags}<a href="/tagged/{.}">#{.}</a> {/headers.tags}
+    </span>
+    {/headers.tags}
+  </div>
+  {?prev_entries}
+  <div class="twelve columns" id="previously-div">
+    <h5>Previously</h5>
+    {#prev_entries}
+    <a href="/{.entry_root}{site.export_html_ext}">{.headers.title}</a><br/>
+    {/prev_entries}
+  </div>
+  {/prev_entries}
+</div>
+{/entry}
+
+{/content}
