@@ -1,16 +1,18 @@
 ---
 site:
-  title: Chert
-  author: Chert Chertington
-  tagline: Sharp and sparky static sites
+  title: CalVer
+  author: Mahmoud Hashemi
+  tagline: Timely Software Versioning
   copyright: >-
-    &copy; 2015 <a href="https://creativecommons.org/licenses/by-sa/4.0/"><img height="14" src="/img/by-sa.png" /></a>
+    &copy; 2016 <a href="https://creativecommons.org/licenses/by-sa/4.0/"><img height="14" src="/img/by-sa.png" /></a>
   primary_links:
     - text: About
       href: /about.html
+    - text: Examples
+      href: '#'
     - text: Github
-      href: https://github.com/mahmoud/chert
-      desc: Chert source code
+      href: https://github.com/mahmoud/calver
+      desc: CalVer site source
     - text: Twitter
       href: https://twitter.com/mhashemi
   # change to your own analytics code from analytics.google.com
@@ -18,7 +20,7 @@ site:
   analytics_code: UA-63522904-3
 
 theme:
-  name: sedimental
+  name: calver
 
 dev:
   server_host: 0.0.0.0
