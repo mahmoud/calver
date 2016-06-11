@@ -52,48 +52,47 @@ choose a single scheme, CalVer introduces standard terminology for
 users, based on researching current practice.
 
 * YYYY - Full year (four-digit)
-* YY - Truncated year (two-digit)
-* MM - Trimmed month (e.g., 1, 2, 3 ... 10, 11, 12)
+* YY - Short year (two-digit)
+* MM - Short month (e.g., 1, 2, 3 ... 10, 11, 12)
 * 0M - Zero-padded month (e.g., 01, 02, 03 ... 10, 11, 12)
-* DD - Trimmed day
+* DD - Short day
 * 0D - Zero-padded day
 
-Major, minor, and micro are all 0-based, where as the date segments
-are 1-based.
+Note that traditional, incremented version numbers are 0-based, but
+these date segments are 1-based.
 
-Projects are free to use any calendar, provided they state which
-one. Otherwise, the Gregorian calendar is assumed, as is the
-convention of UTC.
+The Gregorian calendar is assumed, as is the convention of
+UTC. Technically any calendar can be used, provided projects state
+which one.
 
 # Case studies
 
 ## Ubuntu
 
-**YY.0M.MICRO** - [Link]()
+**`YY.0M.MICRO`** - [Link](http://www.ubuntu.com)
+
+Three-segment, short year, zero-padded month.
 
 ## Twisted
 
-**YY.MINOR.MICRO** - [Link]()
+**`YY.MINOR.MICRO`** - [Link](https://twistedmatrix.com)
+
+Three-segment, short year.
 
 ## youtube_dl
 
-**YYYY.0M.0D** - [Link]()
+**`YYYY.0M.0D`** - [Link](https://rg3.github.io/youtube-dl/)
 
-## fusefs-ntfs
-
-**YYYY.MM.DD_MICRO** - [Link]()
-
-## OpenSCAD
-
-**YYYY.0M**
-
-Two-segment, full year, zero padded month
+Three-segment, full year, zero-padded month, zero-padded day. In some
+contexts the version adds a fourth segment for MICRO.
 
 ## pytz
 
-Example: YYYY.MM - pytz
+**`YYYY.MM`** - [Link]()
 
-Example: YYYY.MM.DD - certifi
+## certifi
+
+**`YYYY.MM.DD`** - [Link]()
 
 ## Teradata
 
@@ -110,6 +109,12 @@ releases, the API of the library remains the same as it did in October
 2015. Dependent code written since then is safe to upgrade.  We will
 see the year and month segments update next time there is a breaking
 API change.
+
+
+## Other notable projects
+
+* [fusefs-ntfs]() - **YYYY.MM.DD_MICRO**
+* [OpenSCAD]() - **YYYY.0M** - Two-segment. Full year, zero-padded month.
 
 # When to use CalVer
 
