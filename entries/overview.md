@@ -7,7 +7,7 @@ Software versioning is important.
 
 For engineers, versioning allows us to specify precise dependencies
 within ever-expanding software ecosystems. For marketers, the version
-is the dynamic part of the project's brand. For all of us, software
+is the dynamic part of a project's brand. For all of us, software
 versioning lets us reference the past while upgrading to the future.
 
 <!-- Developers who do not design their versioning scheme to match
