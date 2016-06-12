@@ -5,12 +5,10 @@ publish_date: March 25, 2016
 
 Software versioning is important.
 
-Without versioning, we would not be able to discuss software's past or
-plan software's future. For engineers, versioning allows us to specify
-precise dependencies within ever-expanding software ecosystems. For
-marketers, the version is the dynamic part of the project's brand. For
-all of us, software versioning lets us reference the past while
-upgrading to the future.
+For engineers, versioning allows us to specify precise dependencies
+within ever-expanding software ecosystems. For marketers, the version
+is the dynamic part of the project's brand. For all of us, software
+versioning lets us reference the past while upgrading to the future.
 
 <!-- Developers who do not design their versioning scheme to match
 their project are leaving valuable communication capital on the
@@ -18,27 +16,28 @@ table. -->
 
 Different software projects use different systems for versioning, but
 some common practices have emerged. Numeric, decimal point separation,
-e.g., 3.1.4, is all but assumed. Another common versioning pattern to
+e.g., *3.1.4*, is all but given. Another common versioning pattern to
 emerge involves incorporating a time-based element, usually part of
 the release date, into the version.
 
 This date-based approach has come to be called Calendar Versioning, or
-CalVer for short.
+**CalVer** for short.
 
-# Schemes
+[TOC]
 
-There are multiple CalVer schemes, long used by projects big and
-small. Rather than selecting a single scheme as CalVer, it's important
-to recognize the practicality of each and choose the scheme on a
-per-project basis.
+# Scheme
+
+There are multiple calendar versioning schemes, long used by projects
+big and small. Rather than declaring a single scheme to be CalVer,
+it's important to recognize the practicality of each and choose the
+scheme on a per-project basis. First, the parts of the version:
 
 * **Major** - The first number in the version. 2 and 3 are Python's famous
-  major versions. In calendar versioning, this is most commonly the
-  year.
+  major versions. The major segment is the most common calendar-based component.
 * **Minor** - The second number in the version. 7 is the most popular
-  Python minor version.
+  minor version of Python.
 * **Micro** - The third and usually final number in the version. Sometimes
-  referred to as "patch".
+  referred to as the "patch" segment.
 * **Modifier** - An optional text tag, such as "dev", "alpha", "beta",
   "rc1", and so on.
 
@@ -46,20 +45,21 @@ The vast majority of modern software versions are composed of two or
 three numeric segments, plus the optional modifier. Convention
 suggests that four-numeric-segment versions are discouraged.
 
-As seen in the list of real-world examples below, projects have found
-more than one useful way to use dates in their versions. Rather than
-choose a single scheme, CalVer introduces standard terminology for
-users, based on researching current practice.
+As seen in the [case studies](#case_studies) below, projects have
+found more than one useful way to leverage dates in their
+versions. Rather than choose a single scheme, CalVer introduces
+standard terminology for developers, based on current practices and
+conventions.
 
-* YYYY - Full year (four-digit)
-* YY - Short year (two-digit)
-* MM - Short month (e.g., 1, 2, 3 ... 10, 11, 12)
-* 0M - Zero-padded month (e.g., 01, 02, 03 ... 10, 11, 12)
-* DD - Short day
-* 0D - Zero-padded day
+* **`YYYY`** - Full year - 2006, 2016
+* **`YY`** - Short year - 6, 16, 106
+* **`MM`** - Short month - 1, 2 ... 11, 12
+* **`0M`** - Zero-padded month - 01, 02 ... 11, 12
+* **`DD`** - Short day - 1, 2 ... 30, 31
+* **`0D`** - Zero-padded day - 01, 02 ... 30, 31
 
-Note that traditional, incremented version numbers are 0-based, but
-these date segments are 1-based.
+Note that traditional, incremented version numbers are 0-based,
+whereas date segments are 1-based.
 
 The Gregorian calendar is assumed, as is the convention of
 UTC. Technically any calendar can be used, provided projects state
@@ -69,52 +69,136 @@ which one.
 
 ## Ubuntu
 
-**`YY.0M.MICRO`** - [Link](http://www.ubuntu.com)
+<img src="https://img.shields.io/badge/calver-YY.0M.MICRO-22bfda.svg" />
 
-Three-segment, short year, zero-padded month.
+**[Ubuntu][ubuntu]**, one of the most prominent Linux-based operating
+systems available, uses a three-segment CalVer scheme, with a short
+year and zero-padded month. It has done so from the very start, in
+October 2004, making 4.10 the first general release of Ubuntu.
+
+Even a simple operating system involves many, many parts, making it
+difficult to communicate much meaning with an arbitrary number. By
+dating the software release, the calendar-based version is much more
+than an arbitrary number, communicating useful information that is
+rooted in simple fact.
+
+Ubuntu derives additional benefit from its CalVer scheme, by
+integrating it with their support schedule. Ubuntu currently has
+five-year support periods for their long-term support (LTS) releases,
+and only 9 months for non-LTS releases. Thanks to CalVer and
+elementary arithmetic, any user can easily determine whether their
+version is still supported. The current LTS release at the time of
+writing, 16.04, will be supported until April 2021.
+
+[ubuntu]: http://www.ubuntu.com/
 
 ## Twisted
 
-**`YY.MINOR.MICRO`** - [Link](https://twistedmatrix.com)
+<img src="https://img.shields.io/badge/calver-YY.MINOR.MICRO-22bfda.svg" />
 
-Three-segment, short year.
+**[Twisted][twisted]**, the venerated Python networking and
+asynchronous execution framework, uses a three-segment CalVer scheme,
+with a short year in the major version slot.
+
+First released in 2002 and still actively developed today, Twisted is a
+mature library that has grown to match its large scope. It features
+everything from an IRC client to an HTTP server to a slew of utilities
+for concurrent programming. Like an operating system, there are a lot
+of parts, and what triggers a micro-segment update versus a
+minor-segment update is completely up to maintainers.
+
+However, a CalVer major segment provides a definitive basis for
+integrators and maintainers. It also provides an image of consistent
+forward momentum, suitable for any evolving library.
+
+[twisted]: https://twistedmatrix.com
 
 ## youtube_dl
 
-**`YYYY.0M.0D`** - [Link](https://rg3.github.io/youtube-dl/)
+<img src="https://img.shields.io/badge/calver-YYYY.0M.0D-22bfda.svg" />
 
-Three-segment, full year, zero-padded month, zero-padded day. In some
-contexts the version adds a fourth segment for MICRO.
+**[youtube_dl][youtube_dl]**, the understated friend of Internet media archivists
+everywhere, uses a three-segment CalVer scheme, including full year,
+zero-padded month, and zero-padded day. The version is almost
+completely calendar-driven, except for a micro segment that is added
+in some technical contexts.
+
+Despite the name, youtube_dl's scope is expansive. It supports
+extracting audio and video from a long, ever-expanding list of
+sites. Consider the rapid release cycle of supported services, and it
+becomes clear why the project has adopted CalVer to such a great
+degree.
+
+[youtube_dl]: https://rg3.github.io/youtube-dl/
 
 ## pytz
 
-**`YYYY.MM`** - [Link]()
+<img src="https://img.shields.io/badge/calver-YYYY.MM-22bfda.svg" />
 
-## certifi
+**[pytz][pytz]** is the Python translation of the IANA/Olson timezone
+database, the database behind accurate times for all of computerdom.
+pytz uses a two-segment CalVer scheme, including full year and short
+month.
 
-**`YYYY.MM.DD`** - [Link]()
+While Python has a history of "batteries-included" architecture, and
+the datetime module frequently mentions timezones, the core Python
+runtime does not include timezone information. This is because
+timezone updates do not follow a fixed schedule, and are subject to
+politics and legislative whim. Calendar versioning offers a
+date-stamped snapshot of an otherwise chaotic system.
+
+[pytz]: https://pypi.python.org/pypi/pytz
 
 ## Teradata
 
-**YY.MM.MINOR.MICRO** - [Link](https://pypi.python.org/pypi/teradata)
+<img src="https://img.shields.io/badge/calver-YY.MM.MINOR.MICRO-22bfda.svg" />
 
-Notable because there have been multiple releases in 2016 which were
-versioned as *15.10.\**. This may seem breaking at first, but the
-meaning and utility is clear.
+The **[Teradata UDA client][teradata_uda]** provides [next-generation
+access][uda_blog] to [Teradata][teradata]'s data warehousing technologies.
 
-In effect, the library has crafted a resourceful hybrid of semantic
-versioning and calendar versioning. The **YY.MM** part of the version
-are used as a combined SemVer major version. That is, for new
-releases, the API of the library remains the same as it did in October
-2015. Dependent code written since then is safe to upgrade.  We will
-see the year and month segments update next time there is a breaking
-API change.
+Teradata's usage is notable not for the prominence of the technology
+or company, but because there have been multiple releases in 2016
+which were versioned as `15.10`. This may seem breaking at first, but
+the meaning and utility is clear.
 
+The library maintainers have crafted a resourceful hybrid of
+[semantic versioning][semver] and calendar versioning. The **YY.MM**
+part of the version are used as a combined SemVer major version. That
+is, for new releases, the API of the library remains the same as it
+did in October 2015. Dependent code written since then is safe to
+upgrade.  We will see the year and month segments update next time
+there is a breaking API change.
+
+[teradata]: http://www.teradata.com/
+[teradata_uda]: https://pypi.python.org/pypi/teradata
+[uda_blog]: https://developer.teradata.com/tools/reference/teradata-python-module
+[semver]: http://semver.org/
 
 ## Other notable projects
 
-* [fusefs-ntfs]() - **YYYY.MM.DD_MICRO**
-* [OpenSCAD]() - **YYYY.0M** - Two-segment. Full year, zero-padded month.
+* [boltons][boltons] - **`YY.MINOR.MICRO`** - A broad library of
+  utilities supplementing the Python standard library.
+* [PyCharm][pycharm] - **`YYYY.MINOR.MICRO`** - A leading Python IDE.
+* [OpenSCAD][openscad] - **`YYYY.0M`** - The premiere open-source
+  offering for solid 3D CAD modelling.
+* [fusefs-ntfs][fusefs-ntfs] - **`YYYY.MM.DD_MICRO`** - One of the
+  earliest and most cross-compatible NTFS access layers for Unix
+  systems.
+* [certifi][certifi] - **`YYYY.MM.DD`** - certifi is a wrapper around
+  Mozilla's certificate authority bundle, used for secure Internet
+  communication. Similar to [pytz](#pytz), certificate updates do not
+  follow a fixed schedule, but timely, dateable updates are critical
+  to security.
+<!-- * Windows 95, 98, and 2000 - While Ubuntu is undoubtedly the
+better operating sytem exemplar, Windows did serve to demonstrate the
+branding success of CalVer. Windows 95 simply had a better ring to it
+than Windows 3.1.1. -->
+
+[boltons]: http://boltons.readthedocs.io/en/latest/
+[pycharm]: https://www.jetbrains.com/pycharm/download/
+[fusefs-ntfs]: http://www.freshports.org/sysutils/fusefs-ntfs
+[openscad]: http://www.openscad.org/
+[certifi]: https://pypi.python.org/pypi/certifi
 
 # When to use CalVer
 
@@ -123,7 +207,7 @@ wait is over. In the end the decision is the project developer's, but
 here are the questions to be asking:
 
 * Is your project large or all-encompassing?
-    * Large frameworks, like Twisted.
+    * Large systems and frameworks, like Ubuntu and Twisted.
     * Amorphous sets of utilities, like Boltons.
 * Is your project time-sensitive in any way? Are external changes a
   primary driver of new project releases?
@@ -133,3 +217,17 @@ here are the questions to be asking:
 
 If you answered yes to any of these questions, CalVer's semantics may
 make it a strong choice for your project.
+
+<!--
+
+Protocols are perfect. Or rather, protocols are abstractions that can
+approach axiomatic perfection. However, implementations can never be
+perfect. They can only model the current version of the protocol.
+
+Thus it makes sense to version protocols with a basic 0-based,
+incremental scheme, such as TLS 1.0, 1.1, 1.2, etc. Then,
+implementations track their increasing correctness through
+calendar-based versioning. Perhaps we'll see an OpenSSL 17.0.0 in our
+near future.
+
+-->
