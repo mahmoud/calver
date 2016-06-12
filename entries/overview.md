@@ -82,8 +82,9 @@ notability and variety of use cases.
 
 **[Ubuntu][ubuntu]**, one of the most prominent Linux-based operating
 systems available, uses a three-segment CalVer scheme, with a short
-year and zero-padded month. It has done so from the very start, in
-October 2004, making 4.10 the first general release of Ubuntu.
+year and zero-padded month. It has done so
+[from the very start][ubuntu_releases], in October 2004, making 4.10
+the first general release of Ubuntu.
 
 Even a simple operating system involves many, many parts, making it
 difficult to communicate much meaning with an arbitrary number. By
@@ -100,6 +101,7 @@ version is still supported. The current LTS release at the time of
 writing, 16.04, will be supported until April 2021.
 
 [ubuntu]: http://www.ubuntu.com/
+[ubuntu_releases]: https://en.wikipedia.org/wiki/List_of_Ubuntu_releases
 
 ## Twisted
 
@@ -109,18 +111,19 @@ writing, 16.04, will be supported until April 2021.
 asynchronous execution framework, uses a three-segment CalVer scheme,
 with a short year in the major version slot.
 
-First released in 2002 and still actively developed today, Twisted is a
-mature library that has grown to match its large scope. It features
-everything from an IRC client to an HTTP server to a slew of utilities
-for concurrent programming. Like an operating system, there are a lot
-of parts, and what triggers a micro-segment update versus a
-minor-segment update is completely up to maintainers.
+First released in 2002 and still actively developed today, Twisted is
+a [mature][twisted_wp] library that has grown to match its large
+scope. It features everything from an IRC client to an HTTP server to
+a slew of utilities for concurrent programming. Like an operating
+system, there are a lot of parts, and what triggers a micro-segment
+update versus a minor-segment update is completely up to maintainers.
 
-However, a CalVer major segment provides a definitive basis for
-integrators and maintainers. It also provides an image of consistent
-forward momentum, suitable for any evolving library.
+The CalVer major segment provides a definitive basis for integrators
+and maintainers. It also provides an image of consistent forward
+momentum, suitable for any evolving library.
 
 [twisted]: https://twistedmatrix.com
+[twisted_wp]: https://en.wikipedia.org/wiki/Twisted_%28software%29
 
 ## youtube_dl
 
@@ -144,10 +147,10 @@ degree.
 
 <img src="https://img.shields.io/badge/calver-YYYY.MM-22bfda.svg" />
 
-**[pytz][pytz]** is the Python translation of the IANA/Olson timezone
-database, the database behind accurate times for all of computerdom.
-pytz uses a two-segment CalVer scheme, including full year and short
-month.
+**[pytz][pytz]** is the Python translation of the
+[IANA/Olson timezone database][iana_tz], the database behind accurate
+times for all of computerdom.  pytz uses a two-segment CalVer scheme,
+including full year and short month.
 
 While Python has a history of "batteries-included" architecture, and
 the datetime module frequently mentions timezones, the core Python
@@ -157,6 +160,7 @@ politics and legislative whim. Calendar versioning offers a
 date-stamped snapshot of an otherwise chaotic system.
 
 [pytz]: https://pypi.python.org/pypi/pytz
+[iana_tz]: https://www.iana.org/time-zones
 
 ## Teradata
 
