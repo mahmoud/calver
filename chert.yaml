@@ -29,10 +29,10 @@ dev:
   autorefresh: 0  # set to a positive integer to cause the default theme to autorefresh every few seconds
 
 prod:
-  canonical_domain: http://sedimental.org
+  canonical_domain: http://calver.org
   canonical_base_path: /
-  remote_host: sedimental.org
-  remote_user: chert_user
-  remote_path: /home/chert_user/my_site/public
+  remote_host: calver.org
+  remote_user: mahmoud
+  remote_path: /home/mahmoud/calver/public
   # rsync_cmd: rsync
   # rsync_flags: avzPk
