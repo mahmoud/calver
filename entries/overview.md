@@ -29,8 +29,9 @@ This date-based approach has come to be called Calendar Versioning, or
 
 There are multiple calendar versioning schemes, long used by projects
 big and small. Rather than declaring a single scheme to be CalVer,
-it's important to recognize the practicality of each and choose the
-scheme on a per-project basis. First, the parts of the version:
+it's important to recognize the practicality of each and
+[design the scheme][designing_a_version] to fit the project. First,
+the parts of the version:
 
 * **Major** - The first number in the version. 2 and 3 are Python's famous
   major versions. The major segment is the most common calendar-based component.
@@ -44,6 +45,8 @@ scheme on a per-project basis. First, the parts of the version:
 The vast majority of modern software versions are composed of two or
 three numeric segments, plus the optional modifier. Convention
 suggests that four-numeric-segment versions are discouraged.
+
+[designing_a_version]: http://sedimental.org/designing_a_version.html
 
 As seen in the [case studies](#case_studies) below, projects have
 found more than one useful way to leverage dates in their
@@ -61,11 +64,17 @@ conventions.
 Note that traditional, incremented version numbers are 0-based,
 whereas date segments are 1-based.
 
-The Gregorian calendar is assumed, as is the convention of
-UTC. Technically any calendar can be used, provided projects state
-which one.
+The [Gregorian calendar][gregorian] is assumed, as is the convention
+of [UTC][utc]. Technically any calendar can be used, provided projects
+state which one.
+
+[gregorian]: https://en.wikipedia.org/wiki/Gregorian_calendar
+[utc]: https://en.wikipedia.org/wiki/Coordinated_Universal_Time
 
 # Case studies
+
+CalVer has quite a few users. These are projects selected for their
+notability and variety of use cases.
 
 ## Ubuntu
 
@@ -207,13 +216,13 @@ wait is over. In the end the decision is the project developer's, but
 here are the questions to be asking:
 
 * Is your project large or all-encompassing?
-    * Large systems and frameworks, like Ubuntu and Twisted.
-    * Amorphous sets of utilities, like Boltons.
+    * Large systems and frameworks, like [Ubuntu](#ubuntu) and [Twisted](#twisted).
+    * Amorphous sets of utilities, like [Boltons](#other_notable_projects).
 * Is your project time-sensitive in any way? Are external changes a
   primary driver of new project releases?
-    * Business requirements, such as Ubuntu's focus on support schedules.
-    * Security updates, such as certifi's need to update certificates.
-    * Political shifts, such as pytz's handling of timezone changes.
+    * Business requirements, such as [Ubuntu](#ubuntu)'s focus on support schedules.
+    * Security updates, such as [certifi](#other_notable_projects)'s need to update certificates.
+    * Political shifts, such as [pytz](#pytz)'s handling of timezone changes.
 
 If you answered yes to any of these questions, CalVer's semantics may
 make it a strong choice for your project.
