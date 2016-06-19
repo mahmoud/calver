@@ -1,16 +1,37 @@
 ---
 title: About
-publish_date: May 10, 2015
+publish_date: June 18, 2016
 special: true
 ---
 
-<!-- TODO: portrait -->
+<img height=300 align=right src="/uploads/caltree_med.png">
 
-Here are a few facts of an autobiographical nature:
+CalVer is a software versioning convention based on calendar dates of
+project releases, instead of arbitrary numbers. There are
+[many benefits][designing_a_version] to this approach, and
+[multiple variations][calver_overview] to custom fit all projects.
 
-* I write words, at least some of the time.
-* I run Python, at least some of the time.
+Calendar versioning has a long history, but CalVer itself was first
+publicly released in 2016. The initial version was written by
+[Mahmoud Hashemi][mahmoud], with thanks to
+[Stephen LaPorte][stephen], [Mark Williams][mark],
+[Glyph Lefkowitz][glyph], and [Hynek Schlawack][hynek].
 
-My PGP key fingerprint looks a little like:
+If you have questions, comments, issues, or enhancements, please feel
+free to [open an issue on the CalVer GitHub][issue].
 
-`ABCD 92F2 EDE7 BEEF DEED A3CF 4567 4756 ED87 1234`
+This site generated with [Chert][chert] and [Python][python].
+
+[designing_a_version]: http://sedimental.org/designing_a_version.html
+[calver_overview]: /overview.html
+
+[mahmoud]: http://sedimental.org
+[stephen]: https://twitter.com/sklaporte
+[mark]: https://enotuniq.org/
+[glyph]: https://twitter.com/glyph
+[hynek]: https://twitter.com/hynek
+
+[issue]: https://github.com/mahmoud/calver/issues
+
+[chert]: https://github.com/mahmoud/chert
+[python]: http://python.org
