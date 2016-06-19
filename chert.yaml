@@ -8,8 +8,8 @@ site:
   primary_links:
     - text: About
       href: /about.html
-    - text: Examples
-      href: '#'
+    - text: Users
+      href: '/users.html'
     - text: Github
       href: https://github.com/mahmoud/calver
       desc: CalVer site source
