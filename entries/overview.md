@@ -3,7 +3,10 @@ title: Calendar Versioning
 publish_date: March 25, 2016
 ---
 
-Software versioning is important.
+*CalVer is a software versioning convention that is based on your
+project's release calendar, instead of arbitrary numbers.*
+
+**Software versioning gets better with time.**
 
 For engineers, versioning allows us to specify precise dependencies
 within ever-expanding software ecosystems. For marketers, the version
@@ -16,9 +19,9 @@ table. -->
 
 Different software projects use different systems for versioning, but
 some common practices have emerged. Numeric, decimal point separation,
-e.g., *3.1.4*, is all but given. Another common versioning pattern to
-emerge involves incorporating a time-based element, usually part of
-the release date, into the version.
+e.g., *3.1.4*, is all but given. Another common versioning pattern
+incorporates a time-based element, usually part of the release date,
+into the version.
 
 This date-based approach has come to be called Calendar Versioning, or
 **CalVer** for short.
@@ -129,11 +132,11 @@ momentum, suitable for any evolving library.
 
 <img src="https://img.shields.io/badge/calver-YYYY.0M.0D-22bfda.svg" />
 
-**[youtube_dl][youtube_dl]**, the understated friend of Internet media archivists
-everywhere, uses a three-segment CalVer scheme, including full year,
-zero-padded month, and zero-padded day. The version is almost
-completely calendar-driven, except for a micro segment that is added
-in some technical contexts.
+**[youtube_dl][youtube_dl]**, the understated ally of Internet
+media archivists everywhere, uses a three-segment CalVer scheme,
+including full year, zero-padded month, and zero-padded day. The
+version is almost completely calendar-driven, except for a micro
+segment that is added in some technical contexts.
 
 Despite the name, youtube_dl's scope is expansive. It supports
 extracting audio and video from a long, ever-expanding list of
