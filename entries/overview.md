@@ -1,5 +1,6 @@
 ---
 title: Calendar Versioning
+entry_root: overview
 publish_date: March 25, 2016
 ---
 
@@ -215,6 +216,10 @@ than Windows 3.1.1. -->
 [fusefs-ntfs]: http://www.freshports.org/sysutils/fusefs-ntfs
 [openscad]: http://www.openscad.org/
 [certifi]: https://pypi.python.org/pypi/certifi
+
+See the [Users page][users] for a growing list of CalVer users.
+
+[users]: /users.html
 
 # When to use CalVer
 
