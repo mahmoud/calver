@@ -10,7 +10,7 @@ site:
       href: /about.html
     - text: Users
       href: '/users.html'
-    - text: Github
+    - text: GitHub
       href: https://github.com/mahmoud/calver
       desc: CalVer site source
     - text: Twitter
