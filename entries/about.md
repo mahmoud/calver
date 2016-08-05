@@ -13,9 +13,9 @@ project releases, instead of arbitrary numbers. There are
 
 Calendar versioning has a long history, but CalVer itself was first
 publicly released in 2016. The initial version was written by
-[Mahmoud Hashemi][mahmoud], with thanks to
-[Stephen LaPorte][stephen], [Mark Williams][mark],
-[Glyph Lefkowitz][glyph], and [Hynek Schlawack][hynek].
+[Mahmoud Hashemi][mahmoud], with thanks to [Stephen LaPorte][stephen],
+[Mark Williams][mark], [Glyph Lefkowitz][glyph],
+[Amber Brown][hawkowl], and [Hynek Schlawack][hynek].
 
 If you have questions, comments, issues, or enhancements, please feel
 free to [open an issue on the CalVer GitHub][issue].
@@ -29,6 +29,7 @@ This site generated with [Chert][chert] and [Python][python].
 [stephen]: https://twitter.com/sklaporte
 [mark]: https://enotuniq.org/
 [glyph]: https://twitter.com/glyph
+[hawkowl]: https://github.com/hawkowl
 [hynek]: https://twitter.com/hynek
 
 [issue]: https://github.com/mahmoud/calver/issues
