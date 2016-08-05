@@ -4,7 +4,7 @@ publish_date: June 18, 2016
 special: true
 ---
 
-<img height=300 align=right src="/uploads/caltree_med.png">
+<img width=40% align=right src="/uploads/calver_cal_med.png">
 
 CalVer is a software versioning convention based on calendar dates of
 project releases, instead of arbitrary numbers. There are
