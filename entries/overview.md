@@ -113,21 +113,30 @@ writing, 16.04, will be supported until April 2021.
 
 **[Twisted][twisted]**, the venerated Python networking and
 asynchronous execution framework, uses a three-segment CalVer scheme,
-with a short year in the major version slot.
+with a short year in the major version slot, release number of that year
+in the minor slot, and the micro slot being the bugfix release number.
 
 First released in 2002 and still actively developed today, Twisted is
 a [mature][twisted_wp] library that has grown to match its large
 scope. It features everything from an IRC client to an HTTP server to
 a slew of utilities for concurrent programming. Like an operating
-system, there are a lot of parts, and what triggers a micro-segment
-update versus a minor-segment update is completely up to maintainers.
+system, there are a lot of parts, and so semver is a poor fit due to
+the individual parts deprecating & breaking compatibility individually.
 
-The CalVer major segment provides a definitive basis for integrators
-and maintainers. It also provides an image of consistent forward
-momentum, suitable for any evolving library.
+The non-deprecated parts of Twisted are backwards compatible between
+each successive version, and breaking changes are done on a time basis,
+where one year must pass and two releases issued between the release
+deprecating the functionality and the removal of the functionality.
+
+Its versioning scheme has spread to related projects, including
+[Klein][klein], [Treq][treq], and a dependency of Twisted,
+[PyOpenSSL][pyopenssl].
 
 [twisted]: https://twistedmatrix.com
 [twisted_wp]: https://en.wikipedia.org/wiki/Twisted_%28software%29
+[klein]: https://github.com/twisted/klein
+[treq]: https://github.com/twisted/treq
+[pyopenssl]: https://github.com/pyca/pyopenssl
 
 ## youtube_dl
 
