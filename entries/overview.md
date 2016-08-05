@@ -120,16 +120,16 @@ First released in 2002 and still actively developed today, Twisted is
 a [mature][twisted_wp] library that has grown to match its large
 scope. It features everything from an IRC client to an HTTP server to
 a slew of utilities for concurrent programming. Like an operating
-system, there are a lot of parts, and so semver is a poor fit due to
-the individual parts deprecating & breaking compatibility individually.
+system, Twisted has a lot of parts, making SemVer a poor fit due to
+the individual parts deprecating and breaking compatibility individually.
 
-The non-deprecated parts of Twisted are backwards compatible between
+The non-deprecated parts of Twisted are backwards-compatible between
 each successive version, and breaking changes are done on a time basis,
 where one year must pass and two releases issued between the release
 deprecating the functionality and the removal of the functionality.
 
 Its versioning scheme has spread to related projects, including
-[Klein][klein], [Treq][treq], and a dependency of Twisted,
+[Klein][klein], [Treq][treq], and even one of Twisted's dependencies,
 [PyOpenSSL][pyopenssl].
 
 [twisted]: https://twistedmatrix.com
