@@ -109,7 +109,7 @@ writing, 16.04, will be supported until April 2021.
 
 ## Twisted
 
-<img src="https://img.shields.io/badge/calver-YY.MINOR.MICRO-22bfda.svg" />
+<img src="https://img.shields.io/badge/calver-YY.MM.MICRO-22bfda.svg" />
 
 **[Twisted][twisted]**, the venerated Python networking and
 asynchronous execution framework, uses a three-segment CalVer scheme,
