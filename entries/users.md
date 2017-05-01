@@ -31,6 +31,7 @@ Project                         | CalVer Format      | Examples
 [JetBrains PyCharm][pycharm]    | `YYYY.MINOR.MICRO` | 2017.1.2
 
 [ubuntu]: /overview.html#ubuntu
+[nixos_releases]: https://nixos.org/news.html
 [ms_win]: https://en.wikipedia.org/wiki/Microsoft_Windows
 [openscad]: https://en.wikipedia.org/wiki/OpenSCAD
 [pycharm]: https://en.wikipedia.org/wiki/PyCharm
