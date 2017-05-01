@@ -1,7 +1,8 @@
 ---
 title: Calendar Versioning
 entry_root: overview
-publish_date: March 25, 2016
+publish_date: May 1, 2017
+orig_publish_dat: March 25, 2016
 ---
 
 *CalVer is a software versioning convention that is based on your
