@@ -24,10 +24,11 @@ from incorporating calendar dates into their brands.
 
 Project                         | CalVer Format      | Examples
 ------------------------------- | ------------------ | ---------------
-[Ubuntu][ubuntu]                | `YY.0M`            | 4.10 - 16.04
+[Ubuntu][ubuntu]                | `YY.0M`            | 4.10 - 17.04
+[NixOS][nixos_releases]         | `YY.0M`            | 13.10 - 17.03
 [Microsoft Windows][ms_win]     | `YY`/`YYYY`        | 95, 98, 2000
 [OpenSCAD][openscad]            | `YYYY.0M`          | 2015.03
-[JetBrains PyCharm][pycharm]    | `YYYY.MINOR.MICRO` | 2016.1.2
+[JetBrains PyCharm][pycharm]    | `YYYY.MINOR.MICRO` | 2017.1.2
 
 [ubuntu]: /overview.html#ubuntu
 [ms_win]: https://en.wikipedia.org/wiki/Microsoft_Windows
@@ -61,8 +62,8 @@ freshness with just a glance at the dependency list.
 
 Project                         | CalVer Format       | Examples
 ------------------------------- | ------------------- | ---------------
-[Boltons][boltons]              | `YY.MINOR.MICRO`    | 16.4.1
-[Twisted][twisted]              | `YY.MINOR.MICRO`    | 16.1.0
+[Boltons][boltons]              | `YY.MINOR.MICRO`    | 17.2.0
+[Twisted][twisted]              | `YY.MM.MICRO`       | 16.1.1
 [certifi][certifi]              | `YYYY.MM.DD`        | 2016.2.28
 [Teradata][teradata]            | `YY.MM.MINOR.MICRO` | 15.10.0.16
 [pytz][pytz]                    | `YYYY.MM`           | 2016.4
