@@ -13,8 +13,6 @@ site:
     - text: GitHub
       href: https://github.com/mahmoud/calver
       desc: CalVer site source
-    - text: Twitter
-      href: https://twitter.com/mhashemi
   # change to your own analytics code from analytics.google.com
   # remove if you won't be using analytics
   analytics_code: UA-63522904-3
