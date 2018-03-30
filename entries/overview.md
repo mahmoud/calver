@@ -233,32 +233,19 @@ See the [Users page][users] for a growing list of CalVer users.
 
 # When to use CalVer
 
-For those seeking straight answers to the version design question, the
-wait is over. In the end the decision is the project developer's, but
-here are the questions to be asking:
+If both you and someone you don't know use your project seriously,
+then use a serious version. Your project is released, and it needs a
+nonzero major version. Luckily, the decision on whether to use CalVer
+for that version is easier than ever:
 
 * Is your project large or all-encompassing?
     * Large systems and frameworks, like [Ubuntu](#ubuntu) and [Twisted](#twisted).
     * Amorphous sets of utilities, like [Boltons](#other_notable_projects).
-* Is your project time-sensitive in any way? Are external changes a
-  primary driver of new project releases?
+* Is your project time-sensitive in any way? Do other external changes
+  drive new project releases?
     * Business requirements, such as [Ubuntu](#ubuntu)'s focus on support schedules.
     * Security updates, such as [certifi](#other_notable_projects)'s need to update certificates.
     * Political shifts, such as [pytz](#pytz)'s handling of timezone changes.
 
-If you answered yes to any of these questions, CalVer's semantics may
-make it a strong choice for your project.
-
-<!--
-
-Protocols are perfect. Or rather, protocols are abstractions that can
-approach axiomatic perfection. However, implementations can never be
-perfect. They can only model the current version of the protocol.
-
-Thus it makes sense to version protocols with a basic 0-based,
-incremental scheme, such as TLS 1.0, 1.1, 1.2, etc. Then,
-implementations track their increasing correctness through
-calendar-based versioning. Perhaps we'll see an OpenSSL 17.0.0 in our
-near future.
-
--->
+If you answered yes to any of these questions, CalVer's semantics make
+it a strong choice for your project.
