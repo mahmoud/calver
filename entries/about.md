@@ -7,9 +7,10 @@ special: true
 <img width=40% align=right src="/uploads/calver_cal_med.png">
 
 CalVer is a software versioning convention based on calendar dates of
-project releases, instead of arbitrary numbers. There are
-[many benefits][designing_a_version] to this approach, and
-[multiple variations][calver_overview] to custom fit all projects.
+project releases, support schedules, and compatibility, instead of
+arbitrary numbers. There are [many benefits][designing_a_version] to
+this approach, and [multiple variations][calver_overview] to custom
+fit all projects.
 
 Calendar versioning has a long history, but CalVer itself was first
 publicly released in 2016. The initial version was written by

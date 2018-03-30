@@ -1,6 +1,8 @@
 ---
 title: CalVer Users
 entry_root: users
+special: true
+publish_date: March 29, 2018
 ---
 
 Calendar versioning has a long history, and CalVer users can be found
@@ -29,12 +31,14 @@ Project                         | CalVer Format      | Examples
 [Microsoft Windows][ms_win]     | `YY`/`YYYY`        | 95, 98, 2000
 [OpenSCAD][openscad]            | `YYYY.0M`          | 2015.03
 [JetBrains PyCharm][pycharm]    | `YYYY.MINOR.MICRO` | 2017.1.2
+[ArchLinux][archlinux]          | `YYYY.0M.0D`       | 2018.03.01
 
 [ubuntu]: /overview.html#ubuntu
 [nixos_releases]: https://nixos.org/news.html
 [ms_win]: https://en.wikipedia.org/wiki/Microsoft_Windows
 [openscad]: https://en.wikipedia.org/wiki/OpenSCAD
 [pycharm]: https://en.wikipedia.org/wiki/PyCharm
+[archlinux]: https://www.archlinux.org/releng/releases/
 
 # Standards
 
@@ -49,12 +53,14 @@ Project                         | CalVer Format     | Examples
 [C][c]                          | `YY`              | 89, 99, 11
 [C++][cpp]                      | `YY`              | 98, 03, 11, 14, 17
 [Fortran][fortran]              | `YY`/`YYYY`       | 66, 77, 90, 95, 2003, 2008
+[Python manylinux][manylinux]   | `YYYY`            | 2010 ("backwards compatible to")
 
 [ada]: https://en.wikipedia.org/wiki/Ada_(programming_language)
 [algol]: https://en.wikipedia.org/wiki/ALGOL_60
 [c]: https://en.wikipedia.org/wiki/C_(programming_language)
 [cpp]: https://en.wikipedia.org/wiki/C%2B%2B
 [fortran]: https://en.wikipedia.org/wiki/Fortran
+[manylinux]: https://www.python.org/dev/peps/pep-0571/
 
 # Libraries
 
@@ -68,12 +74,14 @@ Project                         | CalVer Format       | Examples
 [certifi][certifi]              | `YYYY.MM.DD`        | 2016.2.28
 [Teradata][teradata]            | `YY.MM.MINOR.MICRO` | 15.10.0.16
 [pytz][pytz]                    | `YYYY.MM`           | 2016.4
+[attrs][attrs]                  | `YY.MINOR.MICRO`    | 17.4.0
 
 [boltons]: http://boltons.readthedocs.io/en/latest/
 [twisted]: /overview.html#twisted
 [certifi]: https://pypi.python.org/pypi/certifi
 [teradata]: /overview.html#teradata
 [pytz]: /overview.html#pytz
+[attrs]: https://github.com/python-attrs/attrs
 
 # Utilities
 
@@ -83,9 +91,11 @@ Project                         | CalVer Format       | Examples
 ------------------------------- | ------------------- | ---------------
 [youtube_dl][youtube_dl]        | `YYYY.0M.0D.MICRO`  | 2016.06.19.1
 [fusefs-ntfs][fsfntfs]          | `YYYY.MM.DD_MICRO`  | 2016.2.22_1
+[black][black]                  | `YY.MM.MICRO`       | 18.3a0
 
 [youtube_dl]: /overview.html#youtube_dl
 [fsfntfs]: http://www.freshports.org/sysutils/fusefs-ntfs
+[black]: https://github.com/ambv/black
 
 # Other
 
