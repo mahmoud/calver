@@ -13,17 +13,17 @@ project's release calendar, instead of arbitrary numbers.*
 For engineers, versioning allows us to specify precise dependencies
 within ever-expanding software ecosystems. For marketers, the version
 is the dynamic part of a project's brand. For all of us, software
-versioning lets us reference the past while upgrading to the future.
+versioning lets us reference the past while also upgrading to the
+future.
 
 <!-- Developers who do not design their versioning scheme to match
 their project are leaving valuable communication capital on the
 table. -->
 
 Different software projects use different systems for versioning, but
-some common practices have emerged. Numeric, decimal point separation,
-e.g., *3.1.4*, is all but given. Another common versioning pattern
-incorporates a time-based element, usually part of the release date,
-into the version.
+some common practices have emerged. Point-separated numbers e.g.,
+*3.1.4*, are all but given. Another common versioning pattern
+incorporates a time-based element, usually part of the release date.
 
 This date-based approach has come to be called Calendar Versioning, or
 **CalVer** for short.
