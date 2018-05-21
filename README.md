@@ -24,10 +24,10 @@ from [Ubuntu][ubuntu] to [Twisted][twisted] to [PyCharm][pycharm] to
 If you have questions, comments, issues, or enhancements, please feel
 free to [open an issue][issue].
 
-This site generated with [Chert][chert] and [Python][python]. So, if
-you would like to submit a pull request directly, `pip install chert`
-and `chert serve` from within the repository to get a live-updating
-preview of what your change will look like.
+calver.org is generated with [Chert][chert] and [Python][python]. So,
+if you would like to submit a pull request directly, `pip install
+chert` and `chert serve` from within the repo directory to get a
+live-updating preview of what your change will look like.
 
 [issue]: https://github.com/mahmoud/calver/issues
 
