@@ -59,7 +59,7 @@ versions. Rather than choose a single scheme, CalVer introduces
 standard terminology for developers, based on current practices and
 conventions.
 
-* **`YYYY`** - Full year - 2006, 2016
+* **`YYYY`** - Full year - 2006, 2016, 2106
 * **`YY`** - Short year - 6, 16, 106
 * **`MM`** - Short month - 1, 2 ... 11, 12
 * **`0M`** - Zero-padded month - 01, 02 ... 11, 12
