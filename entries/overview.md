@@ -60,14 +60,15 @@ standard terminology for developers, based on current practices and
 conventions.
 
 * **`YYYY`** - Full year - 2006, 2016
-* **`YY`** - Short year - 6, 16, 106
+* **`YY`** - Short year - 6, 16, 106 (relative to year 2000)
 * **`MM`** - Short month - 1, 2 ... 11, 12
 * **`0M`** - Zero-padded month - 01, 02 ... 11, 12
 * **`DD`** - Short day - 1, 2 ... 30, 31
 * **`0D`** - Zero-padded day - 01, 02 ... 30, 31
 
 Note that traditional, incremented version numbers are 0-based,
-whereas date segments are 1-based.
+whereas date segments are 1-based, and the short year is implicitly
+relative to the year 2000.
 
 The [Gregorian calendar][gregorian] is assumed, as is the convention
 of [UTC][utc]. Technically any calendar can be used, provided projects
