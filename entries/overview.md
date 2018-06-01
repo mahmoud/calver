@@ -67,7 +67,8 @@ conventions.
 * **`0D`** - Zero-padded day - 01, 02 ... 30, 31
 
 Note that traditional, incremented version numbers are 0-based,
-whereas date segments are 1-based.
+whereas date segments are 1-based, and the short year is relative 
+to the year 2000.
 
 The [Gregorian calendar][gregorian] is assumed, as is the convention
 of [UTC][utc]. Technically any calendar can be used, provided projects
