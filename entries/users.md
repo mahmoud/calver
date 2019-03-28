@@ -21,7 +21,7 @@ see the [CalVer overview][overview].
 
 # Products
 
-From small to large, closed and open, many products have all profitted
+From small to large, closed and open, many products have all profited
 from incorporating calendar dates into their brands.
 
 Project                         | CalVer Format      | Examples
