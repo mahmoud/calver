@@ -76,6 +76,7 @@ Project                         | CalVer Format       | Examples
 [pytz][pytz]                    | `YYYY.MM`           | 2016.4
 [attrs][attrs]                  | `YY.MINOR.MICRO`    | 17.4.0
 [pip][pip]                      | `YY.MINOR.MICRO`    | 18.0 - 19.0.3
+[MediaInfo][mediainfo]          | `YY.MM`             | 17.10 - 19.04
 
 [boltons]: http://boltons.readthedocs.io/en/latest/
 [twisted]: /overview.html#twisted
@@ -84,6 +85,7 @@ Project                         | CalVer Format       | Examples
 [pytz]: /overview.html#pytz
 [attrs]: https://github.com/python-attrs/attrs
 [pip]: https://pip.pypa.io/en/stable/
+[mediainfo]: https://mediaarea.net/en/MediaInfo
 
 # Utilities
 
