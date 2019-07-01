@@ -1,28 +1,23 @@
 ---
 title: Calendar Versioning
 entry_root: overview
-publish_date: May 1, 2017
+publish_date: July 1, 2019
 orig_publish_dat: March 25, 2016
 ---
 
-*CalVer is a software versioning convention that is based on your
-project's release calendar, instead of arbitrary numbers.*
+*CalVer is a versioning convention based on your project's release
+calendar, instead of arbitrary numbers.*
 
-**Software versioning gets better with time.**
+**Versioning gets better with time.**
 
-For engineers, versioning allows us to specify precise dependencies
-within ever-expanding software ecosystems. For marketers, the version
-is the dynamic part of a project's brand. For all of us, software
-versioning lets us reference the past while also upgrading to the
-future.
+For maintainers, versioning allows us to specify precise dependencies
+within an ever-expanding ecosystem. For sellers and promoters, a
+project's version is a dynamic part of a brand. For all of us,
+versioning lets us reference the past while upgrading to the future.
 
-<!-- Developers who do not design their versioning scheme to match
-their project are leaving valuable communication capital on the
-table. -->
-
-Different software projects use different systems for versioning, but
-some common practices have emerged. Point-separated numbers e.g.,
-*3.1.4*, are all but given. Another common versioning pattern
+Different projects use different systems for versioning, but common
+practices have emerged. For instance, point-separated numbers (e.g.,
+*3.1.4*) are all but given. Another common versioning pattern
 incorporates a time-based element, usually part of the release date.
 
 This date-based approach has come to be called Calendar Versioning, or
@@ -47,7 +42,7 @@ the parts of the version:
 * **Modifier** - An optional text tag, such as "dev", "alpha", "beta",
   "rc1", and so on.
 
-The vast majority of modern software versions are composed of two or
+The vast majority of modern version identifiers are composed of two or
 three numeric segments, plus the optional modifier. Convention
 suggests that four-numeric-segment versions are discouraged.
 
@@ -95,7 +90,7 @@ the first general release of Ubuntu.
 
 Even a simple operating system involves many, many parts, making it
 difficult to communicate much meaning with an arbitrary number. By
-dating the software release, the calendar-based version is much more
+dating the project release, the calendar-based version is much more
 than an arbitrary number, communicating useful information that is
 rooted in simple fact.
 
@@ -235,12 +230,11 @@ See the [Users page][users] for a growing list of CalVer users.
 
 # When to use CalVer
 
-If both you and someone you don't know use your project seriously,
-then use a serious version. Your project is released, and it needs a
-nonzero major version. Luckily, the decision on whether to use CalVer
+If both you and people you don't know use your project seriously, then
+use a serious version. Luckily, the decision on whether to use CalVer
 for that version is easier than ever:
 
-* Is your project large or all-encompassing?
+* Is your project feature a large or constantly-changing scope?
     * Large systems and frameworks, like [Ubuntu](#ubuntu) and [Twisted](#twisted).
     * Amorphous sets of utilities, like [Boltons](#other_notable_projects).
 * Is your project time-sensitive in any way? Do other external changes
