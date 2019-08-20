@@ -234,7 +234,7 @@ If both you and people you don't know use your project seriously, then
 use a serious version. Luckily, the decision on whether to use CalVer
 for that version is easier than ever:
 
-* Is your project feature a large or constantly-changing scope?
+* Does your project feature a large or constantly-changing scope?
     * Large systems and frameworks, like [Ubuntu](#ubuntu) and [Twisted](#twisted).
     * Amorphous sets of utilities, like [Boltons](#other_notable_projects).
 * Is your project time-sensitive in any way? Do other external changes
