@@ -3,7 +3,7 @@
 <img height=300 align=right
 src="https://raw.githubusercontent.com/mahmoud/calver/master/uploads/caltree_med.png">
 
-CalVer is a software versioning convention based on calendar dates of
+CalVer is a project versioning convention based on calendar dates of
 project releases, instead of arbitrary numbers. There are
 [many benefits][designing_a_version] to this approach, and
 [multiple variations][calver_overview] to custom fit all projects,

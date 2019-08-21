@@ -6,9 +6,8 @@ publish_date: March 29, 2018
 ---
 
 Calendar versioning has a long history, and CalVer users can be found
-in all areas of software development. This ever-growing,
-never-complete list of project names and example versions is
-[open to expansion][issues].
+in all areas. This ever-growing, never-complete list of project names
+and example versions is [open to expansion][issues].
 
 [issues]: https://github.com/mahmoud/calver/issues
 
