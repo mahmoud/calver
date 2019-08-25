@@ -200,8 +200,8 @@ there is a breaking API change.
 
 ## Other notable projects
 
-* [boltons][boltons] - **`YY.MINOR.MICRO`** - A broad library of
-  utilities supplementing the Python standard library.
+* [Unity][unity] - **`YYYY.MINOR.MICRO`** - Cross-platform game engine.
+* [pip][pip] - **`YY.MINOR.MICRO`** - Official package manager for Python.
 * [PyCharm][pycharm] - **`YYYY.MINOR.MICRO`** - A leading Python IDE.
 * [OpenSCAD][openscad] - **`YYYY.0M`** - The premiere open-source
   offering for solid 3D CAD modelling.
@@ -213,16 +213,17 @@ there is a breaking API change.
   communication. Similar to [pytz](#pytz), certificate updates do not
   follow a fixed schedule, but timely, dateable updates are critical
   to security.
-<!-- * Windows 95, 98, and 2000 - While Ubuntu is undoubtedly the
-better operating sytem exemplar, Windows did serve to demonstrate the
-branding success of CalVer. Windows 95 simply had a better ring to it
-than Windows 3.1.1. -->
+* [boltons][boltons] - **`YY.MINOR.MICRO`** - A broad library of
+  utilities supplementing the Python standard library.
 
-[boltons]: http://boltons.readthedocs.io/en/latest/
+[unity]: https://unity3d.com/unity/whats-new/
 [pycharm]: https://www.jetbrains.com/pycharm/download/
 [fusefs-ntfs]: http://www.freshports.org/sysutils/fusefs-ntfs
 [openscad]: http://www.openscad.org/
 [certifi]: https://pypi.python.org/pypi/certifi
+[boltons]: http://boltons.readthedocs.io/en/latest/
+[pip]: https://pip.pypa.io/en/stable/news/
+
 
 See the [Users page][users] for a growing list of CalVer users.
 

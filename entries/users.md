@@ -31,6 +31,8 @@ Project                         | CalVer Format      | Examples
 [OpenSCAD][openscad]            | `YYYY.0M`          | 2015.03
 [JetBrains PyCharm][pycharm]    | `YYYY.MINOR.MICRO` | 2017.1.2
 [ArchLinux][archlinux]          | `YYYY.0M.0D`       | 2018.03.01
+[Unity][unity]                  | `YYYY.MINOR.MICRO` | 2019.2.2
+[Slack for Mobile][slack]       | `YY.0M.MICRO`      | 19.08.10
 
 [ubuntu]: /overview.html#ubuntu
 [nixos_releases]: https://nixos.org/news.html
@@ -38,6 +40,9 @@ Project                         | CalVer Format      | Examples
 [openscad]: https://en.wikipedia.org/wiki/OpenSCAD
 [pycharm]: https://en.wikipedia.org/wiki/PyCharm
 [archlinux]: https://www.archlinux.org/releng/releases/
+[unity]: https://unity3d.com/unity/whats-new/
+[slack]: https://slack.com/release-notes/android
+
 
 # Standards
 
@@ -82,7 +87,7 @@ Project                         | CalVer Format       | Examples
 [teradata]: /overview.html#teradata
 [pytz]: /overview.html#pytz
 [attrs]: https://github.com/python-attrs/attrs
-[pip]: https://pip.pypa.io/en/stable/
+[pip]: https://pip.pypa.io/en/stable/news/
 
 # Utilities
 
@@ -90,13 +95,16 @@ System administrators appreciate a tool with a proper version.
 
 Project                         | CalVer Format       | Examples
 ------------------------------- | ------------------- | ---------------
+[pip][pip] ([details][pipdeet]) | `YYYY.MINOR.MICRO`  | 19.2.3
 [youtube_dl][youtube_dl]        | `YYYY.0M.0D.MICRO`  | 2016.06.19.1
 [fusefs-ntfs][fsfntfs]          | `YYYY.MM.DD_MICRO`  | 2016.2.22_1
 [black][black]                  | `YY.MM.MICRO`       | 18.3a0
 
 [youtube_dl]: /overview.html#youtube_dl
 [fsfntfs]: http://www.freshports.org/sysutils/fusefs-ntfs
+[pip]: https://pypi.org/project/pip/#history
 [black]: https://github.com/ambv/black
+[pipdeet]: https://groups.google.com/forum/#!topic/pypa-dev/AKsd2D_F4cM
 
 # Other
 
