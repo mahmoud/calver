@@ -50,14 +50,16 @@ Programming language standards are conventionally named for their year
 (`YY`/`YYYY`), and comprise some of the oldest notable usages of
 calendar versioning.
 
-Project                         | CalVer Format     | Examples
-------------------------------- | ----------------- | ---------------
-[Ada][ada]                      | `YY`/`YYYY`       | 83, 95, 2012
-[ALGOL][algol]                  | `YY`              | 58, 60, 68
-[C][c]                          | `YY`              | 89, 99, 11
-[C++][cpp]                      | `YY`              | 98, 03, 11, 14, 17
-[Fortran][fortran]              | `YY`/`YYYY`       | 66, 77, 90, 95, 2003, 2008
-[Python manylinux][manylinux]   | `YYYY`            | 2010 ("backwards compatible to")
+Project                           | CalVer Format     | Examples
+--------------------------------- | ----------------- | ---------------
+[Ada][ada]                        | `YY`/`YYYY`       | 83, 95, 2012
+[ALGOL][algol]                    | `YY`              | 58, 60, 68
+[C][c]                            | `YY`              | 89, 99, 11
+[C++][cpp]                        | `YY`              | 98, 03, 11, 14, 17
+[Fortran][fortran]                | `YY`/`YYYY`       | 66, 77, 90, 95, 2003, 2008
+[ECMAScript][js] (aka JavaScript) | `YYYY`            | 2015, 2020
+[Python manylinux][manylinux]     | `YYYY`            | 2010 ("backwards compatible to")
+
 
 [ada]: https://en.wikipedia.org/wiki/Ada_(programming_language)
 [algol]: https://en.wikipedia.org/wiki/ALGOL_60
@@ -65,6 +67,7 @@ Project                         | CalVer Format     | Examples
 [cpp]: https://en.wikipedia.org/wiki/C%2B%2B
 [fortran]: https://en.wikipedia.org/wiki/Fortran
 [manylinux]: https://www.python.org/dev/peps/pep-0571/
+[js]: https://en.wikipedia.org/wiki/ECMAScript#Versions
 
 # Libraries
 
