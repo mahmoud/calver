@@ -1,0 +1,43 @@
+
+{#entry.loaded_parts}
+{^data_idx}
+
+{?inline}
+<p>{content_ihtml|s}</p>
+{:else}
+<p>{content_html|s}</p>
+{/inline}
+
+{:else}
+{?ordinal_text}
+<h3>{ordinal_text} {title}</h3>
+{:else}
+<h3>{title}</h3>
+{/ordinal_text}
+{?summary}
+{summary}  {! should be markdown, should check !}
+{/summary}
+{?attrs}
+<ul class="attr-ul">
+{#attrs}
+{@eq key=type value="default"}
+  <li class="attr-li"><span class="attr-title">{title}</span>: <span class="attr-value">{value}</span></li>
+{/eq}
+{/attrs}
+{#links}{#value}
+  <li class="attr-li"><a href="{href|u}" title="{tip}">{title}</a></li>
+{/value}{/links}
+</ul>
+{/attrs}
+{?content}
+
+{?inline}
+<p>{content_ihtml|s}</p>
+{:else}
+<p>{content_html|s}</p>
+{/inline}
+
+{/content}
+{/data_idx}
+<hr />
+{/entry.loaded_parts}

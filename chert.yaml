@@ -18,7 +18,7 @@ site:
   analytics_code: UA-63522904-3
 
 theme:
-  name: calver
+  name: floc
 
 dev:
   server_host: 0.0.0.0

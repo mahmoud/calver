@@ -1,0 +1,184 @@
+
+/* general stuff */
+body {
+    line-height: 1.5;
+    max-width: 87ch;
+    margin: auto;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    font-family: 'Merriweather', Georgia, serif;
+    padding: 0 6px;
+}
+
+header, footer, main {
+    color: rgba(0, 0, 0, 0.80);
+    text-rendering: optimizeLegibility;
+}
+
+p, li {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.7;
+    word-spacing: 0.03rem;
+    letter-spacing: -0.002em;
+}
+
+p { margin-bottom: 2rem; }
+
+a { color: rgba(31, 157, 196, 0.85); }
+
+a:hover { color: rgba(31, 120, 148, 0.85); }
+
+/* header specific stuff */
+
+#header {
+    text-align: center;
+    line-height: 1.1;
+}
+
+#pri-links-p {
+    font-size: 120%;
+}
+
+#header p {
+    margin: 0.5rem 0;
+}
+
+#header a {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#footer {
+    margin-top: 2ch;
+    padding-bottom: 2ch;
+    text-align: center;
+    border-bottom: 5px solid #444;
+    width: 100%
+}
+
+/* heading stuff */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Lato, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a {
+    color: rgba(0, 0, 0, 0.85);
+    text-decoration: none;
+}
+
+h1 {font-size: 3.3rem; letter-spacing: -0.1rem; word-spacing: 0.2rem; margin: 1rem 0 -0.2rem 0;}
+h2 {font-size: 2.5rem; letter-spacing: -0.08rem; word-spacing: 0.17rem; margin: 1rem 0 -0.5rem 0;}
+h3 {font-size: 2.2rem; letter-spacing: -0.07rem; word-spacing: 0.15rem; margin: 1rem 0 -0.5rem 0;}
+h4 {font-size: 2.0rem; letter-spacing: -0.05rem; word-spacing: 0.12rem; margin: 1rem 0 -0.5rem 0;}
+h5 {font-size: 1.7rem; font-weight: bold; margin: 1rem 0 -0.2rem 0;}
+h6 {font-size: 1.6rem; text-decoration: underline; margin: 1rem 0 -0.2rem 0;}
+
+/* Table of contents stuff */
+
+.toctitle {
+    font-size: 1.3rem;
+    font-weight: bold;
+    font-family: Lato, "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+}
+
+div.toc {
+    border-left: 5px solid #E1E1E1;
+    padding: 0 0 0 1rem;
+    margin-bottom: 1rem;
+}
+
+div.toc ul {
+    list-style-type: decimal;
+    margin: 1rem 0 1rem 2rem;
+}
+
+div.toc > ul {
+    margin-left: 0.5rem;
+}
+
+div.toc li {
+    margin-bottom: 0.5rem;
+}
+
+
+/* horizontal rule (and footnote) stuff */
+
+hr {
+    border: none;
+    border-top: 2px solid #E1E1E1;
+    margin: 10px 0 5px 0;
+}
+
+div.footnote hr {
+    border-top: 2px solid #E1E1E1;
+    color: #BBB;
+}
+
+div.footnote hr:after {
+    content: "###";
+    display: inline-block;
+    position: relative;
+    top: -1.1rem;
+    padding: 0 0.25rem;
+    background: white;
+}
+
+
+/* code stuff */
+
+.codehilite {
+  padding: .2rem .5rem;
+  margin: 0 .2rem;
+  font-size: 135%;
+  white-space: nowrap;
+  background: #F1F1F1;
+  border: 1px solid #E1E1E1;
+  border-radius: 4px; }
+
+div.codehilite > pre {
+    max-width: 79ch;
+    overflow-x: auto;
+}
+
+code { font-size: 115% }
+
+
+/* quote stuff */
+
+blockquote, blockquote > p {
+    font-size: 21px;
+    font-style: italic;
+    letter-spacing: -0.03rem;
+    line-height: 1.9;
+    overflow-wrap: break-word;
+    margin: 0.5rem 3rem 1.5rem 1.5rem;
+    /* text-align: center; */
+    color: rgba(0, 0, 0, 0.68);
+}
+
+/* table stuff */
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #E1E1E1;
+}
+
+th:first-child, td:first-child {
+    padding-left: 0;
+}
+
+th:last-child, td:last-child {
+    padding-right: 0;
+}
+
+/* misc */
+
+.entry-metadata a {
+    padding-left: 7px;
+}
