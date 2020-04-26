@@ -33,6 +33,10 @@ Project                         | CalVer Format      | Examples
 [ArchLinux][archlinux]          | `YYYY.0M.0D`       | 2018.03.01
 [Unity][unity]                  | `YYYY.MINOR.MICRO` | 2019.2.2
 [Slack for Mobile][slack]       | `YY.0M.MICRO`      | 19.08.10
+[CockroachDB][cockroachdb]      | `YY.MINOR.MICRO`   | 19.1.0
+[Dgraph][dgraph]                | `YY.0M.MICRO`      | 20.03.0, 20.03.1-beta.Jun15
+[Spring Cloud][spring_cloud]    | `YYYY.MINOR.MICRO` | 2020.0.0-RC2
+[Tesla Firmware][tesla_fw]      | `YYYY.WW.MICRO`    | 2020.12.10
 
 [ubuntu]: /overview.html#ubuntu
 [nixos_releases]: https://nixos.org/news.html
@@ -42,7 +46,10 @@ Project                         | CalVer Format      | Examples
 [archlinux]: https://www.archlinux.org/releng/releases/
 [unity]: https://unity3d.com/unity/whats-new/
 [slack]: https://slack.com/release-notes/android
-
+[cockroachdb]: https://www.cockroachlabs.com/blog/calendar-versioning/
+[dgraph]: https://dgraph.io/blog/post/dgraph-calendar-versioning/
+[spring_cloud]: https://spring.io/blog/2020/04/17/spring-cloud-2020-0-0-m1-released
+[tesla_fw]: https://teslafi.com/firmware/
 
 # Standards
 
