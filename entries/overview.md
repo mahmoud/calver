@@ -156,12 +156,12 @@ degree.
 
 ## pytz
 
-<img src="https://img.shields.io/badge/calver-YYYY.MM-22bfda.svg" />
+<img src="https://img.shields.io/badge/calver-YYYY.MINOR-22bfda.svg" />
 
 **[pytz][pytz]** is the Python translation of the
 [IANA/Olson timezone database][iana_tz], the database behind accurate
 times for all of computerdom.  pytz uses a two-segment CalVer scheme,
-including full year and short month.
+including full year and minor version.
 
 While Python has a history of "batteries-included" architecture, and
 the datetime module frequently mentions timezones, the core Python
