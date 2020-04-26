@@ -51,20 +51,23 @@ suggests that four-numeric-segment versions are discouraged.
 As seen in the [case studies](#case_studies) below, projects have
 found more than one useful way to leverage dates in their
 versions. Rather than choose a single scheme, CalVer introduces
-standard terminology for developers, based on current practices and
-conventions.
+standard terminology for developers, in addition to the "semantic"
+versions:
 
 * **`YYYY`** - Full year - 2006, 2016, 2106
 * **`YY`** - Short year - 6, 16, 106
 * **`0Y`** - Zero-padded year - 06, 16, 106
 * **`MM`** - Short month - 1, 2 ... 11, 12
 * **`0M`** - Zero-padded month - 01, 02 ... 11, 12
+* **`WW`** - Short week (since start of year) - 1, 2, 33, 52
+* **`0W`** - Zero-padded week - 01, 02, 33, 52
 * **`DD`** - Short day - 1, 2 ... 30, 31
 * **`0D`** - Zero-padded day - 01, 02 ... 30, 31
 
 Note that traditional, incremented version numbers are 0-based,
 whereas date segments are 1-based, and the short and zero-padded years
-are relative to the year 2000.
+are relative to the year 2000. Also note that usage of weeks is
+usually mutually exclusive with months/days.
 
 The [Gregorian calendar][gregorian] is assumed, as is the convention
 of [UTC][utc]. Technically any calendar can be used, provided projects
