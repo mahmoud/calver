@@ -73,8 +73,8 @@ orig_publish_dat: March 25, 2016
 [UTC][utc] 的惯例也是如此。从技术上讲可以使用任何日历，
 只要提供的项目声明使用哪一个。
 
-[gregorian]: https://en.wikipedia.org/wiki/Gregorian_calendar
-[utc]: https://en.wikipedia.org/wiki/Coordinated_Universal_Time
+[gregorian]: https://zh.wikipedia.org/wiki/%E6%A0%BC%E9%87%8C%E6%9B%86
+[utc]: https://zh.wikipedia.org/wiki/%E5%8D%8F%E8%B0%83%E4%B8%96%E7%95%8C%E6%97%B6
 
 # 样例学习
 
@@ -106,7 +106,7 @@ Ubuntu 从中获取了额外的好处。Ubuntu 目前为
 是 16.04，将会支持到 2021 年 4 月。
 
 [ubuntu]: http://www.ubuntu.com/
-[ubuntu_releases]: https://en.wikipedia.org/wiki/List_of_Ubuntu_releases
+[ubuntu_releases]: https://zh.wikipedia.org/wiki/Ubuntu%E5%8F%91%E8%A1%8C%E7%89%88%E5%88%97%E8%A1%A8
 
 ## Twisted
 
@@ -199,7 +199,7 @@ Teradata 的使用并非以技术或公司的突出而著称，
 [teradata]: http://www.teradata.com/
 [teradata_uda]: https://pypi.python.org/pypi/teradata
 [uda_blog]: https://developer.teradata.com/tools/reference/teradata-python-module
-[semver]: http://semver.org/
+[semver]: https://semver.org/lang/zh-CN/
 
 ## 其他值得注意的项目
 
