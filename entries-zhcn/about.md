@@ -18,6 +18,8 @@ CalVer 不是基于任意数字，而是一个基于
 [Mark Williams][mark]、[Glyph Lefkowitz][glyph]、
 [Amber Brown][hawkowl] 和 [Hynek Schlawack][hynek]。
 
+中文版由 [狂飙][networm] 翻译完成。
+
 如果你有疑问、评论、问题或改进的地方，请
 直接 [在 CalVer GitHub 上创建一个问题][issue]。
 
@@ -32,6 +34,7 @@ CalVer 不是基于任意数字，而是一个基于
 [glyph]: https://twitter.com/glyph
 [hawkowl]: https://github.com/hawkowl
 [hynek]: https://twitter.com/hynek
+[networm]: https://github.com/networm
 
 [issue]: https://github.com/mahmoud/calver/issues
 
