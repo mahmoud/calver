@@ -14,7 +14,7 @@ CalVer 不是基于任意数字，而是一个基于
 
 日历化版本由来已久，但 CalVer 本身最初是
 在 2016 年公开发布。最初的版本是由
-[Mahmoud Hashemi][mahmoud]，感谢 [Stephen LaPorte][Stephen]、
+[Mahmoud Hashemi][mahmoud] 编写，感谢 [Stephen LaPorte][Stephen]、
 [Mark Williams][mark]、[Glyph Lefkowitz][glyph]、
 [Amber Brown][hawkowl] 和 [Hynek Schlawack][hynek]。
 
