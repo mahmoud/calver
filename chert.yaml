@@ -10,6 +10,8 @@ site:
       href: /about.html
     - text: Users
       href: '/users.html'
+    - text: 中文
+      href: '/overview_zhcn.html'
     - text: GitHub
       href: https://github.com/mahmoud/calver
       desc: CalVer site source

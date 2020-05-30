@@ -1,6 +1,8 @@
 ---
-title: About
-publish_date: June 18, 2016
+title: About (中文)
+entry_root: about_zhcn
+publish_date: May 30, 2020
+orig_publish_date: June 18, 2016
 special: true
 ---
 

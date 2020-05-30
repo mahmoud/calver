@@ -1,8 +1,9 @@
 ---
-title: Calendar Versioning
-entry_root: overview
-publish_date: July 1, 2019
-orig_publish_dat: March 25, 2016
+title: 日历化版本 / Calendar Versioning
+special: true
+entry_root: overview_zhcn
+publish_date: May 30, 2020
+orig_publish_date: March 25, 2016
 ---
 
 *CalVer 不是基于任意数字，而是基于项目发布日期
@@ -20,7 +21,7 @@ orig_publish_dat: March 25, 2016
 *3.1.4*）就是全部。另一种常见的版本模式
 包含一个基于时间的元素，通常是发布日期的一部分。
 
-这种基于日期的方法被称为“日历化版本”（Calendar Versioning），
+这种基于日期的方法被称为 “日历化版本”（Calendar Versioning），
 或者简称 **CalVer**。
 
 [TOC]

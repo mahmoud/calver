@@ -2,7 +2,7 @@
 title: Calendar Versioning
 entry_root: overview
 publish_date: July 1, 2019
-orig_publish_dat: March 25, 2016
+orig_publish_date: March 25, 2016
 ---
 
 *CalVer is a versioning convention based on your project's release

@@ -1,8 +1,9 @@
 ---
-title: CalVer Users
-entry_root: users
+title: CalVer Users (中文)
+entry_root: users_zhcn
 special: true
-publish_date: March 29, 2018
+publish_date: May 30, 2020
+orig_publish_date: March 29, 2018
 ---
 
 日历版本化由来已久，在所有领域都可以找到 CalVer 用户。
