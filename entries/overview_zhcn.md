@@ -229,7 +229,7 @@ Teradata 的使用并非以技术或公司的突出而著称，
 [pip]: https://pip.pypa.io/en/stable/news/
 
 
-参见 [用户页面][users] 以获取越来越多的 CalVer 用户列表。
+参见 [用户页面][users] ([中文](/users_zhcn.html)) 以获取越来越多的 CalVer 用户列表。
 
 [users]: /users.html
 
