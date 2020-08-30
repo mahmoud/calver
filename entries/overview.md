@@ -79,7 +79,6 @@ state which one.
 The definition of `WW`/`0W` in the above list is intentionally left
 ambiguous.
 
-* There are at least two common definitions for week numbering: The 
 * There are at least four common week numbering schemes: The 
   [ISO][iso-week] and the [US Broadcast][us-week] standards as well
   as the output of `%W` and `%U` in many implementations of `strftime`
