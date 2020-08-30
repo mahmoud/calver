@@ -59,8 +59,8 @@ versions:
 * **`0Y`** - Zero-padded year - 06, 16, 106
 * **`MM`** - Short month - 1, 2 ... 11, 12
 * **`0M`** - Zero-padded month - 01, 02 ... 11, 12
-* **`WW`** - Short week (since start of year) - 1, 2, 33, 52
-* **`0W`** - Zero-padded week - 01, 02, 33, 52
+* **`WW`** - Short week (since start of year) - 0, 1, 2, 33, 52, 53
+* **`0W`** - Zero-padded week - 00, 01, 02, 33, 52, 53
 * **`DD`** - Short day - 1, 2 ... 30, 31
 * **`0D`** - Zero-padded day - 01, 02 ... 30, 31
 
