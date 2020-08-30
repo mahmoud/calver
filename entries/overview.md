@@ -80,7 +80,10 @@ The definition of `WW`/`0W` in the above list is intentionally left
 ambiguous.
 
 * There are at least two common definitions for week numbering: The 
-  [ISO][iso-week] and the [US Broadcast][us-week] standards. 
+* There are at least four common week numbering schemes: The 
+  [ISO][iso-week] and the [US Broadcast][us-week] standards as well
+  as the output of `%W` and `%U` in many implementations of `strftime`
+  which produce numbers in the range `[0-52]`. 
 * It would be tedious to determine which system a given project
   actually uses.
 * The last week of the year can span multiple years, so that a
