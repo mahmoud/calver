@@ -76,6 +76,23 @@ state which one.
 [gregorian]: https://en.wikipedia.org/wiki/Gregorian_calendar
 [utc]: https://en.wikipedia.org/wiki/Coordinated_Universal_Time
 
+The definition of `WW`/`0W` in the above list is intentionally left
+ambiguous.
+
+* There are at least two common definitions for week numbering: The 
+  [ISO][iso-week] and the [US Broadcast][us-week] standards. 
+* It would be tedious to determine which system a given project
+  actually uses.
+* The last week of the year can span multiple years, so that a
+  version such as `2020.53` may have been published in 2021
+  if it was published on Friday the 1st of January 2021.
+  
+[iso-week]: https://en.wikipedia.org/wiki/ISO_week_date
+[us-week]: https://en.wikipedia.org/wiki/Broadcast_calendar
+
+Suffice it to say, there is perhaps a good reason that only few
+projects use week numbers in their versioning.
+
 # Case studies
 
 CalVer has quite a few users. These are projects selected for their
