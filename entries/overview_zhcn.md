@@ -156,7 +156,7 @@ Twisted 的版本方案已扩展到相关项目，包括：
 快速发布周期，它清楚地说明了
 为什么该项目如此深度的使用 CalVer。
 
-[youtube_dl]: https://rg3.github.io/youtube-dl/
+[youtube_dl]: https://youtube-dl.org/
 
 ## pytz
 
