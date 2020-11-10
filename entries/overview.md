@@ -155,7 +155,7 @@ sites. Consider the rapid release cycle of supported services, and it
 becomes clear why the project has adopted CalVer to such a great
 degree.
 
-[youtube_dl]: https://rg3.github.io/youtube-dl/
+[youtube_dl]: https://youtube-dl.org/
 
 ## pytz
 
