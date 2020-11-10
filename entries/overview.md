@@ -114,8 +114,8 @@ writing, 16.04, will be supported until April 2021.
 
 **[Twisted][twisted]**, the venerated Python networking and
 asynchronous execution framework, uses a three-segment CalVer scheme,
-with a short year in the major version slot, release number of that year
-in the minor slot, and the micro slot being the bugfix release number.
+with a short year in the major version slot, short month in the minor
+version slot, and micro/patch version in the third and final slot.
 
 First released in 2002 and still actively developed today, Twisted is
 a [mature][twisted_wp] library that has grown to match its large
