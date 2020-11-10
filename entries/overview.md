@@ -113,10 +113,9 @@ writing, 16.04, will be supported until April 2021.
 <img src="https://img.shields.io/badge/calver-YY.MM.MICRO-22bfda.svg" />
 
 **[Twisted][twisted]**, the venerated Python networking and
-asynchronous execution framework. Twisted releases use a time-based
-numbering scheme. Releases versions like YY.MM.mm, where YY is the
-last two digits of the year of the release, MM is the month of
-release, and mm is the number of the patch release.
+asynchronous execution framework, uses a three-segment CalVer scheme,
+with a short year in the major version slot, short month in the minor
+version slot, and micro/patch version in the third and final slot.
 
 First released in 2002 and still actively developed today, Twisted is
 a [mature][twisted_wp] library that has grown to match its large
