@@ -105,7 +105,7 @@ System administrators appreciate a tool with a proper version.
 
 Project                         | CalVer Format       | Examples
 ------------------------------- | ------------------- | ---------------
-[pip][pip] ([details][pipdeet]) | `YYYY.MINOR.MICRO`  | 19.2.3
+[pip][pip] ([details][pipdeet]) | `YY.MINOR.MICRO`    | 19.2.3
 [youtube_dl][youtube_dl]        | `YYYY.0M.0D.MICRO`  | 2016.06.19.1
 [fusefs-ntfs][fsfntfs]          | `YYYY.MM.DD_MICRO`  | 2016.2.22_1
 [black][black]                  | `YY.MM.MICRO`       | 18.3a0
