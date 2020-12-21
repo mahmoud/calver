@@ -25,7 +25,7 @@ from incorporating calendar dates into their brands.
 
 Project                         | CalVer Format      | Examples
 ------------------------------- | ------------------ | ---------------
-[Ubuntu][ubuntu]                | `YY.0M`            | 4.10 - 17.04
+[Ubuntu][ubuntu]                | `YY.0M`            | 4.10 - 20.04
 [NixOS][nixos_releases]         | `YY.0M`            | 13.10 - 17.03
 [Microsoft Windows][ms_win]     | `YY`/`YYYY`        | 95, 98, 2000
 [OpenSCAD][openscad]            | `YYYY.0M`          | 2015.03
@@ -37,6 +37,7 @@ Project                         | CalVer Format      | Examples
 [Dgraph][dgraph]                | `YY.0M.MICRO`      | 20.03.0, 20.03.1-beta.Jun15
 [Spring Cloud][spring_cloud]    | `YYYY.MINOR.MICRO` | 2020.0.0-RC2
 [Tesla Firmware][tesla_fw]      | `YYYY.WW.MICRO`    | 2020.12.10
+[KDE Apps][kde_apps]            | `YY.0M.MICRO`      | 20.12.0
 
 [ubuntu]: /overview.html#ubuntu
 [nixos_releases]: https://nixos.org/news.html
@@ -50,6 +51,7 @@ Project                         | CalVer Format      | Examples
 [dgraph]: https://dgraph.io/blog/post/dgraph-calendar-versioning/
 [spring_cloud]: https://spring.io/blog/2020/04/17/spring-cloud-2020-0-0-m1-released
 [tesla_fw]: https://teslafi.com/firmware/
+[kde_apps]: https://kde.org/announcements/releases/2020-12-apps-update/
 
 # Standards
 
