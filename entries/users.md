@@ -38,6 +38,7 @@ Project                         | CalVer Format      | Examples
 [Spring Cloud][spring_cloud]    | `YYYY.MINOR.MICRO` | 2020.0.0-RC2
 [Tesla Firmware][tesla_fw]      | `YYYY.WW.MICRO`    | 2020.12.10
 [KDE Apps][kde_apps]            | `YY.0M.MICRO`      | 20.12.0
+[Consensys Quorum][quorum]      | `YY.MM.MICRO`      | 20.10.0
 
 [ubuntu]: /overview.html#ubuntu
 [nixos_releases]: https://nixos.org/news.html
@@ -52,6 +53,8 @@ Project                         | CalVer Format      | Examples
 [spring_cloud]: https://spring.io/blog/2020/04/17/spring-cloud-2020-0-0-m1-released
 [tesla_fw]: https://teslafi.com/firmware/
 [kde_apps]: https://kde.org/announcements/releases/2020-12-apps-update/
+[quorum]: https://consensys.net/blog/quorum/consensys-quorum-is-moving-to-calendar-versioning/
+
 
 # Standards
 
