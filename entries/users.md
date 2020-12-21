@@ -18,10 +18,10 @@ see the [CalVer overview][overview].
 
 [overview]: /overview.html
 
-# Products
+# Applications
 
-From small to large, closed and open, many products have all profited
-from incorporating calendar dates into their brands.
+From small to large, closed and open, many systems and applications
+from incorporating calendar dates into their projects.
 
 Project                         | CalVer Format      | Examples
 ------------------------------- | ------------------ | ---------------
@@ -39,6 +39,7 @@ Project                         | CalVer Format      | Examples
 [Tesla Firmware][tesla_fw]      | `YYYY.WW.MICRO`    | 2020.12.10
 [KDE Apps][kde_apps]            | `YY.0M.MICRO`      | 20.12.0
 [Consensys Quorum][quorum]      | `YY.MM.MICRO`      | 20.10.0
+[Home Assistant][ha]            | `YYYY.0M.MICRO`    | 20.12.0
 
 [ubuntu]: /overview.html#ubuntu
 [nixos_releases]: https://nixos.org/news.html
@@ -54,7 +55,7 @@ Project                         | CalVer Format      | Examples
 [tesla_fw]: https://teslafi.com/firmware/
 [kde_apps]: https://kde.org/announcements/releases/2020-12-apps-update/
 [quorum]: https://consensys.net/blog/quorum/consensys-quorum-is-moving-to-calendar-versioning/
-
+[ha]: https://www.home-assistant.io/blog/2020/12/13/release-202012/
 
 # Standards
 
