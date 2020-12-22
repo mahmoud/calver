@@ -39,7 +39,7 @@ Project                         | CalVer Format      | Examples
 [Tesla Firmware][tesla_fw]      | `YYYY.WW.MICRO`    | 2020.12.10
 [KDE Apps][kde_apps]            | `YY.0M.MICRO`      | 20.12.0
 [Consensys Quorum][quorum]      | `YY.MM.MICRO`      | 20.10.0
-[Home Assistant][ha]            | `YYYY.0M.MICRO`    | 20.12.0
+[Home Assistant][ha]            | `YYYY.MM.MICRO`    | 20.12.1
 
 [ubuntu]: /overview.html#ubuntu
 [nixos_releases]: https://nixos.org/news.html
