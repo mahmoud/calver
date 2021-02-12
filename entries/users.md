@@ -112,11 +112,11 @@ System administrators appreciate a tool with a proper version.
 Project                         | CalVer Format       | Examples
 ------------------------------- | ------------------- | ---------------
 [pip][pip] ([details][pipdeet]) | `YY.MINOR.MICRO`    | 19.2.3
-[youtube_dl][youtube_dl]        | `YYYY.0M.0D.MICRO`  | 2016.06.19.1
+[youtube-dl][youtube-dl]        | `YYYY.0M.0D.MICRO`  | 2016.06.19.1
 [fusefs-ntfs][fsfntfs]          | `YYYY.MM.DD_MICRO`  | 2016.2.22_1
 [black][black]                  | `YY.MM.MICRO`       | 18.3a0
 
-[youtube_dl]: /overview.html#youtube_dl
+[youtube-dl]: /overview.html#youtube-dl
 [fsfntfs]: http://www.freshports.org/sysutils/fusefs-ntfs
 [pip]: https://pypi.org/project/pip/#history
 [black]: https://github.com/ambv/black

@@ -139,23 +139,23 @@ Its versioning scheme has spread to related projects, including
 [treq]: https://github.com/twisted/treq
 [pyopenssl]: https://github.com/pyca/pyopenssl
 
-## youtube_dl
+## youtube-dl
 
 <img src="https://img.shields.io/badge/calver-YYYY.0M.0D-22bfda.svg" />
 
-**[youtube_dl][youtube_dl]**, the understated ally of Internet
+**[youtube-dl][youtube-dl]**, the understated ally of Internet
 media archivists everywhere, uses a three-segment CalVer scheme,
 including full year, zero-padded month, and zero-padded day. The
 version is almost completely calendar-driven, except for a micro
 segment that is added in some technical contexts.
 
-Despite the name, youtube_dl's scope is expansive. It supports
+Despite the name, youtube-dl's scope is expansive. It supports
 extracting audio and video from a long, ever-expanding list of
 sites. Consider the rapid release cycle of supported services, and it
 becomes clear why the project has adopted CalVer to such a great
 degree.
 
-[youtube_dl]: https://youtube-dl.org/
+[youtube-dl]: https://youtube-dl.org/
 
 ## pytz
 
