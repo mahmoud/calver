@@ -140,23 +140,23 @@ Twisted 的版本方案已扩展到相关项目，包括：
 [treq]: https://github.com/twisted/treq
 [pyopenssl]: https://github.com/pyca/pyopenssl
 
-## youtube_dl
+## youtube-dl
 
 <img src="https://img.shields.io/badge/calver-YYYY.0M.0D-22bfda.svg" />
 
-**[youtube_dl][youtube_dl]**，是各地的互联网媒体档案员的盟友，
+**[youtube-dl][youtube-dl]**，是各地的互联网媒体档案员的盟友，
 使用三段式的 CalVer 方案，
 包括年份全称、以零填充的月、以零填充的日。
 除了由于某些技术背景下添加的一个微小版本部分，
 这个版本几乎完全由日历驱动。
 
-尽管有这个名字，但 youtube_dl 的使用范围很广。它支持
+尽管有这个名字，但 youtube-dl 的使用范围很广。它支持
 从很多网站中提取音频和视频，并且这一长串网站列表
 还在不断扩大。考虑到支持服务的
 快速发布周期，它清楚地说明了
 为什么该项目如此深度的使用 CalVer。
 
-[youtube_dl]: https://youtube-dl.org/
+[youtube-dl]: https://youtube-dl.org/
 
 ## pytz
 
