@@ -40,6 +40,7 @@ Project                         | CalVer Format      | Examples
 [KDE Apps][kde_apps]            | `YY.0M.MICRO`      | 20.12.0
 [Consensys Quorum][quorum]      | `YY.MM.MICRO`      | 20.10.0
 [Home Assistant][ha]            | `YYYY.MM.MICRO`    | 20.12.1
+[Sentry][sentry]                | `YY.M.MICRO`       | 20.12.0, 21.6.3
 
 [ubuntu]: /overview.html#ubuntu
 [nixos_releases]: https://nixos.org/news.html
@@ -56,6 +57,7 @@ Project                         | CalVer Format      | Examples
 [kde_apps]: https://kde.org/announcements/releases/2020-12-apps-update/
 [quorum]: https://consensys.net/blog/quorum/consensys-quorum-is-moving-to-calendar-versioning/
 [ha]: https://www.home-assistant.io/blog/2020/12/13/release-202012/
+[sentry]: https://blog.sentry.io/2020/06/22/self-hosted-sentry-switching-to-calver
 
 # Standards
 
