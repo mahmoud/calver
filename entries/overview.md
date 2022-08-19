@@ -240,11 +240,11 @@ for that version is easier than ever:
 
 * Does your project feature a large or constantly-changing scope?
     * Large systems and frameworks, like [Ubuntu](#ubuntu) and [Twisted](#twisted).
-    * Amorphous sets of utilities, like [Boltons](#other_notable_projects).
+    * Amorphous sets of utilities, like [Boltons](#other-notable-projects).
 * Is your project time-sensitive in any way? Do other external changes
   drive new project releases?
     * Business requirements, such as [Ubuntu](#ubuntu)'s focus on support schedules.
-    * Security updates, such as [certifi](#other_notable_projects)'s need to update certificates.
+    * Security updates, such as [certifi](#other-notable-projects)'s need to update certificates.
     * Political shifts, such as [pytz](#pytz)'s handling of timezone changes.
 
 If you answered yes to any of these questions, CalVer's semantics make
