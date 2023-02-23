@@ -40,7 +40,7 @@ Project                         | CalVer Format      | Examples
 [KDE Apps][kde_apps]            | `YY.0M.MICRO`      | 20.12.0
 [Consensys Quorum][quorum]      | `YY.MM.MICRO`      | 20.10.0
 [Home Assistant][ha]            | `YYYY.MM.MICRO`    | 2020.12.1
-[Bookstack][bookstack]          | `vYY.0M.MICRO`     | v23.01.1
+[Bookstack][bookstack]          | `YY.0M.MICRO`      | 23.01.1
 
 [ubuntu]: /overview.html#ubuntu
 [nixos_releases]: https://nixos.org/news.html
