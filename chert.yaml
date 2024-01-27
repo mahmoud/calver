@@ -12,7 +12,7 @@ site:
       href: '/users.html'
     - text: 中文
       href: '/overview_zhcn.html'
-    - text: Português brasileiro (pt-BR)
+    - text: pt-BR
       href: '/overview_pt_br.html'
     - text: GitHub
       href: https://github.com/mahmoud/calver
