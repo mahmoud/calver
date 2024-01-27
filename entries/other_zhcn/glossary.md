@@ -1,4 +1,10 @@
+---
+title: zhcn glossary
+---
+
 # 翻译术语表
+
+Some translation notes:
 
 - you 你
 - Calendar Versioning 日历化版本
