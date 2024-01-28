@@ -5,8 +5,8 @@ publish_date: July 1, 2019
 orig_publish_date: March 25, 2016
 ---
 
-*CalVer is a versioning convention based on your project's release
-calendar, instead of arbitrary numbers.*
+_CalVer is a versioning convention based on your project's release
+calendar, instead of arbitrary numbers._
 
 **Versioning gets better with time.**
 
@@ -17,7 +17,7 @@ versioning lets us reference the past while upgrading to the future.
 
 Different projects use different systems for versioning, but common
 practices have emerged. For instance, point-separated numbers (e.g.,
-*3.1.4*) are all but given. Another common versioning pattern
+_3.1.4_) are all but given. Another common versioning pattern
 incorporates a time-based element, usually part of the release date.
 
 This date-based approach has come to be called Calendar Versioning, or
@@ -33,13 +33,13 @@ it's important to recognize the practicality of each and
 [design the scheme][designing_a_version] to fit the project. First,
 the parts of the version:
 
-* **Major** - The first number in the version. 2 and 3 are Python's famous
+- **Major** - The first number in the version. 2 and 3 are Python's famous
   major versions. The major segment is the most common calendar-based component.
-* **Minor** - The second number in the version. 7 is the most popular
+- **Minor** - The second number in the version. 7 is the most popular
   minor version of Python.
-* **Micro** - The third and usually final number in the version. Sometimes
+- **Micro** - The third and usually final number in the version. Sometimes
   referred to as the "patch" segment.
-* **Modifier** - An optional text tag, such as "dev", "alpha", "beta",
+- **Modifier** - An optional text tag, such as "dev", "alpha", "beta",
   "rc1", and so on.
 
 The vast majority of modern version identifiers are composed of two or
@@ -54,15 +54,15 @@ versions. Rather than choose a single scheme, CalVer introduces
 standard terminology for developers, in addition to the "semantic"
 versions:
 
-* **`YYYY`** - Full year - 2006, 2016, 2106
-* **`YY`** - Short year - 6, 16, 106
-* **`0Y`** - Zero-padded year - 06, 16, 106
-* **`MM`** - Short month - 1, 2 ... 11, 12
-* **`0M`** - Zero-padded month - 01, 02 ... 11, 12
-* **`WW`** - Short week (since start of year) - 1, 2, 33, 52
-* **`0W`** - Zero-padded week - 01, 02, 33, 52
-* **`DD`** - Short day - 1, 2 ... 30, 31
-* **`0D`** - Zero-padded day - 01, 02 ... 30, 31
+- **`YYYY`** - Full year - 2006, 2016, 2106
+- **`YY`** - Short year - 6, 16, 106
+- **`0Y`** - Zero-padded year - 06, 16, 106
+- **`MM`** - Short month - 1, 2 ... 11, 12
+- **`0M`** - Zero-padded month - 01, 02 ... 11, 12
+- **`WW`** - Short week (since start of year) - 1, 2, 33, 52
+- **`0W`** - Zero-padded week - 01, 02, 33, 52
+- **`DD`** - Short day - 1, 2 ... 30, 31
+- **`0D`** - Zero-padded day - 01, 02 ... 30, 31
 
 Note that traditional, incremented version numbers are 0-based,
 whereas date segments are 1-based, and the short and zero-padded years
@@ -163,7 +163,7 @@ degree.
 
 **[pytz][pytz]** is the Python translation of the
 [IANA/Olson timezone database][iana_tz], the database behind accurate
-times for all of computerdom.  pytz uses a two-segment CalVer scheme,
+times for all of computerdom. pytz uses a two-segment CalVer scheme,
 including full year and minor version.
 
 While Python has a history of "batteries-included" architecture, and
@@ -193,7 +193,7 @@ The library maintainers have crafted a resourceful hybrid of
 part of the version are used as a combined SemVer major version. That
 is, for new releases, the API of the library remains the same as it
 did in October 2015. Dependent code written since then is safe to
-upgrade.  We will see the year and month segments update next time
+upgrade. We will see the year and month segments update next time
 there is a breaking API change.
 
 [teradata]: http://www.teradata.com/
@@ -203,21 +203,22 @@ there is a breaking API change.
 
 ## Other notable projects
 
-* [Unity][unity] - **`YYYY.MINOR.MICRO`** - Cross-platform game engine.
-* [pip][pip] - **`YY.MINOR.MICRO`** - Official package manager for Python.
-* [PyCharm][pycharm] - **`YYYY.MINOR.MICRO`** - A leading Python IDE.
-* [OpenSCAD][openscad] - **`YYYY.0M`** - The premiere open-source
+- [Unity][unity] - **`YYYY.MINOR.MICRO`** - Cross-platform game engine.
+- [pip][pip] - **`YY.MINOR.MICRO`** - Official package manager for Python.
+- [PyCharm][pycharm] - **`YYYY.MINOR.MICRO`** - A leading Python IDE.
+- [OpenSCAD][openscad] - **`YYYY.0M`** - The premiere open-source
   offering for solid 3D CAD modelling.
-* [fusefs-ntfs][fusefs-ntfs] - **`YYYY.MM.DD_MICRO`** - One of the
+- [fusefs-ntfs][fusefs-ntfs] - **`YYYY.MM.DD_MICRO`** - One of the
   earliest and most cross-compatible NTFS access layers for Unix
   systems.
-* [certifi][certifi] - **`YYYY.MM.DD`** - certifi is a wrapper around
+- [certifi][certifi] - **`YYYY.MM.DD`** - certifi is a wrapper around
   Mozilla's certificate authority bundle, used for secure Internet
   communication. Similar to [pytz](#pytz), certificate updates do not
   follow a fixed schedule, but timely, dateable updates are critical
   to security.
-* [boltons][boltons] - **`YY.MINOR.MICRO`** - A broad library of
+- [boltons][boltons] - **`YY.MINOR.MICRO`** - A broad library of
   utilities supplementing the Python standard library.
+- [Stripe's API][stripe]- **`YYYY-MM-DD`** - An API-first payments processing platform.
 
 [unity]: https://unity3d.com/unity/whats-new/
 [pycharm]: https://www.jetbrains.com/pycharm/download/
@@ -226,7 +227,7 @@ there is a breaking API change.
 [certifi]: https://pypi.python.org/pypi/certifi
 [boltons]: http://boltons.readthedocs.io/en/latest/
 [pip]: https://pip.pypa.io/en/stable/news/
-
+[stripe]: https://stripe.com/blog/api-versioning
 
 See the [Users page][users] for a growing list of CalVer users.
 
@@ -238,14 +239,14 @@ If both you and people you don't know use your project seriously, then
 use a serious version. Luckily, the decision on whether to use CalVer
 for that version is easier than ever:
 
-* Does your project feature a large or constantly-changing scope?
-    * Large systems and frameworks, like [Ubuntu](#ubuntu) and [Twisted](#twisted).
-    * Amorphous sets of utilities, like [Boltons](#other_notable_projects).
-* Is your project time-sensitive in any way? Do other external changes
+- Does your project feature a large or constantly-changing scope?
+  - Large systems and frameworks, like [Ubuntu](#ubuntu) and [Twisted](#twisted).
+  - Amorphous sets of utilities, like [Boltons](#other_notable_projects).
+- Is your project time-sensitive in any way? Do other external changes
   drive new project releases?
-    * Business requirements, such as [Ubuntu](#ubuntu)'s focus on support schedules.
-    * Security updates, such as [certifi](#other_notable_projects)'s need to update certificates.
-    * Political shifts, such as [pytz](#pytz)'s handling of timezone changes.
+  - Business requirements, such as [Ubuntu](#ubuntu)'s focus on support schedules.
+  - Security updates, such as [certifi](#other_notable_projects)'s need to update certificates.
+  - Political shifts, such as [pytz](#pytz)'s handling of timezone changes.
 
 If you answered yes to any of these questions, CalVer's semantics make
 it a strong choice for your project.
