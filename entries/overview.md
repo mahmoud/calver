@@ -203,31 +203,34 @@ there is a breaking API change.
 
 ## Other notable projects
 
-- [Unity][unity] - **`YYYY.MINOR.MICRO`** - Cross-platform game engine.
-- [pip][pip] - **`YY.MINOR.MICRO`** - Official package manager for Python.
-- [PyCharm][pycharm] - **`YYYY.MINOR.MICRO`** - A leading Python IDE.
-- [OpenSCAD][openscad] - **`YYYY.0M`** - The premiere open-source
-  offering for solid 3D CAD modelling.
-- [fusefs-ntfs][fusefs-ntfs] - **`YYYY.MM.DD_MICRO`** - One of the
-  earliest and most cross-compatible NTFS access layers for Unix
-  systems.
+- [boltons][boltons] - **`YY.MINOR.MICRO`** - A broad library of
+  utilities supplementing the Python standard library.
 - [certifi][certifi] - **`YYYY.MM.DD`** - certifi is a wrapper around
   Mozilla's certificate authority bundle, used for secure Internet
   communication. Similar to [pytz](#pytz), certificate updates do not
   follow a fixed schedule, but timely, dateable updates are critical
   to security.
-- [boltons][boltons] - **`YY.MINOR.MICRO`** - A broad library of
-  utilities supplementing the Python standard library.
+- [fusefs-ntfs][fusefs-ntfs] - **`YYYY.MM.DD_MICRO`** - One of the
+  earliest and most cross-compatible NTFS access layers for Unix
+  systems.
+- [LibreOffice][libreoffice] - **`YY.MM`** - free and powerful office suite,
+  and a successor to OpenOffice.org (commonly known as OpenOffice).
+- [OpenSCAD][openscad] - **`YYYY.0M`** - The premiere open-source
+  offering for solid 3D CAD modelling.
+- [pip][pip] - **`YY.MINOR.MICRO`** - Official package manager for Python.
+- [PyCharm][pycharm] - **`YYYY.MINOR.MICRO`** - A leading Python IDE.
 - [Stripe's API][stripe]- **`YYYY-MM-DD`** - An API-first payments processing platform.
+- [Unity][unity] - **`YYYY.MINOR.MICRO`** - Cross-platform game engine.
 
-[unity]: https://unity3d.com/unity/whats-new/
-[pycharm]: https://www.jetbrains.com/pycharm/download/
-[fusefs-ntfs]: http://www.freshports.org/sysutils/fusefs-ntfs
-[openscad]: http://www.openscad.org/
+[boltons]: https://boltons.readthedocs.io/en/latest/
 [certifi]: https://pypi.python.org/pypi/certifi
-[boltons]: http://boltons.readthedocs.io/en/latest/
+[fusefs-ntfs]: https://www.freshports.org/sysutils/fusefs-ntfs
+[libreoffice]: https://www.libreoffice.org/
+[openscad]: https://openscad.org/
 [pip]: https://pip.pypa.io/en/stable/news/
+[pycharm]: https://www.jetbrains.com/pycharm/download/
 [stripe]: https://stripe.com/blog/api-versioning
+[unity]: https://unity3d.com/unity/whats-new/
 
 See the [Users page][users] for a growing list of CalVer users.
 
