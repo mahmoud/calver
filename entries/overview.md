@@ -208,9 +208,9 @@ there is a breaking API change.
   utilities supplementing the Python standard library.
 - [certifi][certifi] - **`YYYY.MM.DD`** - certifi is a wrapper around
   Mozilla's certificate authority bundle, used for secure Internet
-  communication. Similar to [pytz](#pytz), certificate updates do not
-  follow a fixed schedule, but timely, dateable updates are critical
-  to security.
+  communication. Similar to [the IANA timezone database](#the-iana-olson-timezone-database),
+  certificate updates do not follow a fixed schedule, but timely,
+  dateable updates are critical to security.
 - [fusefs-ntfs][fusefs-ntfs] - **`YYYY.MM.DD_MICRO`** - One of the
   earliest and most cross-compatible NTFS access layers for Unix
   systems.
@@ -245,12 +245,12 @@ for that version is easier than ever:
 
 - Does your project feature a large or constantly-changing scope?
   - Large systems and frameworks, like [Ubuntu](#ubuntu) and [Twisted](#twisted).
-  - Amorphous sets of utilities, like [Boltons](#other_notable_projects).
+  - Amorphous sets of utilities, like [Boltons](#other-notable-projects).
 - Is your project time-sensitive in any way? Do other external changes
   drive new project releases?
   - Business requirements, such as [Ubuntu](#ubuntu)'s focus on support schedules.
-  - Security updates, such as [certifi](#other_notable_projects)'s need to update certificates.
-  - Political shifts, such as [pytz](#pytz)'s handling of timezone changes.
+  - Security updates, such as [certifi](#other-notable-projects)'s need to update certificates.
+  - Political shifts, such as [the IANA database](#the-iana-olson-timezone-database)'s handling of timezone changes.
 
 If you answered yes to any of these questions, CalVer's semantics make
 it a strong choice for your project.
