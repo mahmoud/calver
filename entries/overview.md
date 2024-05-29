@@ -157,24 +157,25 @@ degree.
 
 [youtube-dl]: https://youtube-dl.org/
 
-## pytz
+## The IANA/Olson timezone database
 
-<img src="https://img.shields.io/badge/calver-YYYY.MINOR-22bfda.svg" />
+<img src="https://img.shields.io/badge/calver-YYYYa..z-22bfda.svg" />
 
-**[pytz][pytz]** is the Python translation of the
-[IANA/Olson timezone database][iana_tz], the database behind accurate
-times for all of computerdom. pytz uses a two-segment CalVer scheme,
-including full year and minor version.
+The [IANA/Olson timezone database][iana_tz] represents the history of local
+time for many representative locations around the globe, and is the source
+of truth for essentially every operating system, database, website, or other
+computer that deals with timezones or daylight savings time.
 
-While Python has a history of "batteries-included" architecture, and
-the datetime module frequently mentions timezones, the core Python
-runtime does not include timezone information. This is because
-timezone updates do not follow a fixed schedule, and are subject to
-politics and legislative whim. Calendar versioning offers a
-date-stamped snapshot of an otherwise chaotic system.
+It is updated periodically to reflect changes made by political bodies to
+time zone boundaries, UTC offsets, and daylight-saving rules.  Because these
+changes follow politicical and legislative whim rather than a fixed schedule,
+the database is [versioned][tz_version] with a four-digit year followed by
+lower-case letter (a through z, then za through zz, then zza through zzz,
+and so on).  Calendar versioning offers a date-stamped snapshot of an
+otherwise chaotic system.
 
-[pytz]: https://pypi.python.org/pypi/pytz
 [iana_tz]: https://www.iana.org/time-zones
+[tz_version]: https://data.iana.org/time-zones/tz-link.html
 
 ## Teradata
 
