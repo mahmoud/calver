@@ -95,7 +95,6 @@ Project                         | CalVer Format       | Examples
 [Teradata][teradata]            | `YY.MM.MINOR.MICRO` | 15.10.0.16
 [pytz][pytz]                    | `YYYY.MM`           | 2016.4
 [attrs][attrs]                  | `YY.MINOR.MICRO`    | 17.4.0
-[pip][pip]                      | `YY.MINOR.MICRO`    | 18.0 - 19.0.3
 
 [boltons]: http://boltons.readthedocs.io/en/latest/
 [twisted]: /overview.html#twisted
@@ -103,7 +102,6 @@ Project                         | CalVer Format       | Examples
 [teradata]: /overview.html#teradata
 [pytz]: /overview.html#pytz
 [attrs]: https://github.com/python-attrs/attrs
-[pip]: https://pip.pypa.io/en/stable/news/
 
 # Utilities
 
