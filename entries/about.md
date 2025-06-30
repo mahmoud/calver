@@ -14,10 +14,10 @@ this approach, and [multiple variations][calver_overview] to custom
 fit all projects.
 
 Calendar versioning has a long history, but CalVer itself was first
-publicly released in 2016. The initial version was written by
-[Mahmoud Hashemi][mahmoud], with thanks to [Stephen LaPorte][stephen],
-[Mark Williams][mark], [Glyph Lefkowitz][glyph],
-[Amber Brown][hawkowl], and [Hynek Schlawack][hynek].
+publicly released in 2016, by [Mahmoud Hashemi][mahmoud], who's now
+working on [FinFam][finfam].  Thanks to [Stephen LaPorte][stephen], [Mark
+Williams][mark], [Glyph Lefkowitz][glyph], [Amber Brown][hawkowl], and
+[Hynek Schlawack][hynek] for all their help on the initial version.
 
 Big thanks to [狂飙][networm] for the initial Chinese
 ([中文](/overview_zhcn.html)) translation.
@@ -31,6 +31,7 @@ This site generated with [Chert][chert] and [Python][python].
 [calver_overview]: /overview.html
 
 [mahmoud]: https://sedimental.org
+[finfam]: https://finfam.app
 [networm]: https://github.com/networm
 [stephen]: https://twitter.com/sklaporte
 [mark]: https://enotuniq.org/
