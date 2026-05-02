@@ -14,6 +14,8 @@ site:
       href: '/overview_zhcn.html'
     - text: pt-BR
       href: '/overview_pt_br.html'
+    - text: 한국어
+      href: '/overview_ko.html'
     - text: GitHub
       href: https://github.com/mahmoud/calver
       desc: CalVer site source
