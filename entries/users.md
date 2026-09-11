@@ -91,7 +91,7 @@ both padding styles.
 [neo4j]: https://feedback.neo4j.com/changelog/important-update-calendar-versioning-cypher-25
 [scylladb]: https://www.scylladb.com/2025/04/08/announcing-scylladb-2025-1/
 [openstack]: https://releases.openstack.org/
-[vertica]: https://blogs.opentext.com/whats-new-in-opentext-vertica-23-3/
+[vertica]: https://www.rocketsoftware.com/en-us/insights/whats-new-in-vertica-23-3
 [authentik]: https://docs.goauthentik.io/releases/2026.8/
 [nvidia_gpu_op]: https://docs.nvidia.com/datacenter/cloud-native/gpu-operator/latest/life-cycle-policy.html
 [nvidia_rapids]: https://docs.rapids.ai/notices/rgn0013/
