@@ -137,6 +137,7 @@ Two cautions to state at the end:
 
 ## Install
 
+<!-- GoodTurn: https://goodturn.ai/p/gtp_01m29brgj6eghb36njj0hgtftm -->
 - Claude Code: symlink or copy this directory to
   `~/.claude/skills/calver-adoption`.
 - Oh My Pi, Codex, and other agents using the Agent Skills layout:
