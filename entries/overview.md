@@ -46,7 +46,7 @@ The vast majority of modern version identifiers are composed of two or
 three numeric segments, plus the optional modifier. Convention
 suggests that four-numeric-segment versions are discouraged.
 
-[designing_a_version]: http://sedimental.org/designing_a_version.html
+[designing_a_version]: https://sedimental.org/designing_a_version.html
 
 As seen in the [case studies](#case-studies) below, projects have
 found more than one useful way to leverage dates in their
@@ -354,3 +354,39 @@ for that version is easier than ever:
 
 If you answered yes to any of these questions, CalVer's semantics make
 it a strong choice for your project.
+
+# FAQ
+
+## What about breaking changes?
+
+CalVer does not encode API breaks in the number, and that is
+deliberate. There is no consensus on what counts as a breaking change
+(is a new field breaking? a reworded error?), so a version bump that
+claims to carry that meaning [substitutes for the documentation and
+communication that actually keep dependents working][designing_a_version].
+Pair a calendar version with a time-based deprecation policy and say
+it out loud: Twisted requires one year and two releases between
+deprecating something and removing it. For a rewrite large enough
+that the policy can't cover it, rename the project. Further
+discussion in [#4][issue_4].
+
+## Multiple releases per day?
+
+Append an incrementing micro segment: `2026.9.11`, then `2026.9.11.1`,
+written `YYYY.M.D[.MICRO]` in scheme notation. Avoid intra-day
+timestamps; they trade a readable number for one that either runs
+out of resolution (two releases in the same minute) or grows too
+long, and humans don't convert a second-counter to a wall clock in
+their heads. If an automated pipeline genuinely needs the timestamp,
+build metadata (`+HHMMSS`) carries it without affecting precedence.
+Further discussion in [#49][issue_49] and [#62][issue_62].
+
+## Padded or unpadded?
+
+Unpadded, unless your versions are sorted as strings (filenames,
+image tags, object-store keys). See [Padding](#padding) for the
+reasoning and the exceptions.
+
+[issue_4]: https://github.com/mahmoud/calver/issues/4
+[issue_49]: https://github.com/mahmoud/calver/issues/49
+[issue_62]: https://github.com/mahmoud/calver/issues/62
