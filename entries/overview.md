@@ -35,8 +35,8 @@ the parts of the version:
 
 - **Major** - The first number in the version. 2 and 3 are Python's famous
   major versions. The major segment is the most common calendar-based component.
-- **Minor** - The second number in the version. 7 is the most popular
-  minor version of Python.
+- **Minor** - The second number in the version. The 7 in Python 2.7 is
+  its minor version.
 - **Micro** - The third and usually final number in the version. Sometimes
   referred to as the "patch" segment.
 - **Modifier** - An optional text tag, such as "dev", "alpha", "beta",
@@ -48,33 +48,90 @@ suggests that four-numeric-segment versions are discouraged.
 
 [designing_a_version]: http://sedimental.org/designing_a_version.html
 
-As seen in the [case studies](#case_studies) below, projects have
+As seen in the [case studies](#case-studies) below, projects have
 found more than one useful way to leverage dates in their
 versions. Rather than choose a single scheme, CalVer introduces
 standard terminology for developers, in addition to the "semantic"
 versions:
 
 - **`YYYY`** - Full year - 2006, 2016, 2106
-- **`YY`** - Short year - 6, 16, 106
-- **`0Y`** - Zero-padded year - 06, 16, 106
-- **`MM`** - Short month - 1, 2 ... 11, 12
-- **`0M`** - Zero-padded month - 01, 02 ... 11, 12
-- **`WW`** - Short week (since start of year) - 1, 2, 33, 52
-- **`0W`** - Zero-padded week - 01, 02, 33, 52
-- **`DD`** - Short day - 1, 2 ... 30, 31
-- **`0D`** - Zero-padded day - 01, 02 ... 30, 31
+- **`YY`** - Two-digit year, zero-padded - 06, 16 (as in 16.04)
+- **`Y`** - Short year, unpadded - 6, 16, 106
+- **`MM`** - Zero-padded month - 01, 02 ... 11, 12
+- **`M`** - Short month - 1, 2 ... 11, 12
+- **`WW`** - Zero-padded week (since start of year) - 01, 02, 33, 52
+- **`W`** - Short week - 1, 2, 33, 52
+- **`DD`** - Zero-padded day - 01, 02 ... 30, 31
+- **`D`** - Short day - 1, 2 ... 30, 31
+
+A few real versions, decomposed:
+
+- `2026.9.11` is **`YYYY.M.D`** (certifi's scheme)
+- `26.04` is **`YY.MM`** (Ubuntu)
+- `2026.2` is **`YYYY.MINOR`** (JetBrains, Kali Linux)
+- `2026.08.19` is **`YYYY.MM.DD`** (yt-dlp)
+
+Doubled letters are zero-padded and single letters are not, the same
+repeat-count convention used by the [date-formatting
+libraries][dayjs_format] most developers already know: Java's
+DateTimeFormatter, moment.js, day.js, and ICU.
 
 Note that traditional, incremented version numbers are 0-based,
-whereas date segments are 1-based, and the short and zero-padded years
-are relative to the year 2000. Also note that usage of weeks is
-usually mutually exclusive with months/days.
+whereas date segments are 1-based, and the short years are relative
+to the year 2000. `Y` is a technicality: `Y` and `YY` only produce
+different strings for the years 2000-2009 and 2100 onward. Ubuntu's
+first release, 4.10 (October 2004), is the one well-known unpadded
+year; in practice, projects write `YY`.
+
+Trailing optional segments are written in square brackets, so
+`YYYY.MM.DD[.MICRO]` is a date version that sometimes carries a
+fourth number, as yt-dlp's does.
+
+Weeks deserve caution. There are several definitions in common use
+(`strftime`'s `%W` counts Monday-started weeks from 00, `%U` does the
+same from Sunday, and ISO 8601's `%V` runs 01 through 53 with its own
+week-based year), and depending on the definition a year can have as
+many as 54 numbered weeks. A project using weeks should state which
+definition it means. Usage of weeks is mutually exclusive with months
+and days.
+
+> **Pre-26.0 notation.** Before spec 26.0, this site wrote padded
+> tokens with a zero prefix (`0Y`, `0M`, `0W`, `0D`) and used `YY`,
+> `MM`, `WW`, and `DD` for the *unpadded* forms. The old `YYYY.0M.0D`
+> reads as `YYYY.MM.DD` today, and the old `YY.MM` reads as `YY.M`.
+> See the [spec changelog](#spec-changelog).
 
 The [Gregorian calendar][gregorian] is assumed, as is the convention
 of [UTC][utc]. Technically any calendar can be used, provided projects
 state which one.
 
+[dayjs_format]: https://day.js.org/docs/en/display/format
 [gregorian]: https://en.wikipedia.org/wiki/Gregorian_calendar
 [utc]: https://en.wikipedia.org/wiki/Coordinated_Universal_Time
+
+## Padding
+
+Unpadded is the sensible default: `YYYY.M.D`, not `YYYY.MM.DD`. The
+version comparators that matter treat `04` and `4` as the same
+number. dpkg and rpm compare numerically, and [PEP 440 normalizes
+leading zeros away][pep440_norm], so PyPI shows `2025.4` no matter
+what you tagged. Padding buys nothing there, and it costs something
+elsewhere: a padded segment is invalid [SemVer][semver] ("MUST NOT
+contain leading zeroes"), which Cargo and Go modules reject outright.
+NVIDIA's GPU Operator [says it plainly][nvidia_lifecycle]: "Zero
+padding is omitted for month to be still compatible with semantic
+versioning."
+
+Padding earns its keep in one place: string sorting. When versions
+live in filenames, image tags, or object-store keys that get listed
+by `ls` or sorted lexically, fixed-width segments keep `26.04` ahead
+of `26.10`. That is why Ubuntu, NixOS, the Arch Linux ISOs, and
+NVIDIA's monthly NGC containers pad, and it is fine that they do. Pad
+when your versions are sorted as strings; otherwise, don't.
+
+[pep440_norm]: https://packaging.python.org/en/latest/specifications/version-specifiers/#integer-normalization
+[semver]: https://semver.org/
+[nvidia_lifecycle]: https://docs.nvidia.com/datacenter/cloud-native/gpu-operator/latest/life-cycle-policy.html
 
 # Case studies
 
