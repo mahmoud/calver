@@ -140,7 +140,7 @@ notability and variety of use cases.
 
 ## Ubuntu
 
-<img src="https://img.shields.io/badge/calver-YY.0M.MICRO-22bfda.svg" />
+<img src="https://img.shields.io/badge/calver-YY.MM.MICRO-22bfda.svg" />
 
 **[Ubuntu][ubuntu]**, one of the most prominent Linux-based operating
 systems available, uses a three-segment CalVer scheme, with a short
@@ -160,26 +160,80 @@ five-year support periods for their long-term support (LTS) releases,
 and only 9 months for non-LTS releases. Thanks to CalVer and
 elementary arithmetic, any user can easily determine whether their
 version is still supported. The current LTS release at the time of
-writing, 16.04, will be supported until April 2021.
+writing, [26.04 LTS][ubuntu_cycle], will be supported until 2031.
 
-[ubuntu]: http://www.ubuntu.com/
+[ubuntu]: https://ubuntu.com/
 [ubuntu_releases]: https://en.wikipedia.org/wiki/List_of_Ubuntu_releases
+[ubuntu_cycle]: https://ubuntu.com/about/release-cycle
+
+## Apple
+
+<img src="https://img.shields.io/badge/calver-YY.MINOR-22bfda.svg" />
+
+At WWDC in June 2025, **[Apple][apple_ios26]** moved every one of its
+operating systems to a single year-based number: iOS 18 became iOS
+26, macOS 15 became macOS 26, and iPadOS, watchOS, tvOS, and visionOS
+made the same jump, with Xcode 26 and Safari 26 following. The
+releases shipped in September 2025 but carry the number of the year
+ahead, the way car model years do. WWDC 2026 [confirmed the pattern
+is annual][apple_wwdc26], with the 27 family.
+
+In CalVer terms the scheme is `YY.MINOR` with the year offset by one:
+the calendar supplies the major version, point releases count up
+underneath it, and the rounding is marketing-friendly rather than
+strictly literal. The payoff is the one Ubuntu found twenty years
+earlier. A single number now tells a customer, a developer, or a
+support engineer how current any Apple platform is, and the numbers
+line up across platforms instead of drifting (iOS 18 beside macOS 15
+beside watchOS 11 took a lookup table). Measured by devices, it is
+likely the largest calendar versioning adoption to date.
+
+[apple_ios26]: https://www.apple.com/newsroom/2025/06/apple-elevates-the-iphone-experience-with-ios-26/
+[apple_wwdc26]: https://www.apple.com/newsroom/2026/06/apple-unveils-next-generation-of-apple-intelligence-siri-ai-and-more/
+
+## NVIDIA
+
+<img src="https://img.shields.io/badge/calver-YY.M.MICRO-22bfda.svg" />
+
+**NVIDIA** runs calendar versions across much of its infrastructure
+software, and its documentation is unusually explicit about why. The
+[GPU Operator][nvidia_lifecycle] for Kubernetes went from SemVer 1.11
+to 22.9.0 in September 2022, with a new major every six months and a
+twelve-month support window, so the version alone tells an operator
+when support ends. [RAPIDS][rapids_calver], the CUDA data science
+libraries, jumped from 0.19 to 21.06.00 in June 2021. The [NGC
+deep-learning containers][ngc_notes] (PyTorch, TensorFlow, TensorRT,
+Triton) have shipped monthly as `YY.MM` since at least 19.08.
+[Legate][legate_versions] uses `YY.MM.PP` with `.devXXX` weeklies and
+promises API and ABI stability within each month version.
+
+The instructive wrinkle is that one company uses both padding
+styles. GPU Operator is unpadded, and says so: "Zero padding is
+omitted for month to be still compatible with semantic versioning."
+RAPIDS, NGC, and Legate pad, because their versions are container
+tags that sort as strings. Each chose correctly for its own artifact
+(see [Padding](#padding)).
+
+[rapids_calver]: https://docs.rapids.ai/notices/rgn0013/
+[ngc_notes]: https://docs.nvidia.com/deeplearning/frameworks/container-release-notes/index.html
+[legate_versions]: https://docs.nvidia.com/legate/latest/versions.html
 
 ## Twisted
 
-<img src="https://img.shields.io/badge/calver-YY.MM.MICRO-22bfda.svg" />
+<img src="https://img.shields.io/badge/calver-YY.M.MICRO-22bfda.svg" />
 
 **[Twisted][twisted]**, the venerated Python networking and
 asynchronous execution framework, uses a three-segment CalVer scheme,
 with a short year in the major version slot, short month in the minor
 version slot, and micro/patch version in the third and final slot.
 
-First released in 2002 and still actively developed today, Twisted is
-a [mature][twisted_wp] library that has grown to match its large
-scope. It features everything from an IRC client to an HTTP server to
-a slew of utilities for concurrent programming. Like an operating
-system, Twisted has a lot of parts, making SemVer a poor fit due to
-the individual parts deprecating and breaking compatibility individually.
+First released in 2002 and still actively developed today (26.4.0 at
+the time of writing), Twisted is a [mature][twisted_wp] library that
+has grown to match its large scope. It features everything from an
+IRC client to an HTTP server to a slew of utilities for concurrent
+programming. Like an operating system, Twisted has a lot of parts,
+making SemVer a poor fit due to the individual parts deprecating and
+breaking compatibility individually.
 
 The non-deprecated parts of Twisted are backwards-compatible between
 each successive version, and breaking changes are done on a time basis,
@@ -190,29 +244,35 @@ Its versioning scheme has spread to related projects, including
 [Klein][klein], [Treq][treq], and even one of Twisted's dependencies,
 [PyOpenSSL][pyopenssl].
 
-[twisted]: https://twistedmatrix.com
+[twisted]: https://twisted.org/
 [twisted_wp]: https://en.wikipedia.org/wiki/Twisted_%28software%29
 [klein]: https://github.com/twisted/klein
 [treq]: https://github.com/twisted/treq
 [pyopenssl]: https://github.com/pyca/pyopenssl
 
-## youtube-dl
+## yt-dlp
 
-<img src="https://img.shields.io/badge/calver-YYYY.0M.0D-22bfda.svg" />
+<img src="https://img.shields.io/badge/calver-YYYY.MM.DD%5B.MICRO%5D-22bfda.svg" />
 
-**[youtube-dl][youtube-dl]**, the understated ally of Internet
-media archivists everywhere, uses a three-segment CalVer scheme,
-including full year, zero-padded month, and zero-padded day. The
-version is almost completely calendar-driven, except for a micro
-segment that is added in some technical contexts.
+**[yt-dlp][yt-dlp]**, the community successor to youtube-dl, is the
+understated ally of Internet media archivists everywhere. youtube-dl
+pioneered the scheme, a full date with a micro segment appended when
+a same-day fix is needed, and has been dormant since 2021.12.17;
+yt-dlp forked in January 2021 and inherited the scheme unchanged,
+tagging [2026.08.19][ytdlp_release] in the usual style.
 
-Despite the name, youtube-dl's scope is expansive. It supports
-extracting audio and video from a long, ever-expanding list of
-sites. Consider the rapid release cycle of supported services, and it
-becomes clear why the project has adopted CalVer to such a great
-degree.
+Despite the name, yt-dlp's scope is expansive. It supports extracting
+audio and video from a long, ever-expanding list of sites. Consider
+the rapid release cycle of supported services, and it becomes clear
+why the project has adopted CalVer to such a great degree.
 
-[youtube-dl]: https://youtube-dl.org/
+The tags are zero-padded, but PyPI lists the same release as
+`2026.8.19`, the [PEP 440][pep440_norm]-normalized form. It is a live
+illustration of the [padding note](#padding) above: the two strings
+are one version.
+
+[yt-dlp]: https://github.com/yt-dlp/yt-dlp
+[ytdlp_release]: https://github.com/yt-dlp/yt-dlp/releases/tag/2026.08.19
 
 ## The IANA/Olson timezone database
 
@@ -225,7 +285,7 @@ computer that deals with timezones or daylight savings time.
 
 It is updated periodically to reflect changes made by political bodies to
 time zone boundaries, UTC offsets, and daylight-saving rules.  Because these
-changes follow politicical and legislative whim rather than a fixed schedule,
+changes follow political and legislative whim rather than a fixed schedule,
 the database is [versioned][tz_version] with a four-digit year followed by
 lower-case letter (a through z, then za through zz, then zza through zzz,
 and so on).  Calendar versioning offers a date-stamped snapshot of an
@@ -234,61 +294,44 @@ otherwise chaotic system.
 [iana_tz]: https://www.iana.org/time-zones
 [tz_version]: https://data.iana.org/time-zones/tz-link.html
 
-## Teradata
-
-<img src="https://img.shields.io/badge/calver-YY.MM.MINOR.MICRO-22bfda.svg" />
-
-The **[Teradata UDA client][teradata_uda]** provides [next-generation
-access][uda_blog] to [Teradata][teradata]'s data warehousing technologies.
-
-Teradata's usage is notable not for the prominence of the technology
-or company, but because there have been multiple releases in 2016
-which were versioned as `15.10`. This may seem breaking at first, but
-the meaning and utility is clear.
-
-The library maintainers have crafted a resourceful hybrid of
-[semantic versioning][semver] and calendar versioning. The **YY.MM**
-part of the version are used as a combined SemVer major version. That
-is, for new releases, the API of the library remains the same as it
-did in October 2015. Dependent code written since then is safe to
-upgrade. We will see the year and month segments update next time
-there is a breaking API change.
-
-[teradata]: http://www.teradata.com/
-[teradata_uda]: https://pypi.python.org/pypi/teradata
-[uda_blog]: https://developer.teradata.com/tools/reference/teradata-python-module
-[semver]: http://semver.org/
-
 ## Other notable projects
 
 - [boltons][boltons] - **`YY.MINOR.MICRO`** - A broad library of
   utilities supplementing the Python standard library.
-- [certifi][certifi] - **`YYYY.MM.DD`** - certifi is a wrapper around
+- [certifi][certifi] - **`YYYY.M.D`** - certifi is a wrapper around
   Mozilla's certificate authority bundle, used for secure Internet
   communication. Similar to [the IANA timezone database](#the-iana-olson-timezone-database),
   certificate updates do not follow a fixed schedule, but timely,
   dateable updates are critical to security.
-- [fusefs-ntfs][fusefs-ntfs] - **`YYYY.MM.DD_MICRO`** - One of the
+- [CockroachDB][cockroachdb] - **`YY.MINOR.MICRO`** - Distributed SQL
+  database, on CalVer since 19.1.
+- [fusefs-ntfs][fusefs-ntfs] - **`YYYY.M.D_MICRO`** - One of the
   earliest and most cross-compatible NTFS access layers for Unix
   systems.
-- [LibreOffice][libreoffice] - **`YY.MM`** - free and powerful office suite,
+- [Home Assistant][ha] - **`YYYY.M.MICRO`** - Open-source home
+  automation platform, released monthly since 2020.12.
+- [JetBrains IDEs][jetbrains] - **`YYYY.MINOR.MICRO`** - IntelliJ
+  IDEA, PyCharm, and the rest of the family, since 2016.1.
+- [LibreOffice][libreoffice] - **`YY.M`** - free and powerful office suite,
   and a successor to OpenOffice.org (commonly known as OpenOffice).
-- [OpenSCAD][openscad] - **`YYYY.0M`** - The premiere open-source
+- [OpenSCAD][openscad] - **`YYYY.MM`** - The premiere open-source
   offering for solid 3D CAD modelling.
 - [pip][pip] - **`YY.MINOR.MICRO`** - Official package manager for Python.
-- [PyCharm][pycharm] - **`YYYY.MINOR.MICRO`** - A leading Python IDE.
-- [Stripe's API][stripe]- **`YYYY-MM-DD`** - An API-first payments processing platform.
-- [Unity][unity] - **`YYYY.MINOR.MICRO`** - Cross-platform game engine.
+- [Stripe's API][stripe] - **`YYYY-MM-DD.MODIFIER`** - An API-first
+  payments platform. Integrations pin a dated API version; since 2024
+  the twice-yearly breaking releases carry a plant name, as in
+  `2024-09-30.acacia`.
 
 [boltons]: https://boltons.readthedocs.io/en/latest/
-[certifi]: https://pypi.python.org/pypi/certifi
+[certifi]: https://pypi.org/project/certifi/
+[cockroachdb]: https://www.cockroachlabs.com/blog/calendar-versioning/
 [fusefs-ntfs]: https://www.freshports.org/sysutils/fusefs-ntfs
+[ha]: https://www.home-assistant.io/blog/2020/12/13/release-202012/
+[jetbrains]: https://www.jetbrains.com/idea/whatsnew/
 [libreoffice]: https://www.libreoffice.org/
 [openscad]: https://openscad.org/
 [pip]: https://pip.pypa.io/en/stable/news/
-[pycharm]: https://www.jetbrains.com/pycharm/download/
-[stripe]: https://stripe.com/blog/api-versioning
-[unity]: https://unity3d.com/unity/whats-new/
+[stripe]: https://stripe.com/blog/introducing-stripes-new-api-release-process
 
 See the [Users page][users] for a growing list of CalVer users.
 
