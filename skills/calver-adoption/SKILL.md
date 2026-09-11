@@ -139,8 +139,9 @@ Two cautions to state at the end:
 
 - Claude Code: symlink or copy this directory to
   `~/.claude/skills/calver-adoption`.
-- Oh My Pi and other agents that read `~/.claude/skills`: same path; the
-  skill's name and description are picked up automatically.
+- Oh My Pi, Codex, and other agents using the Agent Skills layout:
+  `~/.agents/skills/calver-adoption`. The skill's name and description
+  are picked up automatically; no other configuration is needed.
 
 ## Self-update
 
