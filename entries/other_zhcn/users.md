@@ -93,10 +93,10 @@ CalVer 软件库允许开发人员只需要看依赖列表一眼
 [pip][pip]                      | `YY.MINOR.MICRO`    | 18.0 - 19.0.3
 
 [boltons]: http://boltons.readthedocs.io/en/latest/
-[twisted]: /overview.html#twisted
+[twisted]: /overview_zhcn.html#twisted
 [certifi]: https://pypi.python.org/pypi/certifi
-[teradata]: /overview.html#teradata
-[pytz]: /overview.html#pytz
+[teradata]: /overview_zhcn.html#teradata
+[pytz]: /overview_zhcn.html#pytz
 [attrs]: https://github.com/python-attrs/attrs
 [pip]: https://pip.pypa.io/en/stable/news/
 
@@ -111,7 +111,7 @@ CalVer 软件库允许开发人员只需要看依赖列表一眼
 [fusefs-ntfs][fsfntfs]          | `YYYY.MM.DD_MICRO`  | 2016.2.22_1
 [black][black]                  | `YY.MM.MICRO`       | 18.3a0
 
-[youtube-dl]: /overview.html#youtube-dl
+[youtube-dl]: /overview_zhcn.html#youtube-dl
 [fsfntfs]: http://www.freshports.org/sysutils/fusefs-ntfs
 [pip]: https://pypi.org/project/pip/#history
 [black]: https://github.com/ambv/black
