@@ -5,6 +5,8 @@ publish_date: July 1, 2019
 orig_publish_date: March 25, 2016
 ---
 
+_This translation reflects the pre-26.0 spec; its scheme notation differs from the current [English overview](/overview.html)._
+
 *CalVer é uma convenção de versionamento baseada no lançamento do seu projeto conforme o calendário, em vez de números arbitrários.*
 
 **O versionamento fica melhor com o tempo.**

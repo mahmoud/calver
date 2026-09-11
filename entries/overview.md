@@ -1,12 +1,14 @@
 ---
 title: Calendar Versioning
 entry_root: overview
-publish_date: July 1, 2019
+publish_date: September 11, 2026
 orig_publish_date: March 25, 2016
 ---
 
 _CalVer is a versioning convention based on your project's release
 calendar, instead of arbitrary numbers._
+
+_Spec version 26.0 ([changes](#spec-changelog))._
 
 **Versioning gets better with time.**
 
@@ -390,3 +392,12 @@ reasoning and the exceptions.
 [issue_4]: https://github.com/mahmoud/calver/issues/4
 [issue_49]: https://github.com/mahmoud/calver/issues/49
 [issue_62]: https://github.com/mahmoud/calver/issues/62
+
+# Spec changelog
+
+- **26.0** (September 2026): padding is spelled by repeating the letter
+  (`M`/`MM`, `D`/`DD`, `W`/`WW`, `Y`/`YY`), replacing the `0M`-style
+  tokens; optional segments in square brackets; padding guidance;
+  case studies and users refreshed for a decade of adoption.
+- **19.7** (2019): revised text, case studies, and users list.
+- **16.6** (2016): original publication.
