@@ -59,3 +59,23 @@
 .vg { color: #008080 } /* Name.Variable.Global */
 .vi { color: #008080 } /* Name.Variable.Instance */
 .il { color: #009999 } /* Literal.Number.Integer.Long */
+
+@media (prefers-color-scheme: dark) {
+.hll { background-color: #3a3a20 }
+.c, .cm, .c1, .cp, .cs { color: #8b949e }
+.err { color: #ffa198; background-color: #490202 }
+.k, .kc, .kd, .kn, .kp, .kr, .o, .ow { color: #ff7b72 }
+.kt, .nc, .ni { color: #ffa657 }
+.m, .mf, .mh, .mi, .mo, .il { color: #79c0ff }
+.s, .sb, .sc, .sd, .s2, .se, .sh, .si, .sx, .s1, .sr, .ss { color: #a5d6ff }
+.na, .no, .nv, .vc, .vg, .vi, .nb, .bp { color: #79c0ff }
+.nd, .ne, .nf, .nl { color: #d2a8ff }
+.nn { color: #c9d1d9 }
+.nt { color: #7ee787 }
+.w { color: #6e7681 }
+.gd { color: #ffa198; background-color: #490202 }
+.gi { color: #56d364; background-color: #04260f }
+.gr, .gt { color: #ffa198 }
+.gh, .gu, .gp, .go { color: #8b949e }
+.ge { color: inherit }
+}

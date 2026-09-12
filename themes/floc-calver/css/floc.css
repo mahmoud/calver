@@ -1,3 +1,31 @@
+:root {
+    color-scheme: light dark;
+    --bg: #fff;
+    --bg-raised: #F1F1F1;
+    --text: rgba(0, 0, 0, 0.80);
+    --text-strong: rgba(0, 0, 0, 0.85);
+    --text-muted: rgba(0, 0, 0, 0.68);
+    --text-faint: #BBB;
+    --link: rgba(31, 157, 196, 0.85);
+    --link-hover: rgba(31, 120, 148, 0.85);
+    --border-soft: #E1E1E1;
+    --border-strong: #444;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #161719;
+        --bg-raised: #1e2023;
+        --text: #d4d4d8;
+        --text-strong: #e8e8ec;
+        --text-muted: #9a9aa3;
+        --text-faint: #6a6c74;
+        --link: #4FC1E9;
+        --link-hover: #7fd3f2;
+        --border-soft: #2a2c31;
+        --border-strong: #b6b6bc;
+    }
+}
 
 /* general stuff */
 body {
@@ -9,10 +37,11 @@ body {
     grid-template-rows: auto 1fr auto;
     font-family: 'Merriweather', Georgia, serif;
     padding: 0 6px;
+    background-color: var(--bg);
 }
 
 header, footer, main {
-    color: rgba(0, 0, 0, 0.80);
+    color: var(--text);
     text-rendering: optimizeLegibility;
 }
 
@@ -26,9 +55,9 @@ p, li {
 
 p { margin-bottom: 2rem; }
 
-a { color: rgba(31, 157, 196, 0.85); }
+a { color: var(--link); }
 
-a:hover { color: rgba(31, 120, 148, 0.85); }
+a:hover { color: var(--link-hover); }
 
 /* header specific stuff */
 
@@ -54,7 +83,7 @@ a:hover { color: rgba(31, 120, 148, 0.85); }
     margin-top: 2ch;
     padding-bottom: 2ch;
     text-align: center;
-    border-bottom: 5px solid #444;
+    border-bottom: 5px solid var(--border-strong);
     width: 100%
 }
 
@@ -66,7 +95,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 a, h2 a, h3 a, h4 a, h5 a {
-    color: rgba(0, 0, 0, 0.85);
+    color: var(--text-strong);
     text-decoration: none;
 }
 
@@ -87,7 +116,7 @@ h6 {font-size: 1.6rem; text-decoration: underline; margin: 1rem 0 -0.2rem 0;}
 }
 
 div.toc {
-    border-left: 5px solid #E1E1E1;
+    border-left: 5px solid var(--border-soft);
     padding: 0 0 0 1rem;
     margin-bottom: 1rem;
 }
@@ -110,13 +139,13 @@ div.toc li {
 
 hr {
     border: none;
-    border-top: 2px solid #E1E1E1;
+    border-top: 2px solid var(--border-soft);
     margin: 10px 0 5px 0;
 }
 
 div.footnote hr {
-    border-top: 2px solid #E1E1E1;
-    color: #BBB;
+    border-top: 2px solid var(--border-soft);
+    color: var(--text-faint);
 }
 
 div.footnote hr:after {
@@ -125,7 +154,7 @@ div.footnote hr:after {
     position: relative;
     top: -1.1rem;
     padding: 0 0.25rem;
-    background: white;
+    background: var(--bg);
 }
 
 
@@ -136,8 +165,8 @@ div.footnote hr:after {
   margin: 0 .2rem;
   font-size: 135%;
   white-space: nowrap;
-  background: #F1F1F1;
-  border: 1px solid #E1E1E1;
+  background: var(--bg-raised);
+  border: 1px solid var(--border-soft);
   border-radius: 4px; }
 
 div.codehilite > pre {
@@ -158,7 +187,7 @@ blockquote, blockquote > p {
     overflow-wrap: break-word;
     margin: 0.5rem 3rem 1.5rem 1.5rem;
     /* text-align: center; */
-    color: rgba(0, 0, 0, 0.68);
+    color: var(--text-muted);
 }
 
 /* table stuff */
@@ -166,7 +195,7 @@ blockquote, blockquote > p {
 th, td {
     padding: 12px 15px;
     text-align: left;
-    border-bottom: 1px solid #E1E1E1;
+    border-bottom: 1px solid var(--border-soft);
 }
 
 th:first-child, td:first-child {
