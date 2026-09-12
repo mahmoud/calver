@@ -14,16 +14,16 @@
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --bg: #161719;
-        --bg-raised: #1e2023;
-        --text: #d4d4d8;
-        --text-strong: #e8e8ec;
-        --text-muted: #9a9aa3;
-        --text-faint: #6a6c74;
-        --link: #4FC1E9;
-        --link-hover: #7fd3f2;
-        --border-soft: #2a2c31;
-        --border-strong: #b6b6bc;
+        --bg: #1b1d21;
+        --bg-raised: #24262b;
+        --text: #c3c4c9;
+        --text-strong: #d5d6da;
+        --text-muted: #90919a;
+        --text-faint: #66686f;
+        --link: #3fa4cf;
+        --link-hover: #6cc0e2;
+        --border-soft: #303239;
+        --border-strong: #9fa0a8;
     }
 }
 
