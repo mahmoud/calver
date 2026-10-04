@@ -18,8 +18,10 @@ executed on request.
 
 Vocabulary: schemes are written in [calver.org 26.0
 notation](https://calver.org/#scheme). Single letters are unpadded (`M`,
-`D`, `W`), doubled letters are zero-padded (`MM`, `DD`, `WW`), `YYYY` is
-the full year and `YY` the two-digit year. `MINOR` and `MICRO` are
+`D`, `W`), a leading zero marks zero-padding (`0M`, `0D`, `0W`), `YYYY`
+is the full year and `YY` the two-digit year. Never write the doubled
+`MM`, `DD`, or `WW`: they are deprecated spellings of the unpadded
+tokens and readers misread them as padded. `MINOR` and `MICRO` are
 ordinary counters. Optional trailing segments go in square brackets:
 `YYYY.M.D[.MICRO]`.
 
@@ -71,11 +73,11 @@ about the project (library vs. application, release cadence, ecosystem).
 | `YY.MINOR.MICRO` | 26.2.1 | pip, attrs, CockroachDB, Mesa | libraries that want a year signal plus a counter |
 | `YYYY.M.MICRO` | 2026.9.0 | Home Assistant, Betaflight, mise | monthly-cadence projects; **default recommendation for packages** |
 | `YY.M.MICRO` | 26.9.0 | Black, conda, Twisted | same, shorter |
-| `YY.MM` | 26.04 | Ubuntu, NixOS, OpenWrt | date-named platform releases that need fixed-width sorting |
-| `YYYY.M.D[.MICRO]` | 2026.9.11 | yt-dlp (padded variant), certifi | tools that release per date |
+| `YY.0M` | 26.04 | Ubuntu, NixOS, OpenWrt | date-named platform releases that need fixed-width sorting |
+| `YYYY.M.D[.MICRO]` | 2026.9.9 | regex, trove-classifiers (yt-dlp and certifi pad: `YYYY.0M.0D`) | tools that release per date |
 
 State the ecosystem constraints that apply, from
-[calver.org's padding section](https://calver.org/#padding):
+[calver.org's padding section](https://calver.org/#to-pad-or-not-to-pad):
 
 - **crates.io and Go modules** reject zero-padded segments (SemVer's
   "MUST NOT contain leading zeroes"). Go modules additionally cannot take

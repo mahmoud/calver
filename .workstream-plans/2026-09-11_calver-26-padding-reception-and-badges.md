@@ -1,5 +1,7 @@
 # CalVer 26.0: unpadded-default reception + badge research
 
+> **Superseded in part (2026-10-03):** the token flip (doubled letters = padded) was replaced by deprecating `MM`/`DD`/`WW` in favor of `M` and `0M`. See `~/work/10notes/_Workstreams/plans/2026-10-03-_calver-26-token-reassessment---calver.md`.
+
 Date: 2026-09-11. Researcher: omp session 01a09396 (branch `calver-26`).
 Question: will the 26.0 unpadded recommendation (`YYYY.M.D`) and the token
 notation flip be well-received, and what happens to calver badges in the wild?
