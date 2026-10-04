@@ -410,11 +410,9 @@ users to have the basic lexical sort work out of the box.
 
 # Spec changelog
 
-- **26.0** (September 2026): short month, week, and day are written
-  `M`, `W`, and `D`; the doubled `MM`, `WW`, and `DD` are deprecated
-  (same meaning, unpadded); zero-padded tokens (`0Y`, `0M`, `0W`,
-  `0D`) are unchanged; optional segments in square brackets; padding
-  guidance; case studies and users refreshed for a decade of
+- **26.0** (2026): short month, week, and day are written
+  `M`, `W`, and `D` (the synonymous doubled `MM`, `WW`, and `DD` are deprecated due to ambiguity). Optional segments in square brackets. Padding
+  guidance. Case studies and users refreshed for a decade of
   adoption.
 - **19.7** (2019): revised text, case studies, and users list.
 - **16.6** (2016): original publication.
