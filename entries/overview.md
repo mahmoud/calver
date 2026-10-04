@@ -65,7 +65,6 @@ versions:
 
 A few real versions, decomposed:
 
-- `2026.7.22` is **`YYYY.M.D`** (certifi, as published on PyPI)
 - `26.04` is **`YY.0M`** (Ubuntu)
 - `2026.2` is **`YYYY.MINOR`** (JetBrains, Kali Linux)
 - `2026.08.19` is **`YYYY.0M.0D`** (yt-dlp)
@@ -163,7 +162,7 @@ made the same jump, with Xcode 26 and Safari 26 following.
 Releases are numbered by the following year, so WWDC 2026 brought iOS version 27, 
 [confirming the pattern is annual][apple_wwdc26].
 
-In CalVer terms the scheme is `YY.MINOR` with the year offset by one:
+In CalVer terms, the scheme is `YY.MINOR` with the year offset by one:
 the calendar supplies the major version, point releases counting up as
 deemed fit. Eminently marketing-friendly, finally embracing the brand's maturity.
 
@@ -181,8 +180,7 @@ iOS 18 coincided with macOS 15 and watchOS 11).
 <img src="https://img.shields.io/badge/calver-YY.M.MICRO-22bfda.svg" />
 
 **NVIDIA** runs calendar versions across much of its infrastructure
-software, and its documentation is unusually explicit about why. The
-[GPU Operator][nvidia_lifecycle] for Kubernetes went from SemVer 1.11
+software. The[GPU Operator][nvidia_lifecycle] for Kubernetes went from SemVer 1.11
 to 22.9.0 in September 2022, with a new major every six months and a
 twelve-month support window, so the version alone tells an operator
 when support ends. [RAPIDS][rapids_calver], the CUDA data science
@@ -192,12 +190,13 @@ Triton) have shipped monthly as `YY.0M` since at least 19.08.
 [Legate][legate_versions] uses `YY.0M.PP` with `.devXXX` weeklies and
 promises API and ABI stability within each month version.
 
-The instructive wrinkle is that one company uses both padding
-styles. GPU Operator is unpadded, and says so: "Zero padding is
+Interestingly, NVIDIA is using both padded and unpadded CalVer.
+GPU Operator is unpadded, and with docs saying: "Zero padding is
 omitted for month to be still compatible with semantic versioning."
 RAPIDS, NGC, and Legate pad, because their versions are container
-tags that sort as strings. Each chose correctly for its own artifact
-(see [To pad or not to pad?](#to-pad-or-not-to-pad)).
+tags that sort as strings. 
+
+To decide for your use case, see [To pad or not to pad?](#to-pad-or-not-to-pad)).
 
 [rapids_calver]: https://docs.rapids.ai/notices/rgn0013/
 [ngc_notes]: https://docs.nvidia.com/deeplearning/frameworks/container-release-notes/index.html
@@ -239,17 +238,17 @@ Its versioning scheme has spread to related projects, including
 
 <img src="https://img.shields.io/badge/calver-YYYY.0M.0D%5B.MICRO%5D-22bfda.svg" />
 
-**[yt-dlp][yt-dlp]**, the community successor to youtube-dl, is the
-understated ally of Internet media archivists everywhere. youtube-dl
+**[yt-dlp][yt-dlp]**, the community successor to youtube-dl and
+understated ally of Internet media archivists everywhere, 
+continues the tradition of using CalVer. youtube-dl
 pioneered the scheme, a full date with a micro segment appended when
-a same-day fix is needed, and has been dormant since 2021.12.17;
-yt-dlp forked in January 2021 and inherited the scheme unchanged,
+a same-day fix is needed. yt-dlp forked in January 2021 and kept going,
 tagging [2026.08.19][ytdlp_release] in the usual style.
 
 Despite the name, yt-dlp's scope is expansive. It supports extracting
 audio and video from a long, ever-expanding list of sites. Consider
-the rapid release cycle of supported services, and it becomes clear
-why the project has adopted CalVer to such a great degree.
+the rapid release cycle of supported services, and surface area of "breaking" changes, 
+it becomes clear why the project has adopted CalVer to such a great degree.
 
 The tags are zero-padded, but PyPI lists the same release as
 `2026.8.19`, the [PEP 440][pep440_norm]-normalized form. It is a live
@@ -287,8 +286,7 @@ otherwise chaotic system.
   Mozilla's certificate authority bundle, used for secure Internet
   communication. Similar to [the IANA timezone database](#the-iana-olson-timezone-database),
   certificate updates do not follow a fixed schedule, but timely,
-  dateable updates are critical to security. Its tags pad
-  (`2026.07.22`); PyPI shows the normalized `2026.7.22`.
+  dateable updates are critical to security.
 - [CockroachDB][cockroachdb] - **`YY.MINOR.MICRO`** - Distributed SQL
   database, on CalVer since 19.1.
 - [fusefs-ntfs][fusefs-ntfs] - **`YYYY.M.D_MICRO`** - One of the
@@ -335,10 +333,6 @@ decode the notation:
 Dots pass through badge URLs untouched. A literal dash must be
 doubled (`--`), and square brackets are percent-encoded, as in
 yt-dlp's `YYYY.0M.0D%5B.MICRO%5D` above.
-
-Badges minted before spec 26.0 use the same tokens. A doubled `MM`,
-`WW`, or `DD` in one still means the short, unpadded value ([see
-above](#scheme)), so a `YY.MM.MICRO` badge describes `YY.M.MICRO`.
 
 [shields]: https://shields.io/badges
 
