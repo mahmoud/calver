@@ -96,8 +96,8 @@ blockquote { margin: 0 0 var(--p-space); padding: .1em 0 .1em 1.1em; border-left
 blockquote p:last-child { margin-bottom: 0; }
 
 /* table of contents (chert hypertext.py emits div.toc > span.toctitle + nested ul) */
-.toc { font-family: var(--sans); font-size: .9rem; margin: 1.5em 0 2em; border-left: 1px solid var(--border-strong); padding-left: 1rem; }
-.toctitle { display: block; font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--text-faint); margin-bottom: .5em; }
+.toc { font-size: .9rem; margin: 1.5em 0 2em; border-left: 1px solid var(--border-strong); padding-left: 1rem; }
+.toctitle { display: block; font-family: var(--sans); font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--text-faint); margin-bottom: .5em; }
 .toc ul { list-style: decimal; padding-left: 1.4em; margin: 0; }
 .toc ul ul { margin-top: .3em; }
 .toc li { margin-bottom: .3em; }
@@ -110,30 +110,30 @@ div.footnote hr { margin: 0 0 1em; width: 6em; text-align: left; }
 div.footnote hr::after { content: "Notes"; display: block; font-family: var(--sans); font-size: .75rem; text-transform: uppercase; letter-spacing: .08em; color: var(--text-faint); margin-top: .6em; }
 div.footnote ol { padding-left: 1.5em; }
 div.footnote li { margin-bottom: .75em; }
-.footnote-ref, .footnote-backref { text-decoration: none; font-family: var(--sans); }
+.footnote-ref, .footnote-backref { text-decoration: none; }
 
 /* masthead */
-#header { padding-top: 1.5rem; padding-bottom: 1rem; margin-bottom: 2rem; border-bottom: 1px solid var(--border-soft); font-family: var(--sans); text-align: center; }
+#header { padding-top: 1.25rem; padding-bottom: .75rem; margin-bottom: 1.75rem; border-bottom: 1px solid var(--border-soft); text-align: center; }
 #header h1 { font-size: 1.75rem; font-weight: 400; margin: 0; line-height: 1.1; }
 #header a { text-decoration: none; }
 #header h1 a { color: var(--text-strong); }
-#tagline-p { color: var(--text-muted); font-family: var(--serif); font-size: .9rem; margin: .4rem 0 0; }
-#header nav { margin-top: .9rem; display: flex; flex-wrap: wrap; justify-content: center; gap: .25rem 1.1rem; }
-#header nav a { color: var(--link); font-size: .95rem; padding: .25rem 0; }
+#tagline-p { color: var(--text-muted); font-size: .9rem; margin: .3rem 0 0; }
+#header nav { margin-top: .5rem; display: flex; flex-wrap: wrap; justify-content: center; gap: .1rem 1rem; }
+#header nav a { color: var(--link); font-size: .9rem; }
 #header nav a:hover { color: var(--link-hover); text-decoration: underline; }
-#header nav.sec { margin-top: .3rem; }
-#header nav.sec a { font-size: .85rem; }
+#header nav.sec { margin-top: .1rem; }
+#header nav.sec a { font-size: .8rem; }
 
 /* entry */
 #entry-header h1 { font-size: 2.25rem; font-weight: 400; margin: 0 0 .25em; letter-spacing: -.015em; line-height: 1.12; }
 #entry-tagline { color: var(--text-muted); font-style: italic; margin-top: 0; }
 #entry-tagline:empty { display: none; }
-.entry-metadata { font-family: var(--sans); font-size: .85rem; color: var(--text-muted); margin: 3em 0 0; padding-top: 1em; border-top: 1px solid var(--border-soft); display: flex; flex-wrap: wrap; gap: .25em 1em; }
+.entry-metadata { font-size: .85rem; color: var(--text-muted); margin: 3em 0 0; padding-top: 1em; border-top: 1px solid var(--border-soft); display: flex; flex-wrap: wrap; gap: .25em 1em; }
 hr + .entry-metadata { margin-top: 0; padding-top: 0; border-top: 0; }
 .entry-metadata a { color: var(--text-muted); text-decoration: none; }
 .entry-metadata a:hover { color: var(--link); }
 .entry-metadata .tags a { margin-right: .6em; }
-#previously-div { margin-top: 2em; font-family: var(--sans); font-size: .95rem; }
+#previously-div { margin-top: 2em; font-size: .9rem; }
 #previously-div h5 { font-size: .8rem; text-transform: uppercase; letter-spacing: .06em; color: var(--text-faint); margin: 0 0 .5em; }
 #previously-div a { display: block; padding: .3em 0; text-decoration: none; color: var(--text-strong); }
 #previously-div a:hover { color: var(--link); }
@@ -144,14 +144,14 @@ hr + .entry-metadata { margin-top: 0; padding-top: 0; border-top: 0; }
 .archive p { color: var(--text-muted); font-size: .95em; margin-bottom: 1.5em; }
 
 /* footer + newsletter (form only renders when site.newsletter is configured) */
-#footer { font-family: var(--sans); font-size: .85rem; color: var(--text-muted); margin-top: 4rem; padding-top: 1.5rem; padding-bottom: 2.5rem; border-top: 1px solid var(--border-soft); }
+#footer { font-size: .85rem; color: var(--text-muted); margin-top: 4rem; padding-top: 1.5rem; padding-bottom: 2.5rem; border-top: 1px solid var(--border-soft); }
 #footer a { color: var(--text-muted); }
 #footer img { vertical-align: middle; }
 .newsletter-signup h3 { margin: 0 0 .25em; font-size: 1.1rem; }
-.newsletter-tagline { margin: 0 0 1em; font-family: var(--serif); font-style: italic; }
+.newsletter-tagline { margin: 0 0 1em; font-style: italic; }
 .embeddable-buttondown-form { max-width: 420px; }
 .form-input-row { display: flex; gap: .5rem; }
-.form-input-row input[type="email"] { flex: 1; font: inherit; font-family: var(--serif); padding: .55em .8em; border: 1px solid var(--border-strong); border-radius: 4px; background: var(--bg); color: var(--text); }
+.form-input-row input[type="email"] { flex: 1; font: inherit; padding: .55em .8em; border: 1px solid var(--border-strong); border-radius: 4px; background: var(--bg); color: var(--text); }
 .form-input-row input[type="email"]:focus { outline: 2px solid var(--link); outline-offset: 1px; border-color: var(--link); }
 .form-input-row input[type="submit"] { font: inherit; font-weight: 700; padding: .55em 1.1em; border: 0; border-radius: 4px; background: var(--link); color: #fff; cursor: pointer; }
 .form-input-row input[type="submit"]:hover { background: var(--link-hover); }
@@ -162,8 +162,8 @@ hr + .entry-metadata { margin-top: 0; padding-top: 0; border-top: 0; }
 @media (max-width: 600px) {
     :root { --gutter: 1rem; }
     body { font-size: calc(var(--body-size) - 1px); }
-    #header { padding-top: 1rem; margin-bottom: 1.5rem; }
-    #header nav a { padding: .4rem 0; }
+    #header { padding-top: 1rem; margin-bottom: 1.25rem; }
+    #header nav a { padding: .2rem 0; }
     #entry-header h1 { font-size: 1.85rem; }
     h2 { font-size: 1.35rem; }
     img[align="right"], img[align="left"] { float: none; display: block; margin: 1em auto; width: auto; max-width: 60%; }
