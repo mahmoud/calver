@@ -180,7 +180,7 @@ iOS 18 coincided with macOS 15 and watchOS 11).
 <img src="https://img.shields.io/badge/calver-YY.M.MICRO-22bfda.svg" />
 
 **NVIDIA** runs calendar versions across much of its infrastructure
-software. The[GPU Operator][nvidia_lifecycle] for Kubernetes went from SemVer 1.11
+software. The [GPU Operator][nvidia_lifecycle] for Kubernetes went from SemVer 1.11
 to 22.9.0 in September 2022, with a new major every six months and a
 twelve-month support window, so the version alone tells an operator
 when support ends. [RAPIDS][rapids_calver], the CUDA data science
@@ -190,13 +190,12 @@ Triton) have shipped monthly as `YY.0M` since at least 19.08.
 [Legate][legate_versions] uses `YY.0M.PP` with `.devXXX` weeklies and
 promises API and ABI stability within each month version.
 
-Interestingly, NVIDIA is using both padded and unpadded CalVer.
-GPU Operator is unpadded, and with docs saying: "Zero padding is
-omitted for month to be still compatible with semantic versioning."
+Interestingly, NVIDIA uses both padded and unpadded CalVer.
+GPU Operator is unpadded to stay compatible with semantic versioning.
 RAPIDS, NGC, and Legate pad, because their versions are container
-tags that sort as strings. 
+tags that sort as strings.
 
-To decide for your use case, see [To pad or not to pad?](#to-pad-or-not-to-pad)).
+To decide for your use case, see [To pad or not to pad?](#to-pad-or-not-to-pad).
 
 [rapids_calver]: https://docs.rapids.ai/notices/rgn0013/
 [ngc_notes]: https://docs.nvidia.com/deeplearning/frameworks/container-release-notes/index.html
@@ -239,7 +238,7 @@ Its versioning scheme has spread to related projects, including
 <img src="https://img.shields.io/badge/calver-YYYY.0M.0D%5B.MICRO%5D-22bfda.svg" />
 
 **[yt-dlp][yt-dlp]**, the community successor to youtube-dl and
-understated ally of Internet media archivists everywhere, 
+understated ally of Internet media archivists everywhere,
 continues the tradition of using CalVer. youtube-dl
 pioneered the scheme, a full date with a micro segment appended when
 a same-day fix is needed. yt-dlp forked in January 2021 and kept going,
@@ -247,8 +246,8 @@ tagging [2026.08.19][ytdlp_release] in the usual style.
 
 Despite the name, yt-dlp's scope is expansive. It supports extracting
 audio and video from a long, ever-expanding list of sites. Consider
-the rapid release cycle of supported services, and surface area of "breaking" changes, 
-it becomes clear why the project has adopted CalVer to such a great degree.
+the rapid release cycle of supported services and the surface area of "breaking" changes,
+and it becomes clear why the project has adopted CalVer to such a great degree.
 
 The tags are zero-padded, but PyPI lists the same release as
 `2026.8.19`, the [PEP 440][pep440_norm]-normalized form. It is a live
