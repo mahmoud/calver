@@ -15,8 +15,8 @@ fit all projects.
 
 Calendar versioning has a long history, but CalVer itself was first
 publicly released in 2016, by [Mahmoud Hashemi][mahmoud], who's now
-working on [FinFam][finfam].  Thanks to [Stephen LaPorte][stephen], [Mark
-Williams][mark], [Glyph Lefkowitz][glyph], [Amber Brown][hawkowl], and
+working on [FinFam][finfam].  Thanks to [Stephen LaPorte][stephen], Mark
+Williams, [Glyph Lefkowitz][glyph], [Amber Brown][hawkowl], and
 [Hynek Schlawack][hynek] for all their help on the initial version.
 The [26.0 revision][changelog] (2026) followed a survey of a decade of
 adoption, from Ubuntu and Twisted through to Apple's OS 26 family and
@@ -37,11 +37,10 @@ This site generated with [Chert][chert] and [Python][python].
 [mahmoud]: https://sedimental.org
 [finfam]: https://finfam.app
 [networm]: https://github.com/networm
-[stephen]: https://twitter.com/sklaporte
-[mark]: https://enotuniq.org/
-[glyph]: https://twitter.com/glyph
-[hawkowl]: https://github.com/hawkowl
-[hynek]: https://twitter.com/hynek
+[stephen]: https://stephen.wiki/
+[glyph]: https://blog.glyph.im/
+[hawkowl]: https://atleastfornow.net/
+[hynek]: https://hynek.me/
 
 [issue]: https://github.com/mahmoud/calver/issues
 

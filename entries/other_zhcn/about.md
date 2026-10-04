@@ -17,7 +17,7 @@ CalVer 不是基于任意数字，而是一个基于
 日历化版本由来已久，但 CalVer 本身最初是
 在 2016 年公开发布。最初的版本是由
 [Mahmoud Hashemi][mahmoud] 编写，感谢 [Stephen LaPorte][Stephen]、
-[Mark Williams][mark]、[Glyph Lefkowitz][glyph]、
+Mark Williams、[Glyph Lefkowitz][glyph]、
 [Amber Brown][hawkowl] 和 [Hynek Schlawack][hynek]。
 
 中文版由 [狂飙][networm] 翻译完成。
@@ -31,11 +31,10 @@ CalVer 不是基于任意数字，而是一个基于
 [calver_overview]: /overview.html
 
 [mahmoud]: http://sedimental.org
-[stephen]: https://twitter.com/sklaporte
-[mark]: https://enotuniq.org/
-[glyph]: https://twitter.com/glyph
-[hawkowl]: https://github.com/hawkowl
-[hynek]: https://twitter.com/hynek
+[stephen]: https://stephen.wiki/
+[glyph]: https://blog.glyph.im/
+[hawkowl]: https://atleastfornow.net/
+[hynek]: https://hynek.me/
 [networm]: https://github.com/networm
 
 [issue]: https://github.com/mahmoud/calver/issues
