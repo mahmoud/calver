@@ -131,8 +131,8 @@ div.footnote li { margin-bottom: .75em; }
 .entry-metadata { font-size: .85rem; color: var(--text-muted); margin: 3em 0 0; padding-top: 1em; border-top: 1px solid var(--border-soft); display: flex; flex-wrap: wrap; gap: .25em 1em; }
 hr + .entry-metadata { margin-top: 0; padding-top: 0; border-top: 0; }
 hr:has(+ .entry-metadata) { margin-bottom: .75em; }
-.entry-metadata a { color: var(--text-muted); text-decoration: none; }
-.entry-metadata a:hover { color: var(--link); }
+.entry-metadata a { color: var(--link); text-decoration: none; }
+.entry-metadata a:hover { color: var(--link-hover); text-decoration: underline; }
 .entry-metadata .tags a { margin-right: .6em; }
 #previously-div { margin-top: 2em; font-size: .9rem; }
 #previously-div h5 { font-size: .8rem; text-transform: uppercase; letter-spacing: .06em; color: var(--text-faint); margin: 0 0 .5em; }
