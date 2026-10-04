@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="{site.lang_code}">
+<head>
+  <meta charset="{site.charset}">
+  <title>{+head_title}{site.head_title}{/head_title}</title>
+  <meta name="author" content="{site.author_name}">
+  <meta name="description" content="{site.tagline}">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <link href="{site.atom_feed_url}" title="{site.head_title} Feed" type="application/atom+xml" rel="alternate" />
+  {?site.dev_mode}{?site.dev_mode_refresh_seconds}
+  <meta http-equiv="refresh" content="{site.dev_mode_refresh_seconds}" />
+  {/site.dev_mode_refresh_seconds}{/site.dev_mode}
+
+  <link rel="preload" href="/css/fonts/merriweather-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/github.css">
+  <link rel="stylesheet" href="/css/varve.css">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+
+  {?site.enable_analytics}
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id={site.analytics_code}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', '{site.analytics_code}');
+  </script>
+  {/site.enable_analytics}
+</head>
+<body>
+  <header id="header">
+    <h1><a href="{site.canonical_base_path}">{site.title}</a></h1>
+    {?site.tagline}<p id="tagline-p">{site.tagline}</p>{/site.tagline}
+    {?site.primary_links}<nav class="pri">
+      {#site.primary_links}<a{?is_external} target="_blank"{/is_external}{?rel} rel="{rel}"{/rel} title="{.desc}" href="{.href}">{.text}</a>
+      {/site.primary_links}
+    </nav>{/site.primary_links}
+    {?site.secondary_links}<nav class="sec">
+      {#site.secondary_links}<a{?is_external} target="_blank"{/is_external}{?rel} rel="{rel}"{/rel} title="{.desc}" href="{.href}">{.text}</a>
+      {/site.secondary_links}
+    </nav>{/site.secondary_links}
+  </header>
+  <main id="page-content">
+  {+content}Page content{/content}
+  </main>
+  <footer id="footer">
+    {#site.newsletter}
+    <div class="newsletter-signup">
+      <h3 id="subscribe-to-the-newsletter">{heading}</h3>
+      <p class="newsletter-tagline">{tagline|s}</p>
+      <form action="{action}" method="post" target="popupwindow" onsubmit="window.open('{popup_url}', 'popupwindow')" class="embeddable-buttondown-form">
+        <div class="form-group">
+          <label for="bd-email" class="sr-only">Enter your email</label>
+          <div class="form-input-row">
+            <input type="email" name="email" id="bd-email" placeholder="{placeholder}" required />
+            <input type="submit" value="{button}" />
+          </div>
+        </div>
+      </form>
+    </div>
+    {/site.newsletter}
+    <div class="footer-content">
+      {site.copyright_notice|s} <a href="{site.atom_feed_url}"><img height="14" src="/img/feed.png"></a>
+    </div>
+  </footer>
+  <!-- Last generated: {site.last_generated_utc} -->
+</body>
+</html>
