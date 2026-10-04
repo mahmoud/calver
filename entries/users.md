@@ -80,7 +80,6 @@ Project                                   | Scheme                  | Example   
 [NVIDIA NGC containers][nvidia_ngc]       | `YY.0M`                 | 26.06             | ≤2019
 [NVIDIA Legate][nvidia_legate]            | `YY.0M.MICRO[.devXXX]`  | 24.06             | 2021
 [Spring Cloud][spring_cloud]              | `YYYY.MINOR.MICRO`      | 2025.1            | 2020
-[FairCom][faircom]                        | `YY.M`                  | 26.10 (planned)   | 2026
 
 See the [NVIDIA case study](/overview.html#nvidia) for how one company ended up with
 both padding styles.
@@ -97,7 +96,6 @@ both padding styles.
 [nvidia_ngc]: https://docs.nvidia.com/deeplearning/frameworks/container-release-notes/index.html
 [nvidia_legate]: https://docs.nvidia.com/legate/latest/versions.html
 [spring_cloud]: https://github.com/spring-cloud/spring-cloud-release/wiki/Supported-Versions
-[faircom]: https://github.com/mahmoud/calver/issues/74
 
 # Languages and standards
 
