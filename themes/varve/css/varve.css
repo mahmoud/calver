@@ -136,8 +136,8 @@ hr:has(+ .entry-metadata) { margin-bottom: .75em; }
 .entry-metadata .tags a { margin-right: .6em; }
 #previously-div { margin-top: 2em; font-size: .9rem; }
 #previously-div h5 { font-size: .8rem; text-transform: uppercase; letter-spacing: .06em; color: var(--text-faint); margin: 0 0 .5em; }
-#previously-div a { display: block; padding: .3em 0; text-decoration: none; color: var(--text-strong); }
-#previously-div a:hover { color: var(--link); }
+#previously-div a { display: block; width: fit-content; padding: .3em 0; text-decoration: none; color: var(--link); }
+#previously-div a:hover { color: var(--link-hover); text-decoration: underline; }
 #previously-div br { display: none; }
 
 /* archive (archive_brief.html wraps entries in div.archive) */
