@@ -6,6 +6,12 @@ site/*
 
 # Ignore compiled Python in the top-level directory (where custom.py lives)
 /*.py[co]
+__pycache__/
+
+nohup.out
+
+# macOS ignores
+.DS_Store
 
 
 # emacs ignores
