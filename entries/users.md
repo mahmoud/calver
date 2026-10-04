@@ -41,7 +41,7 @@ Project                                   | Scheme                      | Exampl
 [OPNsense][opnsense]                      | `YY.M.MICRO`                | 26.7.3         | 2015
 [Arch Linux ISO][archlinux]               | `YYYY.0M.0D`                | 2026.09.01     | pre-2016
 [GrapheneOS][grapheneos]                  | `YYYY0M0DNN`                | 2026091000     | long-standing
-[postmarketOS][postmarketos]              | `YY.0M`                     | 26.06          | ~2020
+[Nura][nura] (formerly postmarketOS)      | `YY.0M`                     | 26.06          | ~2020
 [Slack for Mobile][slack]                 | `YY.0M.MICRO`               | 26.09.20       | ~2018
 [Tesla firmware][tesla_fw]                | `YYYY.W.MICRO`              | 2026.32.3      | ≤2019
 [Rivian firmware][rivian_fw]              | `YYYY.0W.MICRO`             | 2026.31.40     | 2021
@@ -56,7 +56,7 @@ Project                                   | Scheme                      | Exampl
 [opnsense]: https://opnsense.org/blog/
 [archlinux]: https://archlinux.org/releng/releases/
 [grapheneos]: https://grapheneos.org/releases
-[postmarketos]: https://postmarketos.org/blog/
+[nura]: https://nura.eco/blog/
 [slack]: https://apps.apple.com/us/app/slack/id618783545
 [tesla_fw]: https://www.notateslaapp.com/software-updates/
 [rivian_fw]: https://rivianroamer.com/software-updates
