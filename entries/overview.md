@@ -5,12 +5,9 @@ publish_date: September 11, 2026
 orig_publish_date: March 25, 2016
 ---
 
-_CalVer is a versioning convention based on your project's release
-calendar, instead of arbitrary numbers._
+_CalVer is a versioning convention based on your project's release calendar, instead of arbitrary numbers._
 
-_Spec version 26.0 ([changes](#spec-changelog))._
-
-**Versioning gets better with time.**
+*Versioning gets better with time.*
 
 For maintainers, versioning allows us to specify precise dependencies
 within an ever-expanding ecosystem. For sellers and promoters, a
@@ -22,7 +19,7 @@ practices have emerged. For instance, point-separated numbers (e.g.,
 _3.1.4_) are all but given. Another common versioning pattern
 incorporates a time-based element, usually part of the release date.
 
-This date-based approach has come to be called Calendar Versioning, or
+This date-based approach is called Calendar Versioning, or
 **CalVer** for short.
 
 [TOC]
@@ -111,26 +108,6 @@ state which one.
 [gregorian]: https://en.wikipedia.org/wiki/Gregorian_calendar
 [utc]: https://en.wikipedia.org/wiki/Coordinated_Universal_Time
 
-## Padding
-
-Unpadded is the sensible default: `YYYY.M.D`, not `YYYY.MM.DD`. The
-version comparators that matter treat `04` and `4` as the same
-number. dpkg and rpm compare numerically, and [PEP 440 normalizes
-leading zeros away][pep440_norm], so PyPI shows `2025.4` no matter
-what you tagged. Padding buys nothing there, and it costs something
-elsewhere: a padded segment is invalid [SemVer][semver] ("MUST NOT
-contain leading zeroes"), which Cargo and Go modules reject outright.
-NVIDIA's GPU Operator [says it plainly][nvidia_lifecycle]: "Zero
-padding is omitted for month to be still compatible with semantic
-versioning."
-
-Padding earns its keep in one place: string sorting. When versions
-live in filenames, image tags, or object-store keys that get listed
-by `ls` or sorted lexically, fixed-width segments keep `26.04` ahead
-of `26.10`. That is why Ubuntu, NixOS, the Arch Linux ISOs, and
-NVIDIA's monthly NGC containers pad, and it is fine that they do. Pad
-when your versions are sorted as strings; otherwise, don't.
-
 [pep440_norm]: https://packaging.python.org/en/latest/specifications/version-specifiers/#integer-normalization
 [semver]: https://semver.org/
 [nvidia_lifecycle]: https://docs.nvidia.com/datacenter/cloud-native/gpu-operator/latest/life-cycle-policy.html
@@ -177,8 +154,8 @@ operating systems to a single year-based number: iOS 18 became iOS
 26, macOS 15 became macOS 26, and iPadOS, watchOS, tvOS, and visionOS
 made the same jump, with Xcode 26 and Safari 26 following. The
 releases shipped in September 2025 but carry the number of the year
-ahead, the way car model years do. WWDC 2026 [confirmed the pattern
-is annual][apple_wwdc26], with the 27 family.
+ahead, like car models. WWDC 2026 brought version 27, 
+[confirming the pattern is annual][apple_wwdc26].
 
 In CalVer terms the scheme is `YY.MINOR` with the year offset by one:
 the calendar supplies the major version, point releases count up
@@ -339,25 +316,47 @@ See the [Users page][users] for a growing list of CalVer users.
 
 [users]: /users.html
 
-# When to use CalVer
+# Badges
 
-If both you and people you don't know use your project seriously, then
-use a serious version. Luckily, the decision on whether to use CalVer
-for that version is easier than ever:
+The scheme badges on this page are stock [shields.io][shields] static
+images, and any project can mint one. Put your scheme in the middle
+segment of the URL, and link the image here so your readers can
+decode the notation:
+
+    [![CalVer - YYYY.M.D](https://img.shields.io/badge/calver-YYYY.M.D-22bfda.svg)](https://calver.org/)
+
+Dots pass through badge URLs untouched. A literal dash must be
+doubled (`--`), and square brackets are percent-encoded, as in
+yt-dlp's `YYYY.MM.DD%5B.MICRO%5D` above.
+
+Badges minted before spec 26.0 spell padding in the old zero-prefix
+notation ([see above](#scheme)). A `YYYY.MM.DD` badge from that era
+most likely describes today's `YYYY.M.D`.
+
+[shields]: https://shields.io/badges
+
+# Frequently Asked Questions
+
+And their answers, in time.
+
+## When to use CalVer?
+
+If third parties use your project, then use a serious version. 
+
+Luckily, the decision on whether to use CalVer is easier than ever:
 
 - Does your project feature a large or constantly-changing scope?
-  - Large systems and frameworks, like [Ubuntu](#ubuntu) and [Twisted](#twisted).
-  - Amorphous sets of utilities, like [Boltons](#other-notable-projects).
+    - Large systems and frameworks, like [Ubuntu](#ubuntu) and [Twisted](#twisted).
+    - Amorphous sets of utilities, like [Boltons](#other-notable-projects).
+    - Non-technical audiences, who shouldn't have to understand if a change is "breaking", as in [Apple's iOS](#apple).
 - Is your project time-sensitive in any way? Do other external changes
   drive new project releases?
-  - Business requirements, such as [Ubuntu](#ubuntu)'s focus on support schedules.
-  - Security updates, such as [certifi](#other-notable-projects)'s need to update certificates.
-  - Political shifts, such as [the IANA database](#the-iana-olson-timezone-database)'s handling of timezone changes.
+    - Business requirements, such as [Ubuntu](#ubuntu)'s focus on support schedules.
+    - Security updates, such as [certifi](#other-notable-projects)'s need to update certificates.
+    - Political shifts, such as [the IANA database](#the-iana-olson-timezone-database)'s handling of timezone changes.
 
 If you answered yes to any of these questions, CalVer's semantics make
 it a strong choice for your project.
-
-# FAQ
 
 ## What about breaking changes?
 
@@ -383,11 +382,31 @@ their heads. If an automated pipeline genuinely needs the timestamp,
 build metadata (`+HHMMSS`) carries it without affecting precedence.
 Further discussion in [#49][issue_49] and [#62][issue_62].
 
-## Padded or unpadded?
+## To pad or not to pad?
 
-Unpadded, unless your versions are sorted as strings (filenames,
-image tags, object-store keys). See [Padding](#padding) for the
-reasoning and the exceptions.
+Short version: Unless your versions commonly appear as
+filenames to the end reader, unpadded is the sensible default.
+`YYYY.M.D`, not `YYYY.MM.DD`. 
+
+The longer explanation is that most version comparators already treat 
+`04` and `4` as the same number. 
+dpkg and rpm compare numerically, and [PEP 440 normalizes
+leading zeros away][pep440_norm], so PyPI shows `2025.4` no matter
+what you tagged. 
+
+Padding is problematic in a lot of systems, 
+because a padded segment is invalid [SemVer][semver] ("MUST NOT
+contain leading zeroes"), and thus Cargo and Go modules reject outright.
+NVIDIA's GPU Operator [says it outright][nvidia_lifecycle]: "Zero
+padding is omitted for month to be still compatible with semantic
+versioning."
+
+Zero-padding makes the most sense when versions will commonly
+live in filenames, image tags, or object-store keys that get listed 
+lexically. With padding, fixed-width segments keep `26.04` ahead
+of `26.10`. That is probably why Ubuntu, NixOS, the Arch Linux ISOs, and
+NVIDIA's monthly NGC containers pad. Pad when it helps your 
+users to have the basic sort work.
 
 [issue_4]: https://github.com/mahmoud/calver/issues/4
 [issue_49]: https://github.com/mahmoud/calver/issues/49
