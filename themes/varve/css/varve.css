@@ -144,12 +144,13 @@ hr + .entry-metadata { margin-top: 0; padding-top: 0; border-top: 0; }
 .archive p { color: var(--text-muted); font-size: .95em; margin-bottom: 1.5em; }
 
 /* footer + newsletter (form only renders when site.newsletter is configured) */
-#footer { font-size: .85rem; color: var(--text-muted); margin-top: 4rem; padding-top: 1.5rem; padding-bottom: 2.5rem; border-top: 1px solid var(--border-soft); }
+#footer { font-size: .85rem; color: var(--text-muted); margin-top: 4rem; padding-top: 1.5rem; padding-bottom: 2.5rem; border-top: 1px solid var(--border-soft); text-align: center; }
 #footer a { color: var(--text-muted); }
 #footer img { vertical-align: middle; }
 .newsletter-signup h3 { margin: 0 0 .25em; font-size: 1.1rem; }
 .newsletter-tagline { margin: 0 0 1em; font-style: italic; }
-.embeddable-buttondown-form { max-width: 420px; }
+.embeddable-buttondown-form { max-width: 420px; margin: 0 auto; }
+.footer-content:first-child { margin-top: 0; }
 .form-input-row { display: flex; gap: .5rem; }
 .form-input-row input[type="email"] { flex: 1; font: inherit; padding: .55em .8em; border: 1px solid var(--border-strong); border-radius: 4px; background: var(--bg); color: var(--text); }
 .form-input-row input[type="email"]:focus { outline: 2px solid var(--link); outline-offset: 1px; border-color: var(--link); }
