@@ -126,6 +126,7 @@ div.footnote li { margin-bottom: .75em; }
 
 /* entry */
 #entry-header h1 { font-size: 2.25rem; font-weight: 400; margin: 0 0 .25em; letter-spacing: -.015em; line-height: 1.12; }
+#entry-header { margin-bottom: 1.5em; }
 #entry-tagline { color: var(--text-muted); font-style: italic; margin-top: 0; }
 #entry-tagline:empty { display: none; }
 .entry-metadata { font-size: .85rem; color: var(--text-muted); margin: 3em 0 0; padding-top: 1em; border-top: 1px solid var(--border-soft); display: flex; flex-wrap: wrap; gap: .25em 1em; }
