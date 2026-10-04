@@ -5,9 +5,8 @@ publish_date: September 11, 2026
 orig_publish_date: March 25, 2016
 ---
 
-_CalVer is a versioning convention based on your project's release calendar, instead of arbitrary numbers._
-
-*Versioning gets better with time.*
+<p style="text-align: center; margin: 1.25em 0 2em"><em>CalVer is a versioning convention based on your project's release calendar.</em><br>
+<em>Versioning gets better with time.</em></p>
 
 For maintainers, versioning allows us to specify precise dependencies
 within an ever-expanding ecosystem. For sellers and promoters, a
@@ -327,7 +326,7 @@ images, and any project can mint one. Put your scheme in the middle
 segment of the URL, and link the image here so your readers can
 decode the notation:
 
-    [![CalVer - YYYY.M.D](https://img.shields.io/badge/calver-YYYY.M.D-22bfda.svg)](https://calver.org/)
+<pre style="white-space: pre-wrap; overflow-wrap: anywhere"><code>[![CalVer - YYYY.M.D](https://img.shields.io/badge/calver-YYYY.M.D-22bfda.svg)](https://calver.org/)</code></pre>
 
 Dots pass through badge URLs untouched. A literal dash must be
 doubled (`--`), and square brackets are percent-encoded, as in
