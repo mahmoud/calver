@@ -85,9 +85,9 @@ code { font-family: var(--mono); font-size: .875em; }
 p > code, li > code, td > code { background: var(--bg-raised); padding: .08em .35em; border-radius: 4px; }
 .codehilite { background: var(--bg-raised); border-radius: 6px; font-size: .85em; line-height: 1.5; }
 .codehilite pre { margin: 0; padding: .9em 1.1em; overflow-x: auto; }
-table { border-collapse: collapse; width: 100%; display: block; overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; display: block; overflow-x: auto; font-size: .875em; line-height: 1.5; }
 th, td { padding: .5em .75em; text-align: left; border-bottom: 1px solid var(--border-soft); vertical-align: top; }
-th { font-family: var(--sans); font-weight: 700; color: var(--text-strong); font-size: .875em; }
+th { font-family: var(--sans); font-weight: 700; color: var(--text-strong); font-size: .9em; }
 th:first-child, td:first-child { padding-left: 0; }
 th:last-child, td:last-child { padding-right: 0; }
 
