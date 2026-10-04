@@ -130,6 +130,7 @@ div.footnote li { margin-bottom: .75em; }
 #entry-tagline:empty { display: none; }
 .entry-metadata { font-size: .85rem; color: var(--text-muted); margin: 3em 0 0; padding-top: 1em; border-top: 1px solid var(--border-soft); display: flex; flex-wrap: wrap; gap: .25em 1em; }
 hr + .entry-metadata { margin-top: 0; padding-top: 0; border-top: 0; }
+hr:has(+ .entry-metadata) { margin-bottom: .75em; }
 .entry-metadata a { color: var(--text-muted); text-decoration: none; }
 .entry-metadata a:hover { color: var(--link); }
 .entry-metadata .tags a { margin-right: .6em; }
@@ -144,7 +145,7 @@ hr + .entry-metadata { margin-top: 0; padding-top: 0; border-top: 0; }
 .archive p { color: var(--text-muted); font-size: .95em; margin-bottom: 1.5em; }
 
 /* footer + newsletter (form only renders when site.newsletter is configured) */
-#footer { font-size: .85rem; color: var(--text-muted); margin-top: 4rem; padding-top: 1.5rem; padding-bottom: 2.5rem; border-top: 1px solid var(--border-soft); text-align: center; }
+#footer { font-size: .85rem; color: var(--text-muted); margin-top: 2.5rem; padding-top: 1.5rem; padding-bottom: 2.5rem; border-top: 1px solid var(--border-soft); text-align: center; }
 #footer a { color: var(--text-muted); }
 #footer img { vertical-align: middle; }
 .newsletter-signup h3 { margin: 0 0 .25em; font-size: 1.1rem; }
