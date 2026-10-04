@@ -1,5 +1,6 @@
 ---
 title: Controle de versão do calendário
+special: true
 entry_root: overview_pt_br
 publish_date: July 1, 2019
 orig_publish_date: March 25, 2016
