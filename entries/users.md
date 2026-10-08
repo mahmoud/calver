@@ -11,7 +11,8 @@ in all areas. This ever-growing, never-complete list of project names
 and example versions is [open to expansion][issues]. To keep it
 useful, a listed project should be recognizable within its ecosystem
 and have either a public adoption announcement or a sustained
-calendar-versioned release history.
+calendar-versioned release history. For the order in which projects
+switched, see the [timeline](/timeline.html).
 
 [issues]: https://github.com/mahmoud/calver/issues
 
