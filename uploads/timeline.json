@@ -2,24 +2,10 @@
   "kinds": {
     "calver": "CalVer",
     "adoption": "Adoption",
-    "release": "Big-name release",
+    "release": "Notable release",
     "language": "Language standard",
     "tooling": "Tooling"
   },
-  "eras": [
-    {"id": "standards", "title": "Standards named for their year", "start": 1958, "end": 1991,
-     "blurb": "Language committees named revisions by year decades before anyone wrote \"CalVer\". Thirty-three years and a handful of events: this stretch is heavily compressed."},
-    {"id": "boxed", "title": "The year on the box", "start": 1992, "end": 2003,
-     "blurb": "Microsoft put the year on the shrink-wrap and made 95, 98, and 2000 household version numbers; the tz database and C++ picked up the habit too."},
-    {"id": "distros", "title": "Ubuntu to Windows 10", "start": 2004, "end": 2015,
-     "blurb": "Ubuntu 4.10 made YY.0M a release schedule you could read off the version. Dated APIs, snapshots, and libraries followed."},
-    {"id": "calver", "title": "calver.org", "start": 2016, "end": 2019,
-     "blurb": "The convention gets a name, a site, and a users list; JetBrains, pip, Black, ClickHouse, and CockroachDB switch."},
-    {"id": "monthly", "title": "The monthly wave", "start": 2020, "end": 2023,
-     "blurb": "Home Assistant, yt-dlp, conda, OpenStack: projects shipping on a cadence adopt the date as the version."},
-    {"id": "twentysix", "title": "Year 26", "start": 2024, "end": 2026,
-     "blurb": "Apple renumbers every OS to 26, LibreOffice and Neo4j switch, and the spec gets its 26.0 revision."}
-  ],
   "events": [
     {"date": "1958", "title": "ALGOL 58", "kind": "language", "url": "https://en.wikipedia.org/wiki/ALGOL",
      "detail": "The Zurich report; ALGOL 60 (Paris, January 1960) followed. The first language standards named for their year."},

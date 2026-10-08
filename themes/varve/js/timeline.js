@@ -1,7 +1,6 @@
 /* timeline.js: renders /timeline.html from the JSON inlined by custom.py.
-   Vanilla ES2020, no dependencies. One flat list; eras are inline markers
-   on the same spine. State (hidden kinds, order) lives in the URL hash as
-   k=v pairs: #hide=a,b&order=asc */
+   Vanilla ES2020, no dependencies. One flat list. State (hidden kinds,
+   order) lives in the URL hash as k=v pairs: #hide=a,b&order=asc */
 (function () {
   'use strict';
 
@@ -39,7 +38,6 @@
   // --- normalize ---------------------------------------------------------
   var kinds = data.kinds;
   var kindIds = Object.keys(kinds);
-  var eras = data.eras;
 
   var events = data.events.map(function (ev, index) {
     var date = String(ev.date);
@@ -47,12 +45,8 @@
     var month = date.length >= 7 ? +date.slice(5, 7) : null;
     var day = date.length === 10 ? +date.slice(8, 10) : null;
     var t = year + ((month == null ? 7 : month) - 1) / 12 + ((day == null ? 15 : day) - 1) / 365;
-    var era = null;
-    for (var i = 0; i < eras.length; i++) {
-      if (eras[i].start <= year && year <= eras[i].end) { era = eras[i]; break; }
-    }
     return {
-      index: index, year: year, month: month, day: day, t: t, era: era,
+      index: index, year: year, month: month, day: day, t: t,
       title: ev.title, detail: ev.detail, kind: ev.kind, url: ev.url
     };
   });
@@ -155,21 +149,6 @@
     return li;
   }
 
-  function renderEra(era, n) {
-    var li = el('li', 'tl-era');
-    li.id = 'era-' + era.id;
-    var when = el('div', 'tl-when');
-    when.appendChild(el('span', 'tl-era-span', era.start === era.end ? String(era.start) : era.start + '\u2013' + era.end));
-    li.appendChild(when);
-    var body = el('div', 'tl-body');
-    var h = el('h2', 'tl-era-h', era.title);
-    h.appendChild(el('span', 'tl-era-n', n + (n === 1 ? ' event' : ' events')));
-    body.appendChild(h);
-    body.appendChild(el('p', 'tl-era-blurb', era.blurb));
-    li.appendChild(body);
-    return li;
-  }
-
   function renderList() {
     while (toolbar.nextSibling) toolbar.nextSibling.remove();
     orderBtn.textContent = state.order === 'desc' ? 'Oldest first' : 'Newest first';
@@ -179,27 +158,11 @@
       root.appendChild(el('p', 'tl-empty', 'No kinds selected.'));
       return;
     }
-    var perEra = {};
-    visible.forEach(function (ev) {
-      var id = ev.era ? ev.era.id : '';
-      perEra[id] = (perEra[id] || 0) + 1;
-    });
     var ol = el('ol', 'tl-list');
     var prev = null;
-    var curEra = null;
     visible.forEach(function (ev) {
-      var years = prev ? Math.abs(ev.t - prev.t) : 0;
       var li = renderEvent(ev);
-      if (ev.era && ev.era !== curEra) {
-        // The gap (spacing + dash) lands on the era marker; the event
-        // directly under a marker sits tight against it.
-        var marker = renderEra(ev.era, perEra[ev.era.id]);
-        setGap(marker, years);
-        ol.appendChild(marker);
-        curEra = ev.era;
-        years = 0;
-      }
-      setGap(li, years);
+      setGap(li, prev ? Math.abs(ev.t - prev.t) : 0);
       ol.appendChild(li);
       prev = ev;
     });
@@ -207,11 +170,4 @@
   }
 
   renderList();
-
-  // --- deep link ---------------------------------------------------------
-  var hash = location.hash.slice(1);
-  if (hash && hash.indexOf('=') === -1) {
-    var target = document.getElementById(hash);
-    if (target && target.classList.contains('tl-era')) target.scrollIntoView();
-  }
 })();
