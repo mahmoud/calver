@@ -34,7 +34,7 @@
 .tl-kind:has(input:not(:checked)) { opacity: .45; }
 .tl-kind:has(input:not(:checked)) .tl-swatch { background: transparent; box-shadow: inset 0 0 0 2px var(--k); }
 .tl-kind:has(input:focus-visible) { outline: 2px solid var(--link); outline-offset: 2px; border-radius: 2px; }
-.tl-btn { border: 0; background: none; font: inherit; color: var(--link); padding: .15em .3em; cursor: pointer; }
+.tl-btn { border: 0; background: none; font: inherit; color: var(--link); padding: .15em .3em; cursor: pointer; white-space: nowrap; }
 .tl-btn:hover { text-decoration: underline; color: var(--link-hover); }
 
 /* list geometry: three columns (date | dot | body); the spine runs down the

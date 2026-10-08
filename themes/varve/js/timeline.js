@@ -151,7 +151,8 @@
 
   function renderList() {
     while (toolbar.nextSibling) toolbar.nextSibling.remove();
-    orderBtn.textContent = state.order === 'desc' ? 'Oldest first' : 'Newest first';
+    orderBtn.textContent = state.order === 'desc' ? '\u2191 Oldest' : '\u2193 Newest';
+    orderBtn.title = state.order === 'desc' ? 'Show oldest first' : 'Show newest first';
     var visible = events.filter(function (ev) { return !state.hidden.has(ev.kind); });
     if (state.order === 'desc') visible = visible.slice().reverse();
     if (!visible.length) {
