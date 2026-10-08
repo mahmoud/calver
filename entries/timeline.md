@@ -10,8 +10,8 @@ Calendar versioning is older than its name. This timeline runs newest
 first, from the 26.0 spec back through the adopters, the year-on-the-box
 era, and the language standards that started it. Spacing follows the
 calendar, loosely: long quiet stretches are compressed, busy years are
-stretched. Use the legend to filter by kind, and the era headings to
-collapse what you have already seen.
+stretched, and the line goes dashed where more than two years pass
+between events. Use the legend to filter by kind.
 
 Events are curated from the [users list][users] and public release
 notes; the data lives in [timeline.json][json], and additions are

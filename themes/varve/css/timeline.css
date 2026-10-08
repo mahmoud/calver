@@ -16,7 +16,7 @@
     .tl [data-kind="tooling"]  { --k: #9a9ba3; }
 }
 
-/* toolbar: legend + buttons */
+/* toolbar: legend + order button */
 .tl-toolbar {
     display: flex;
     flex-wrap: wrap;
@@ -37,48 +37,55 @@
 .tl-btn { border: 0; background: none; font: inherit; color: var(--link); padding: .15em .3em; cursor: pointer; }
 .tl-btn:hover { text-decoration: underline; color: var(--link-hover); }
 
-/* eras */
-.tl-era[hidden] { display: none; }
-.tl-era > summary { list-style: none; cursor: pointer; }
-.tl-era > summary::-webkit-details-marker { display: none; }
-.tl-era-h { margin: 1.25em 0 .35em; font-size: 1.35rem; }
-.tl-era-h::before { content: "\25BE"; display: inline-block; width: 1em; color: var(--text-faint); }
-.tl-era:not([open]) .tl-era-h::before { transform: rotate(-90deg); }
-.tl-era-span { font-family: var(--sans); font-weight: 400; font-size: .8rem; color: var(--text-faint); margin-left: .6em; white-space: nowrap; }
-.tl-era-blurb { font-size: .9rem; color: var(--text-muted); margin: 0 0 1rem; }
-
-/* list + spine */
-.tl-list { list-style: none; margin: 0 0 1.5rem; padding: 0; position: relative; }
-.tl-list::before {
+/* list geometry: three columns (date | dot | body); the spine runs down the
+   center of the dot column, drawn per item so each segment can be dashed */
+.tl-list {
+    --col-when: 4.5rem;
+    --col-dot: 1.25rem;
+    --col-gap: .5rem;
+    --spine-x: calc(var(--col-when) + var(--col-gap) + var(--col-dot) / 2 - 1px);
+    --dot-y: .65rem;       /* dot center, measured from the item's top */
+    --gap-unit: .55rem;    /* extra margin per clamped year of gap */
+    --spine: color-mix(in srgb, var(--text-faint) 55%, transparent);
+    list-style: none;
+    margin: 0 0 1.5rem;
+    padding: 0;
+}
+.tl-list > li {
+    --m: calc(var(--base, .6rem) + var(--gap, 0) * var(--gap-unit));
+    position: relative;
+    display: grid;
+    grid-template-columns: var(--col-when) var(--col-dot) 1fr;
+    column-gap: var(--col-gap);
+    align-items: start;
+    margin: var(--m) 0 0;
+    padding: 0;
+}
+.tl-list > li:first-child { --m: .25rem; }
+.tl-list > li::before,
+.tl-list > li::after {
     content: "";
     position: absolute;
-    top: .4em;
-    bottom: 0;
-    left: calc(4.5rem + .55rem);
-    border-left: 2px solid var(--border-soft);
+    left: var(--spine-x);
+    border-left: 2px solid var(--spine);
 }
+.tl-list > li::before { top: calc(-1 * var(--m)); height: calc(var(--m) + var(--dot-y)); }  /* previous item's bottom to this dot */
+.tl-list > li::after { top: var(--dot-y); bottom: 0; }                                      /* this dot to the item's bottom */
+.tl-list > li:first-child::before, .tl-list > li:last-child::after { display: none; }
+.tl-list > li[data-dashed]::before { border-left-style: dashed; }
 
 /* events */
-.tl-ev {
-    display: grid;
-    grid-template-columns: 4.5rem 1.25rem 1fr;
-    column-gap: .5rem;
-    align-items: baseline;
-    margin: 0;
-    padding: 0;
-    margin-top: calc(.6rem + var(--gap, 0) * .55rem);
-}
-.tl-ev:first-child { margin-top: .25rem; }
 .tl-when { font-family: var(--sans); text-align: right; line-height: 1.2; }
 .tl-year { font-weight: 700; color: var(--text-strong); font-size: 1rem; }
 .tl-md { display: block; font-size: .72rem; color: var(--text-faint); }
 .tl-dot {
+    position: relative;   /* paints above the spine pseudo-elements */
+    z-index: 1;
     width: .8rem;
     height: .8rem;
+    margin-top: calc(var(--dot-y) - .4rem);
     border-radius: 50%;
     background: var(--k);
-    align-self: baseline;
-    transform: translateY(.1em);
     justify-self: center;
     box-shadow: 0 0 0 3px var(--bg);
 }
@@ -100,20 +107,26 @@
 }
 .tl-detail { font-size: .88rem; color: var(--text-muted); margin: .15em 0 0; line-height: 1.5; }
 
+/* era markers: inline on the spine, no dot */
+.tl-era { --base: 1.75rem; }
+.tl-era .tl-body { grid-column: 3; }
+.tl-era-span { font-weight: 700; color: var(--text-faint); font-size: .85rem; white-space: nowrap; }
+.tl-era-h { margin: 0; font-family: var(--sans); font-size: 1.2rem; line-height: 1.3; }
+.tl-era-n { font-weight: 400; font-size: .8rem; color: var(--text-faint); margin-left: .6em; white-space: nowrap; }
+.tl-era-blurb { font-size: .88rem; color: var(--text-muted); margin: .15em 0 0; line-height: 1.5; }
+
 .tl-error { color: #b3261e; font-family: var(--sans); }
 .tl-empty { color: var(--text-faint); font-style: italic; }
 
-@media (prefers-reduced-motion: no-preference) {
-    .tl-era-h::before { transition: transform .15s; }
-}
-
 /* phones: single column, dot in a left gutter, date inline above the title */
 @media (max-width: 600px) {
-    .tl-ev { grid-template-columns: 1.1rem 1fr; margin-top: calc(.6rem + var(--gap, 0) * .4rem); }
+    .tl-list { --dot-y: .45rem; --gap-unit: .4rem; }
+    .tl-list > li { grid-template-columns: 1.1rem 1fr; }
+    .tl-list > li::before, .tl-list > li::after { left: calc(.55rem - 1px); }
     .tl-when { grid-column: 2; text-align: left; font-size: .75rem; color: var(--text-faint); }
     .tl-year { display: inline; font-size: inherit; color: inherit; font-weight: 700; }
     .tl-md { display: inline; font-size: inherit; color: inherit; margin-left: .35em; }
     .tl-dot { grid-column: 1; grid-row: 1 / span 2; }
-    .tl-body { grid-column: 2; }
-    .tl-list::before { left: .5rem; }
+    .tl-body, .tl-era .tl-body { grid-column: 2; }
+    .tl-era-span { font-size: inherit; }
 }
