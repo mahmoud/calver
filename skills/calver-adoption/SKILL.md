@@ -70,7 +70,7 @@ about the project (library vs. application, release cadence, ecosystem).
 | Scheme | Example | Flagship users | Fits |
 |---|---|---|---|
 | `YYYY.MINOR.MICRO` | 2026.2.0 | JetBrains, Kali, Spring Cloud | apps and platforms with a few releases a year |
-| `YY.MINOR.MICRO` | 26.2.1 | pip, attrs, CockroachDB, Mesa | libraries that want a year signal plus a counter |
+| `YY.MINOR.MICRO` | 26.2.1 | Apple OSes (macOS 26, iOS 26), pip, attrs, CockroachDB, Mesa | libraries that want a year signal plus a counter |
 | `YYYY.M.MICRO` | 2026.9.0 | Home Assistant, Betaflight, mise | monthly-cadence projects; **default recommendation for packages** |
 | `YY.M.MICRO` | 26.9.0 | Black, conda, Twisted | same, shorter |
 | `YY.0M` | 26.04 | Ubuntu, NixOS, OpenWrt | date-named platform releases that need fixed-width sorting |
