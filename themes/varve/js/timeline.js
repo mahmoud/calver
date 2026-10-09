@@ -1,0 +1,174 @@
+/* timeline.js: renders /timeline.html from the JSON inlined by custom.py.
+   Vanilla ES2020, no dependencies. One flat list. State (hidden kinds,
+   order) lives in the URL hash as k=v pairs: #hide=a,b&order=asc */
+(function () {
+  'use strict';
+
+  var MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+                'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  var GAP_MAX = 6;      // years; spacing above an item is clamped here
+  var DASH_AFTER = 2;   // years; longer gaps get a dashed spine segment
+
+  var root = document.getElementById('timeline');
+  var dataEl = document.getElementById('timeline-data');
+  if (!root || !dataEl) return;  // validation failed at build; .tl-error is already on the page
+
+  function el(tag, cls, text) {
+    var node = document.createElement(tag);
+    if (cls) node.className = cls;
+    if (text != null) node.textContent = text;
+    return node;
+  }
+
+  function fail(msg) {
+    root.textContent = '';
+    root.appendChild(el('p', 'tl-error', msg));
+  }
+
+  var data;
+  try {
+    data = JSON.parse(dataEl.textContent);
+  } catch (e) {
+    fail('timeline data could not be parsed');
+    return;
+  }
+  var noscript = root.querySelector('noscript');
+  if (noscript) noscript.remove();
+
+  // --- normalize ---------------------------------------------------------
+  var kinds = data.kinds;
+  var kindIds = Object.keys(kinds);
+
+  var events = data.events.map(function (ev, index) {
+    var date = String(ev.date);
+    var year = +date.slice(0, 4);
+    var month = date.length >= 7 ? +date.slice(5, 7) : null;
+    var day = date.length === 10 ? +date.slice(8, 10) : null;
+    var t = year + ((month == null ? 7 : month) - 1) / 12 + ((day == null ? 15 : day) - 1) / 365;
+    return {
+      index: index, year: year, month: month, day: day, t: t,
+      title: ev.title, detail: ev.detail, kind: ev.kind, url: ev.url
+    };
+  });
+  events.sort(function (a, b) { return (a.t - b.t) || (a.index - b.index); });
+
+  var totals = {};
+  events.forEach(function (ev) { totals[ev.kind] = (totals[ev.kind] || 0) + 1; });
+
+  // --- state <-> hash ----------------------------------------------------
+  var state = { hidden: new Set(), order: 'desc' };
+
+  function readHash() {
+    var params = new URLSearchParams(location.hash.slice(1));
+    state.hidden = new Set((params.get('hide') || '').split(',').filter(function (k) { return k in kinds; }));
+    state.order = params.get('order') === 'asc' ? 'asc' : 'desc';
+  }
+
+  function writeHash() {
+    var params = new URLSearchParams();
+    if (state.hidden.size) params.set('hide', kindIds.filter(function (k) { return state.hidden.has(k); }).join(','));
+    if (state.order === 'asc') params.set('order', 'asc');
+    var hash = params.toString().replace(/%2C/g, ',');
+    history.replaceState(null, '', hash ? '#' + hash : location.pathname + location.search);
+  }
+
+  readHash();
+
+  // --- toolbar -----------------------------------------------------------
+  var toolbar = el('div', 'tl-toolbar');
+  var legend = el('fieldset', 'tl-legend');
+  legend.appendChild(el('legend', 'sr-only', 'Show kinds'));
+  kindIds.forEach(function (kind) {
+    var label = el('label', 'tl-kind');
+    label.dataset.kind = kind;
+    var box = el('input');
+    box.type = 'checkbox';
+    box.checked = !state.hidden.has(kind);
+    box.addEventListener('change', function () {
+      if (box.checked) state.hidden.delete(kind); else state.hidden.add(kind);
+      renderList();
+      writeHash();
+    });
+    label.appendChild(box);
+    label.appendChild(el('span', 'tl-swatch'));
+    label.appendChild(el('span', null, kinds[kind]));
+    label.appendChild(el('span', 'tl-count', ' (' + (totals[kind] || 0) + ')'));
+    legend.appendChild(label);
+  });
+  toolbar.appendChild(legend);
+
+  var orderBtn = el('button', 'tl-btn');
+  orderBtn.id = 'tl-order';
+  orderBtn.type = 'button';
+  orderBtn.addEventListener('click', function () {
+    state.order = state.order === 'desc' ? 'asc' : 'desc';
+    renderList();
+    writeHash();
+  });
+  toolbar.appendChild(orderBtn);
+  root.appendChild(toolbar);
+
+  // --- list --------------------------------------------------------------
+  // Spacing and spine style above an item come from the gap to the previous
+  // visible event: --gap (clamped years) scales the margin, data-dashed
+  // switches the segment above to dashed.
+  function setGap(li, years) {
+    var g = Math.min(GAP_MAX, Math.max(0, years));
+    li.style.setProperty('--gap', String(Math.round(g * 10) / 10));
+    if (years > DASH_AFTER) li.dataset.dashed = '';
+  }
+
+  function renderEvent(ev) {
+    var li = el('li', 'tl-ev');
+    li.dataset.kind = ev.kind;
+
+    var when = el('div', 'tl-when');
+    when.appendChild(el('span', 'tl-year', String(ev.year)));
+    if (ev.month != null) {
+      var md = MONTHS[ev.month - 1] || String(ev.month);
+      if (ev.day != null) md += ' ' + ev.day;
+      when.appendChild(el('span', 'tl-md', md));
+    }
+    li.appendChild(when);
+
+    var dot = el('span', 'tl-dot');
+    dot.setAttribute('aria-hidden', 'true');
+    li.appendChild(dot);
+
+    var body = el('div', 'tl-body');
+    var title = el('div', 'tl-title');
+    var a = el('a', null, ev.title);
+    a.href = ev.url;
+    a.target = '_blank';
+    a.rel = 'noopener';
+    title.appendChild(a);
+    title.appendChild(el('span', 'tl-tag', kinds[ev.kind] || ev.kind));
+    body.appendChild(title);
+    body.appendChild(el('p', 'tl-detail', ev.detail));
+    li.appendChild(body);
+    return li;
+  }
+
+  function renderList() {
+    while (toolbar.nextSibling) toolbar.nextSibling.remove();
+    orderBtn.textContent = state.order === 'desc' ? '\u2191 Oldest' : '\u2193 Newest';
+    orderBtn.title = state.order === 'desc' ? 'Show oldest first' : 'Show newest first';
+    var visible = events.filter(function (ev) { return !state.hidden.has(ev.kind); });
+    if (state.order === 'desc') visible = visible.slice().reverse();
+    if (!visible.length) {
+      root.appendChild(el('p', 'tl-empty', 'No kinds selected.'));
+      return;
+    }
+    var ol = el('ol', 'tl-list');
+    var prev = null;
+    visible.forEach(function (ev) {
+      var li = renderEvent(ev);
+      setGap(li, prev ? Math.abs(ev.t - prev.t) : 0);
+      ol.appendChild(li);
+      prev = ev;
+    });
+    root.appendChild(ol);
+  }
+
+  renderList();
+})();

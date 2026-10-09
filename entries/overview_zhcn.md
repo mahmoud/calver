@@ -6,6 +6,8 @@ publish_date: May 30, 2020
 orig_publish_date: March 25, 2016
 ---
 
+_This translation reflects the pre-26.0 spec; its scheme notation differs from the current [English overview](/overview.html)._
+
 *CalVer 不是基于任意数字，而是基于项目发布日期
 的版本控制约定*
 

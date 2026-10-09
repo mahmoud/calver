@@ -4,12 +4,14 @@ site:
   author: Mahmoud Hashemi
   tagline: Timely Project Versioning
   copyright: >-
-    &copy; 2020 <a href="https://creativecommons.org/licenses/by-sa/4.0/"><img height="14" src="/img/by-sa.png" /></a>
+    &copy; 2026 <a href="https://creativecommons.org/licenses/by-sa/4.0/"><img height="14" src="/img/by-sa.png" /></a>
   primary_links:
     - text: About
       href: /about.html
     - text: Users
       href: '/users.html'
+    - text: Timeline
+      href: '/timeline.html'
     - text: 中文
       href: '/overview_zhcn.html'
     - text: pt-BR
@@ -22,7 +24,7 @@ site:
   analytics_code: UA-63522904-3
 
 theme:
-  name: floc-calver
+  name: varve
 
 dev:
   server_host: 0.0.0.0

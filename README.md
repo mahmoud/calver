@@ -10,10 +10,15 @@ project releases, instead of arbitrary numbers. There are
 from [Ubuntu][ubuntu] to [Twisted][twisted] to [PyCharm][pycharm] to
 [C][c] itself and [more][calver_users].
 
+Adopting CalVer with a coding agent? Point it at
+[`skills/calver-adoption`](skills/calver-adoption/SKILL.md), a skill
+that detects the current version, picks a scheme, writes the docs
+paragraph, and cuts the first release.
+
 [ubuntu]: http://calver.org/overview.html#ubuntu
 [twisted]: http://calver.org/overview.html#twisted
-[pycharm]: http://calver.org/users.html#products
-[c]: http://calver.org/users.html#standards
+[pycharm]: http://calver.org/overview.html#other-notable-projects
+[c]: http://calver.org/users.html#languages-and-standards
 
 [designing_a_version]: http://sedimental.org/designing_a_version.html
 [calver_overview]: http://calver.org/overview.html

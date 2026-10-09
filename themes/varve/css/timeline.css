@@ -1,0 +1,123 @@
+/* timeline.css: styles for /timeline.html, rendered by js/timeline.js.
+   Kept separate from varve.css so a sync from sedimental cannot clobber it.
+   Class names are the contract with timeline.js. */
+
+/* kind colors */
+.tl [data-kind="calver"]   { --k: #0080a7; }
+.tl [data-kind="adoption"] { --k: #3a9a5b; }
+.tl [data-kind="release"]  { --k: #c0702a; }
+.tl [data-kind="language"] { --k: #8a5fbf; }
+.tl [data-kind="tooling"]  { --k: #8a8a8a; }
+@media (prefers-color-scheme: dark) {
+    .tl [data-kind="calver"]   { --k: #3fa4cf; }
+    .tl [data-kind="adoption"] { --k: #5cbf7d; }
+    .tl [data-kind="release"]  { --k: #e09555; }
+    .tl [data-kind="language"] { --k: #b08ad8; }
+    .tl [data-kind="tooling"]  { --k: #9a9ba3; }
+}
+
+/* toolbar: legend + order button */
+.tl-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .5rem 1rem;
+    margin: 0 0 1.5rem;
+    font-family: var(--sans);
+    font-size: .85rem;
+}
+.tl-legend { display: flex; flex-wrap: wrap; gap: .35rem .9rem; margin: 0; padding: 0; border: 0; min-width: 0; }
+.tl-kind { display: inline-flex; align-items: center; gap: .35em; position: relative; cursor: pointer; user-select: none; }
+.tl-kind input { position: absolute; opacity: 0; width: 0; height: 0; margin: 0; }
+.tl-swatch { display: inline-block; width: .75em; height: .75em; border-radius: 50%; background: var(--k); flex: none; }
+.tl-count { color: var(--text-faint); }
+.tl-kind:has(input:not(:checked)) { opacity: .45; }
+.tl-kind:has(input:not(:checked)) .tl-swatch { background: transparent; box-shadow: inset 0 0 0 2px var(--k); }
+.tl-kind:has(input:focus-visible) { outline: 2px solid var(--link); outline-offset: 2px; border-radius: 2px; }
+.tl-btn { border: 0; background: none; font: inherit; color: var(--link); padding: .15em .3em; cursor: pointer; white-space: nowrap; }
+.tl-btn:hover { text-decoration: underline; color: var(--link-hover); }
+
+/* list geometry: three columns (date | dot | body); the spine runs down the
+   center of the dot column, drawn per item so each segment can be dashed */
+.tl-list {
+    --col-when: 4.5rem;
+    --col-dot: 1.25rem;
+    --col-gap: .5rem;
+    --spine-x: calc(var(--col-when) + var(--col-gap) + var(--col-dot) / 2 - 1px);
+    --dot-y: .65rem;       /* dot center, measured from the item's top */
+    --gap-unit: .55rem;    /* extra margin per clamped year of gap */
+    --spine: color-mix(in srgb, var(--text-faint) 55%, transparent);
+    list-style: none;
+    margin: 0 0 1.5rem;
+    padding: 0;
+}
+.tl-list > li {
+    --m: calc(.6rem + var(--gap, 0) * var(--gap-unit));
+    position: relative;
+    display: grid;
+    grid-template-columns: var(--col-when) var(--col-dot) 1fr;
+    column-gap: var(--col-gap);
+    align-items: start;
+    margin: var(--m) 0 0;
+    padding: 0;
+}
+.tl-list > li:first-child { --m: .25rem; }
+.tl-list > li::before,
+.tl-list > li::after {
+    content: "";
+    position: absolute;
+    left: var(--spine-x);
+    border-left: 2px solid var(--spine);
+}
+.tl-list > li::before { top: calc(-1 * var(--m)); height: calc(var(--m) + var(--dot-y)); }  /* previous item's bottom to this dot */
+.tl-list > li::after { top: var(--dot-y); bottom: 0; }                                      /* this dot to the item's bottom */
+.tl-list > li:first-child::before, .tl-list > li:last-child::after { display: none; }
+.tl-list > li[data-dashed]::before { border-left-style: dashed; }
+
+/* events */
+.tl-when { font-family: var(--sans); text-align: right; line-height: 1.2; }
+.tl-year { font-weight: 700; color: var(--text-strong); font-size: 1rem; }
+.tl-md { display: block; font-size: .72rem; color: var(--text-faint); }
+.tl-dot {
+    position: relative;   /* paints above the spine pseudo-elements */
+    z-index: 1;
+    width: .8rem;
+    height: .8rem;
+    margin-top: calc(var(--dot-y) - .4rem);
+    border-radius: 50%;
+    background: var(--k);
+    justify-self: center;
+    box-shadow: 0 0 0 3px var(--bg);
+}
+.tl-title { font-family: var(--sans); font-weight: 700; font-size: 1rem; line-height: 1.3; }
+.tl-title a { color: inherit; text-decoration: none; }
+.tl-title a:hover { text-decoration: underline; }
+.tl-tag {
+    font-size: .65rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    color: var(--k);
+    border: 1px solid var(--k);
+    border-radius: 999px;
+    padding: 0 .45em;
+    margin-left: .5em;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+.tl-detail { font-size: .88rem; color: var(--text-muted); margin: .15em 0 0; line-height: 1.5; }
+
+.tl-error { color: #b3261e; font-family: var(--sans); }
+.tl-empty { color: var(--text-faint); font-style: italic; }
+
+/* phones: single column, dot in a left gutter, date inline above the title */
+@media (max-width: 600px) {
+    .tl-list { --dot-y: .45rem; --gap-unit: .4rem; }
+    .tl-list > li { grid-template-columns: 1.1rem 1fr; }
+    .tl-list > li::before, .tl-list > li::after { left: calc(.55rem - 1px); }
+    .tl-when { grid-column: 2; text-align: left; font-size: .75rem; color: var(--text-faint); }
+    .tl-year { display: inline; font-size: inherit; color: inherit; font-weight: 700; }
+    .tl-md { display: inline; font-size: inherit; color: inherit; margin-left: .35em; }
+    .tl-dot { grid-column: 1; grid-row: 1 / span 2; }
+    .tl-body { grid-column: 2; }
+}
