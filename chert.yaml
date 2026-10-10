@@ -33,7 +33,7 @@ dev:
   autorefresh: 0  # set to a positive integer to cause the default theme to autorefresh every few seconds
 
 prod:
-  canonical_domain: http://calver.org
+  canonical_domain: https://calver.org
   canonical_base_path: /
   remote_host: calver.org
   remote_user: mahmoud
