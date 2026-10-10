@@ -356,6 +356,9 @@ Luckily, the decision on whether to use CalVer is easier than ever:
 
 If you answered yes to any of these questions, CalVer's semantics make
 it a strong choice for your project.
+You can even have your agent adopt it for you, the [CalVer SKILL.md][calver_skill].
+
+[calver_skill]: https://github.com/mahmoud/calver/blob/master/skills/calver-adoption/SKILL.md
 
 ## What about breaking changes?
 
